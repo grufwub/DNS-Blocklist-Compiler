@@ -1,1 +1,8 @@
-
+google.com
+reddit.com
+walmart.com
+youtube.com
+gravatar.com
+googleapis.com
+content.googleapis.com
+blogsmithmedia.com
