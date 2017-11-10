@@ -44,18 +44,15 @@ def addToDict(d, data):
         lineStr = lineStr.replace('www.', '')
         # Strips initial '0.0.0.0 ' from host files
         lineStr = lineStr.replace('0.0.0.0 ', '')
-        # If contains '^third-party' then checks against safe filters
+        # Strips use of '^third-party'
+        lineStr = lineStr.replace('^third-party', '')
+        # Strips extra '^'
+        lineStr = lineStr.replace('^', '')
+        # Checks values against whitelist
         is_safe = False
-        if '^' in lineStr:
-        	third_party_str = '^third-party'
-        	if lineStr.endswith(third_party_str):
-        		lineStr = lineStr.replace(third_party_str, '')
-        		if lineStr in whitelist:
-        			is_safe = True
-        		else:
-        			is_safe = False
-        	else:
-        		lineStr = lineStr.replace('^', '')
+        for key in whitelist:
+        	if lineStr == key:
+        		is_safe = True
         if is_safe:
         	continue
         # Skips final unusables
