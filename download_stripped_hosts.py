@@ -56,13 +56,14 @@ def addToDict(d, data):
         			is_safe = False
         	else:
         		lineStr = lineStr.replace('^', '')
-
         if is_safe:
         	continue
         # Skips final unusables
         if '^' in lineStr:
             continue
         if lineStr.endswith('.'):
+        	continue
+        if '.js' in lineStr:
         	continue
 
         d[lineStr] = d.get(lineStr, 0) + 1
@@ -103,13 +104,6 @@ def getWhitelist():
 	url = "https://pastebin.com/raw/G7UGnpxM"
 	downloadHosts(url, whitelist)
 
-def isServerUp(key):
-	response = os.system("ping -c 1 " + key)
-	if response == 0:
-		return True
-	else:
-		return False
-
 def main():
     d = dict()
     getWhitelist()
@@ -122,13 +116,9 @@ def main():
 
     f = open(file_name, 'w')
     for key in d.keys():
-    	print ("Checking " + key + "\n")
-    	if isServerUp(key):
-    		key = key.strip()
-    		f.write(key + '\n')
-    		print("Added " + key + "\n")
-    	print ("--------------------------------------------------------------------------------------------------\n")
-
+    	key = key.strip()
+    	f.write(key + '\n')
+    	# print("Added " + key + "\n")
 
     f.close()
     print(len(d.keys()))
