@@ -97,7 +97,7 @@ def downloadAdguardSpywareHosts(d):
     return downloadHosts(url, d)
 
 def downloadPersonalHosts(d):
-    url = "https://pastebin.com/raw/X4G4zVJb"
+    url = "https://raw.githubusercontent.com/grufwub/DNS-Blocklist-Compiler/master/hosts.txt"
     return downloadHosts(url, d)
 
 def getWhitelist():
