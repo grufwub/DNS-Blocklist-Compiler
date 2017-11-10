@@ -3404,3 +3404,10 @@ videostat.meta.ua
 web-t.9gag.com
 webmetrics.nintendo-europe.com
 webstat.freaks4u.com
+app-analytics.snapchat.com
+appspot.com
+mparticle.com
+tenjin.io
+analytics.plaid.com
+iadsdk.apple.com
+adj.st
