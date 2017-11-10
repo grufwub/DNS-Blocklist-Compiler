@@ -1,2 +1,2 @@
-# py_dns_blocklist_compiler
+# DNS Blocklist Compiler
 Compiles a list of DNS hostnames from multiple sources and strip unnecessary data.
