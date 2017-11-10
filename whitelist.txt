@@ -8,3 +8,4 @@ content.googleapis.com
 blogsmithmedia.com
 aolcdn.com
 googleusercontent.com
+cdn.turner.com
