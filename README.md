@@ -1,2 +1,2 @@
 # DNS Blocklist Compiler
-Compiles a list of DNS hostnames from multiple sources and strip unnecessary data.
+Compiles a list of DNS hostnames from multiple sources and strips unnecessary data.
