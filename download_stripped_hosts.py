@@ -101,7 +101,7 @@ def downloadPersonalHosts(d):
     return downloadHosts(url, d)
 
 def getWhitelist():
-	url = "https://pastebin.com/raw/G7UGnpxM"
+	url = "https://raw.githubusercontent.com/grufwub/DNS-Blocklist-Compiler/master/whitelist.txt"
 	downloadHosts(url, whitelist)
 
 def main():
