@@ -1,4 +1,4 @@
-import urllib.request, os
+import urllib.request
 
 file_name = "hosts.txt"
 whitelist = dict()
