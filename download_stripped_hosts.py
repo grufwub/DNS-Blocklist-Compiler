@@ -63,7 +63,7 @@ def addToDict(d, data):
             continue
         if lineStr.endswith('.'):
         	continue
-        if '.js' in lineStr:
+        if lineStr.endswith('.js'):
         	continue
 
         d[lineStr] = d.get(lineStr, 0) + 1
