@@ -84,20 +84,12 @@ def downloadBetterFYITrackerList(d):
 	url = "https://raw.githubusercontent.com/anarki999/Adblock-List-Archive/master/Better.fyiTrackersBlocklist.txt"
 	return downloadHosts(url, d)
 
-def downloadAdawayHosts(d):
-	url = "https://raw.githubusercontent.com/AdAway/adaway.github.io/master/hosts.txt"
-	return downloadHosts(url, d)
-
-def downloadYoYoHosts(d):
-	url = "https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&mimetype=plaintext&useip=0.0.0.0"
-	return downloadHosts(url, d)
-
-def downloadAntiMicrosoftHosts(d):
-	url = "https://raw.githubusercontent.com/tyzbit/hosts/master/data/tyzbit/hosts"
-	return downloadHosts(url, d)
-
 def downloadAdguardSpywareHosts(d):
 	url = "https://filters.adtidy.org/extension/chromium/filters/3.txt"
+	return downloadHosts(url, d)
+
+def downloadSteveBlackHosts(d):
+	url = "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts"
 	return downloadHosts(url, d)
 
 def downloadPersonalHosts(d):
@@ -138,6 +130,9 @@ def getUniqueHosts(d):
 	return_list = list()
 	# Creates an ordered list of keys (which are the domain level ints).
 	key_list = getOrderedKeyList(length_dict)
+	# BUG: another hacky fix right here to account for key_list sometimes being empty
+	if len(key_list) == 0:
+		return [""]
 	min_length = min(key_list)
 	min_length_host = length_dict[min_length][0]
 	ext = tldextract.extract(min_length_host)
@@ -165,12 +160,10 @@ def getUniqueHosts(d):
 def main():
 	d = dict()
 	getWhitelist()
-	downloadPersonalHosts(d)
 	downloadBetterFYITrackerList(d)
-	downloadAdawayHosts(d)
-	downloadYoYoHosts(d)
-	downloadAntiMicrosoftHosts(d)
+	downloadPersonalHosts(d)
 	downloadAdguardSpywareHosts(d)
+	downloadSteveBlackHosts(d)
 
 	print('Writing hosts to file:\n')
 	f = open(file_name, 'w')
