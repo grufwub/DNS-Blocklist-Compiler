@@ -1,10 +1,10 @@
 google.com
+google.co.uk
 reddit.com
 walmart.com
 youtube.com
 gravatar.com
 googleapis.com
-content.googleapis.com
 blogsmithmedia.com
 aolcdn.com
 googleusercontent.com
@@ -23,6 +23,5 @@ sport.be
 spot.im
 spox.com
 bit.ly
-storage.googleapis.com
 githubapp.com
 githubusercontent.com
