@@ -8,7 +8,7 @@ content.googleapis.com
 blogsmithmedia.com
 aolcdn.com
 googleusercontent.com
-cdn.turner.com
+turner.com
 dailymail.co.uk
 travelocity.com
 tripadvisor.com
@@ -21,3 +21,4 @@ spieletipps.de
 sport.be
 spot.im
 spox.com
+bit.ly
