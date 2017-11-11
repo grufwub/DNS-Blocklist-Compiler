@@ -4,7 +4,7 @@ import urllib.request, tldextract, os
 os.system("chcp 65001")
 
 file_name = "hosts.txt"
-whitelist = list()
+whitelist = dict()
 
 def addToDict(d, data):
 	# Returns a sorted, stripped dictionary of hosts, with the registered domain as the key
@@ -96,7 +96,7 @@ def downloadAdguardDnsHosts(d):
 	return downloadHosts(url, d)
 
 def downloadPersonalHosts(d):
-	url = "https://raw.githubusercontent.com/grufwub/DNS-Blocklist-Compiler/master/hosts.txt"
+	url = "https://raw.githubusercontent.com/grufwub/DNS-Blocklist-Compiler/master/blacklist.txt"
 	return downloadHosts(url, d)
 
 def getWhitelist():
@@ -106,10 +106,10 @@ def getWhitelist():
 	response = urllib.request.urlopen(url_str)
 	data = response.read()
 	text = data.decode('utf-8')
-	for line in text:
+	for line in text.split('\n'):
 		if not line or line.startswith('/') or line.startswith('\n'):
 			continue
-		whitelist.append(line)
+		whitelist[line] = whitelist.get(line, 0) + 1
 
 def getOrderedKeyList(d):
 	l = list()
@@ -167,7 +167,6 @@ def main():
 	downloadPersonalHosts(d)
 	downloadSteveBlackHosts(d)
 	downloadAdguardDnsHosts(d)
-
 	print('Writing hosts to file:\n')
 	f = open(file_name, 'w', encoding='utf-8')
 	count = 0
