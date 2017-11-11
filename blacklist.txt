@@ -4,3 +4,4 @@ collector.githubapp.com
 triptiahuja.com
 wrightsmedia.com
 purch.com
+syndication.twitter.com
