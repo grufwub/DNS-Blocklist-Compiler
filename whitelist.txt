@@ -13,6 +13,7 @@ dailymail.co.uk
 travelocity.com
 tripadvisor.com
 trivago.de
+nike.com
 store.nike.com
 spot.im
 slack.com
@@ -22,3 +23,6 @@ sport.be
 spot.im
 spox.com
 bit.ly
+storage.googleapis.com
+githubapp.com
+githubusercontent.com
