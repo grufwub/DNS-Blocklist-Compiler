@@ -9,3 +9,4 @@ blogsmithmedia.com
 aolcdn.com
 googleusercontent.com
 cdn.turner.com
+dailymail.co.uk
