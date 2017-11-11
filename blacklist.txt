@@ -2,3 +2,4 @@ adservice.google.co.uk
 app-measurement.com
 collector.githubapp.com
 triptiahuja.com
+wrightsmedia.com
