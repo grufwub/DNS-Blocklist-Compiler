@@ -3,3 +3,4 @@ app-measurement.com
 collector.githubapp.com
 triptiahuja.com
 wrightsmedia.com
+purch.com
