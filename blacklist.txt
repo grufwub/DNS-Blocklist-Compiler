@@ -5,3 +5,4 @@ triptiahuja.com
 wrightsmedia.com
 purch.com
 syndication.twitter.com
+syndication.twimg.com
