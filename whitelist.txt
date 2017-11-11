@@ -10,3 +10,14 @@ aolcdn.com
 googleusercontent.com
 cdn.turner.com
 dailymail.co.uk
+travelocity.com
+tripadvisor.com
+trivago.de
+store.nike.com
+spot.im
+slack.com
+spiegel.tv
+spieletipps.de
+sport.be
+spot.im
+spox.com
