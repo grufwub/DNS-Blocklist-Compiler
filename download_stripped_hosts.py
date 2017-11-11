@@ -1,4 +1,7 @@
-import copy, urllib.request, tldextract
+import urllib.request, tldextract, os
+
+# Ensures we are using the correct code page in windows console!
+os.system("chcp 65001")
 
 file_name = "hosts.txt"
 whitelist = list()
@@ -84,12 +87,12 @@ def downloadBetterFYITrackerList(d):
 	url = "https://raw.githubusercontent.com/anarki999/Adblock-List-Archive/master/Better.fyiTrackersBlocklist.txt"
 	return downloadHosts(url, d)
 
-def downloadAdguardSpywareHosts(d):
-	url = "https://filters.adtidy.org/extension/chromium/filters/3.txt"
-	return downloadHosts(url, d)
-
 def downloadSteveBlackHosts(d):
 	url = "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts"
+	return downloadHosts(url, d)
+
+def downloadAdguardDnsHosts(d):
+	url = "https://filters.adtidy.org/extension/chromium/filters/15.txt"
 	return downloadHosts(url, d)
 
 def downloadPersonalHosts(d):
@@ -162,11 +165,11 @@ def main():
 	getWhitelist()
 	downloadBetterFYITrackerList(d)
 	downloadPersonalHosts(d)
-	downloadAdguardSpywareHosts(d)
 	downloadSteveBlackHosts(d)
+	downloadAdguardDnsHosts(d)
 
 	print('Writing hosts to file:\n')
-	f = open(file_name, 'w')
+	f = open(file_name, 'w', encoding='utf-8')
 	count = 0
 	for key in d.keys():
 		host_list = getUniqueHosts(d[key])
