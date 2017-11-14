@@ -5,7 +5,11 @@ Can either compile a complete list of hosts to a standard hosts file, or compile
 
 Current sources:
 Better.fyi Trackerlist: https://raw.githubusercontent.com/anarki999/Adblock-List-Archive/master/Better.fyiTrackersBlocklist.txt
+
 Steven Black's Hosts: https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
+
 Adguard's Simplified Hosts: https://filters.adtidy.org/extension/chromium/filters/15.txt
+
 Personal Hosts (to catch stragglers): https://raw.githubusercontent.com/grufwub/DNS-Blocklist-Compiler/master/blacklist.txt
+
 Personal Whitelist (to prevent blocking safe domains): https://raw.githubusercontent.com/grufwub/DNS-Blocklist-Compiler/master/whitelist.txt
