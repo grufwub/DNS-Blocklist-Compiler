@@ -31,3 +31,4 @@ imasdk.googleapis.com
 google.se
 linkedin.com
 msn.com
+jwpcdn.com
