@@ -17,7 +17,6 @@ nike.com
 store.nike.com
 spot.im
 slack.com
-sport.be
 spot.im
 spox.com
 bit.ly
@@ -32,3 +31,4 @@ google.se
 linkedin.com
 msn.com
 jwpcdn.com
+cdninstagram.com
