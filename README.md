@@ -16,3 +16,9 @@ Personal Hosts (to catch stragglers): https://raw.githubusercontent.com/grufwub/
 Personal Whitelist (to prevent blocking safe domains): https://raw.githubusercontent.com/grufwub/DNS-Blocklist-Compiler/master/whitelist.txt
 
 anudeepND Whitelist (again, to prevent blocking safe domains): https://github.com/anudeepND/whitelist (https://raw.githubusercontent.com/anudeepND/whitelist/master/whitelist.txt, https://raw.githubusercontent.com/anudeepND/whitelist/master/Google_domains.txt)
+
+Yhonay's Antipopads: https://raw.githubusercontent.com/Yhonay/antipopads/master/hosts
+
+Piperun's IPLogger filter: https://raw.githubusercontent.com/piperun/iploggerfilter/master/filterlist
+
+Quidsup's NoTrack blocklist: https://raw.githubusercontent.com/quidsup/notrack/master/trackers.txt
