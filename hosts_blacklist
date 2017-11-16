@@ -1718,7 +1718,6 @@ d2iz0eu06jh6f4.cloudfront.net
 d3c3cq33003psk.cloudfront.net
 d5i9o0tpq9sa1.cloudfront.net
 d36hc0p18k1aoc.cloudfront.net
-dsms0mj1bbhn4.cloudfront.net
 d3anogn3pbtk4v.cloudfront.net
 d3oltyb66oj2v8.cloudfront.net
 d2bgg7rjywcwsy.cloudfront.net
@@ -1726,7 +1725,6 @@ d32k27yvyi4kmv.cloudfront.net
 d1zatounuylvwg.cloudfront.net
 d26b395fwzu5fz.cloudfront.net
 d1v9u0bgi1uimx.cloudfront.net
-d2c8v52ll5s99u.cloudfront.net
 d2cgumzzqhgmdu.cloudfront.net
 d24n15hnbwhuhn.cloudfront.net
 d2tgfbvjf3q6hn.cloudfront.net
@@ -2835,6 +2833,7 @@ gscounters.gigya.com
 gscounters.us1.gigya.com
 counters.gigya.com
 socialize.eu1.gigya.com
+google.se
 googleadservices.com
 4.afs.googleadservices.com
 pagead2.googleadservices.com
@@ -3413,8 +3412,6 @@ ox-d.venturebeat.servedbyopenx.com
 ox-d.washingtonpost.servedbyopenx.com
 optimahub.com
 optimizely.com
-cdn.optimizely.com
-cdn3.optimizely.com
 log3.optimizely.com
 log.optimizely.com
 3459571470.log.optimizely.com
@@ -5291,14 +5288,6 @@ assoc-amazon.com
 acuityplatform.com
 click-west.acuityplatform.com
 serve-east.acuityplatform.com
-shareaholic.com
-d.shareaholic.com
-howler.shareaholic.com
-analytics.shareaholic.com
-cm.shareaholic.com
-clickcdn.shareaholic.com
-partner.shareaholic.com
-traffic.shareaholic.com
 filepicker.io
 wxug.com
 adservice.google.co.uk
@@ -8888,7 +8877,6 @@ adelly.bg
 adenbay.com
 adexprts.com
 cdn3.adexprts.com
-adf.ly
 adhdtraveler.com
 adhec.com
 adhome.biz
@@ -27090,6 +27078,13 @@ ads.qadserve.com
 qadserve.com
 js4.ringrevenue.com
 json4.ringrevenue.com
+d.shareaholic.com
+howler.shareaholic.com
+analytics.shareaholic.com
+cm.shareaholic.com
+clickcdn.shareaholic.com
+partner.shareaholic.com
+traffic.shareaholic.com
 s.shopify.com
 stats.shopify.com
 v.shopify.com
@@ -29541,7 +29536,6 @@ s.tyxo.com
 tyxo.com
 xclusive.ly
 pixel.yola.com
-s.zkcdn.net
 cdn1.zopiny.com
 adfoc.us
 api.adquality.ch
@@ -31590,7 +31584,6 @@ ad.reachppc.com
 pubs.hiddennetwork.com
 ad.digitimes.com.tw
 ads.mediatwo.com
-s.marketwatch.com
 ads.drugs.com
 tsgonline.com
 ds.eyeblaster.com
@@ -34113,7 +34106,6 @@ easy-hit-counters.com
 amer.hops.glbdns.microsoft.com
 apprep.smartscreen.microsoft.com
 reports.wes.df.telemetry.microsoft.com
-settings-win.data.microsoft.com
 statsfe2.ws.microsoft.com
 wes.df.telemetry.microsoft.com
 choice.microsoft.com
@@ -34593,7 +34585,6 @@ remotrk.com
 rightmedia.net
 rightstats.com
 roskatrack.roskadirect.com
-s.youtube.com
 s2.youtube.com
 ads.youtube.com
 s290.mxcdn.net
@@ -48474,6 +48465,8 @@ yaramol.info
 yatnozin.info
 zhinkichi.info
 a.erogaliv.com
+trustjs.net
+dxracers.accountant
 iygac.com
 auaop.com
 dewife.ru
@@ -52234,6 +52227,9 @@ i2.myapkcdn.in
 c3.myapkcdn.in
 mo.freeindoapp.com
 hqsjc.com
+tkmftc.aotter.net
+tktracker.aotter.net
+tkrecorder.aotter.net
 sumatoad.com
 upsight-api.com
 883.engine.mobileapptracking.com
@@ -52718,6 +52714,7 @@ anormal-tracker.de
 anti-cheat.info
 apexstats.com
 apextwo.com
+api.flocktory.com
 apkonline.ru
 apm.crittercism.com
 ingest.crittercism.com
@@ -54486,6 +54483,7 @@ wateryvan.com
 wirecomic.com
 xovq5nemr.com
 zbwp6ghm.com
+ga.clearbit.com
 hits.dealer.com
 clicks.dealer.com
 tracking.pornhd.com
