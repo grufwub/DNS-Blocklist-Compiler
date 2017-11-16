@@ -8,7 +8,7 @@ file_name = "hosts.txt"
 whitelist = dict()
 TYPE_STANDARD = "standard"
 TYPE_BLACKLIST = "blacklist"
-hosts_type = {TYPE_STANDARD: False, TYPE_BLACKLIST: False}
+hosts_type = dict()
 
 def setHostsType():
 	while True:
