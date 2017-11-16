@@ -124,15 +124,19 @@ def downloadPersonalHosts(d):
 
 def getWhitelist():
 	# Downloads from my manually compiled whitelist on Github to prevent sites from being blacklisted
-	url_str = "https://raw.githubusercontent.com/grufwub/DNS-Blocklist-Compiler/master/whitelist.txt"
-	print('Downloading hosts from ' + url_str)
-	response = urllib.request.urlopen(url_str)
-	data = response.read()
-	text = data.decode('utf-8')
-	for line in text.split('\n'):
-		if not line or line.startswith('/') or line.startswith('\n'):
-			continue
-		whitelist[line] = whitelist.get(line, 0) + 1
+	l = list()
+	l.append("https://raw.githubusercontent.com/grufwub/DNS-Blocklist-Compiler/master/whitelist.txt")
+	l.append("https://raw.githubusercontent.com/anudeepND/whitelist/master/Google_domains.txt")
+	l.append("https://raw.githubusercontent.com/anudeepND/whitelist/master/whitelist.txt")
+	print('Downloading whitelist')
+	for url in l:	
+		response = urllib.request.urlopen(url)
+		data = response.read()
+		text = data.decode('utf-8')
+		for line in text.split('\n'):
+			if not line or line.startswith('/') or line.startswith('\n'):
+				continue
+			whitelist[line] = whitelist.get(line, 0) + 1
 
 def getOrderedKeyList(d):
 	l = list()
@@ -185,7 +189,7 @@ def getUniqueHosts(d):
 			
 def main():
 	while True:
-		t = input("Pleas enter hosts file type (standard / blacklist)\n")
+		t = input("Please enter hosts file type (standard / blacklist)\n")
 		if setHostsType(t):
 			break
 		else:
@@ -205,10 +209,9 @@ def main():
 	count = 0
 	for key in d.keys():
 		# Only finds unique hosts if it's a blacklist for Adguard which allows use of wildcards
-		if getHostsType() == TYPE_STANDARD:
-			host_list = list(dict.fromkeys(d[key]))
-		else:
-			host_list = getUniqueHosts(d[key])
+		# if getHostsType() == TYPE_BLACKLIST:
+		# 	host_list = getUniqueHosts(d[key])
+		host_list = d[key]
 		host_list = list(dict.fromkeys(host_list)) # Hacky fix to remove duplicates since getUniqueHosts() method seems to introduce duplicates in some cases
 		for host in host_list:
 			if getHostsType() == TYPE_STANDARD:
