@@ -105,13 +105,6 @@ def addToDict(d, data):
 		d[base_domain] = td
 	return d
 
-def longestStringInList(l):
-	index = 0
-	for i in range(0, len(l)):
-		if l[i] > l[index]:
-			index = i
-	return l[index]
-
 def downloadHosts(url_str, d):
 	# Downloads hosts and passes them to the method addToDict() which returns a sorted, stripped dict of hosts
 	print('Downloading hosts from ' + url_str)
