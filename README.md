@@ -14,3 +14,5 @@ Adguard's Simplified Hosts: https://filters.adtidy.org/extension/chromium/filter
 Personal Hosts (to catch stragglers): https://raw.githubusercontent.com/grufwub/DNS-Blocklist-Compiler/master/blacklist.txt
 
 Personal Whitelist (to prevent blocking safe domains): https://raw.githubusercontent.com/grufwub/DNS-Blocklist-Compiler/master/whitelist.txt
+
+anudeepND Whitelist (again, to prevent blocking safe domains): https://github.com/anudeepND/whitelist (https://raw.githubusercontent.com/anudeepND/whitelist/master/whitelist.txt, https://raw.githubusercontent.com/anudeepND/whitelist/master/Google_domains.txt)
