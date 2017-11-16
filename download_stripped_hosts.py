@@ -10,18 +10,20 @@ TYPE_STANDARD = "standard"
 TYPE_BLACKLIST = "blacklist"
 hosts_type = {TYPE_STANDARD: False, TYPE_BLACKLIST: False}
 
-def setHostsType(t):
-	if t == TYPE_STANDARD:
-		hosts_type[TYPE_STANDARD] = True
-		print("Hosts file type set to standard")
-		return True
-	if t == TYPE_BLACKLIST:
-		hosts_type[TYPE_BLACKLIST] = True
-		print("Hosts file type set to blacklist")
-		return True
-	else:
-		print("Unrecognised hosts file type")
-		return False
+def setHostsType():
+	while True:
+		t = input("Please enter hosts file type (standard / blacklist)\n")
+		if t == TYPE_STANDARD:
+			hosts_type[TYPE_STANDARD] = True
+			print("Hosts file type set to standard")
+			break
+		if t == TYPE_BLACKLIST:
+			hosts_type[TYPE_BLACKLIST] = True
+			print("Hosts file type set to blacklist")
+			break
+		else:
+			print("Unrecognised hosts file type")
+			continue
 
 def getHostsType():
 	if hosts_type[TYPE_STANDARD]:
@@ -49,14 +51,24 @@ def addToDict(d, data):
 		if '@' in lineStr:
 			continue
 		if '#' in lineStr:
-			continue
+			if lineStr.startswith('#'):
+				continue
+			else:
+				lineStr = lineStr.split('#')[0]
 		if '$' in lineStr:
-			continue
+			if '^$important' in lineStr:
+				lineStr.replace('^$important', '')
+			else:
+				continue
 		if '*' in lineStr:
 			continue
 		if '?' in lineStr:
 			continue
 		if '=' in lineStr:
+			continue
+		if '[' in lineStr:
+			continue
+		if ']' in lineStr:
 			continue
         # Strips any whitespace
 		lineStr = lineStr.strip()
@@ -68,6 +80,8 @@ def addToDict(d, data):
 		lineStr = lineStr.replace('0.0.0.0 ', '')
         # Strips use of '^third-party'
 		lineStr = lineStr.replace('^third-party', '')
+		# Strips use of ^important
+		lineStr = lineStr.replace('^important', '')
         # Strips extra '^'
 		lineStr = lineStr.replace('^', '')
         # Removes unusable information after first '/'
@@ -105,22 +119,6 @@ def downloadHosts(url_str, d):
 	data = response.read()
 	text = data.decode('utf-8')
 	return addToDict(d, text)
-
-def downloadBetterFYITrackerList(d):
-	url = "https://raw.githubusercontent.com/anarki999/Adblock-List-Archive/master/Better.fyiTrackersBlocklist.txt"
-	return downloadHosts(url, d)
-
-def downloadSteveBlackHosts(d):
-	url = "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts"
-	return downloadHosts(url, d)
-
-def downloadAdguardDnsHosts(d):
-	url = "https://filters.adtidy.org/extension/chromium/filters/15.txt"
-	return downloadHosts(url, d)
-
-def downloadPersonalHosts(d):
-	url = "https://raw.githubusercontent.com/grufwub/DNS-Blocklist-Compiler/master/blacklist.txt"
-	return downloadHosts(url, d)
 
 def getWhitelist():
 	# Downloads from my manually compiled whitelist on Github to prevent sites from being blacklisted
@@ -188,19 +186,20 @@ def getUniqueHosts(d):
 	return return_list
 			
 def main():
-	while True:
-		t = input("Please enter hosts file type (standard / blacklist)\n")
-		if setHostsType(t):
-			break
-		else:
-			continue
+	setHostsType()
 	
 	d = dict()
+	l = list()
 	getWhitelist()
-	downloadBetterFYITrackerList(d)
-	downloadPersonalHosts(d)
-	downloadSteveBlackHosts(d)
-	downloadAdguardDnsHosts(d)
+	l.append("https://raw.githubusercontent.com/grufwub/DNS-Blocklist-Compiler/master/blacklist.txt")
+	l.append("https://filters.adtidy.org/extension/chromium/filters/15.txt")
+	l.append("https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts")
+	l.append("https://raw.githubusercontent.com/anarki999/Adblock-List-Archive/master/Better.fyiTrackersBlocklist.txt")
+	l.append("https://raw.githubusercontent.com/Yhonay/antipopads/master/hosts")
+	l.append("https://raw.githubusercontent.com/quidsup/notrack/master/trackers.txt")
+	l.append("https://raw.githubusercontent.com/piperun/iploggerfilter/master/filterlist")
+	for url in l:
+		downloadHosts(url, d)
 
 	print('Writing hosts to file:\n')
 	f = open(file_name, 'w', encoding='utf-8')
