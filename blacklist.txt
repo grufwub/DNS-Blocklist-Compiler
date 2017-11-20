@@ -6,3 +6,5 @@ wrightsmedia.com
 purch.com
 syndication.twitter.com
 syndication.twimg.com
+app-analytics.snapchat.com
+sc-analytics.appspot.com
