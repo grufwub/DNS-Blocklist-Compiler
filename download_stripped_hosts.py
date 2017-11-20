@@ -14,11 +14,11 @@ def setHostsType():
 	while True:
 		t = input("Please enter hosts file type (standard / blacklist)\n")
 		if t == TYPE_STANDARD:
-			hosts_type[TYPE_STANDARD] = True
+			hosts_type.setdefault(TYPE_STANDARD, 0)
 			print("Hosts file type set to standard")
 			break
 		if t == TYPE_BLACKLIST:
-			hosts_type[TYPE_BLACKLIST] = True
+			hosts_type.setdefault(TYPE_BLACKLIST, 0)
 			print("Hosts file type set to blacklist")
 			break
 		else:
@@ -26,9 +26,9 @@ def setHostsType():
 			continue
 
 def getHostsType():
-	if hosts_type[TYPE_STANDARD]:
+	if TYPE_STANDARD in hosts_type:
 		return TYPE_STANDARD
-	if hosts_type[TYPE_BLACKLIST]:
+	if TYPE_BLACKLIST in hosts_type:
 		return TYPE_BLACKLIST
 
 def addToDict(d, data):
@@ -58,6 +58,7 @@ def addToDict(d, data):
 		if '$' in lineStr:
 			if '^$important' in lineStr:
 				lineStr.replace('^$important', '')
+				lineStr.replace('$important', '')
 			else:
 				continue
 		if '*' in lineStr:
@@ -100,6 +101,9 @@ def addToDict(d, data):
 		# Adds the host to a dictionary which serves as the value to a parent dictionary (passed in the method argument), with the registered domain as the key
 		ext = tldextract.extract(lineStr)
 		base_domain = ext.registered_domain
+		# Skips those with an invalid base-domain
+		if base_domain == '' or base_domain == '\n' or base_domain == ' ':
+			continue
 		td = d.get(base_domain, dict())
 		td[lineStr] = td.get(lineStr, 0) + 1
 		d[base_domain] = td
@@ -184,13 +188,15 @@ def main():
 	d = dict()
 	l = list()
 	getWhitelist()
+	if getHostsType() == TYPE_STANDARD:
+		l.append("https://filters.adtidy.org/extension/chromium/filters/15.txt")
+		l.append("https://raw.githubusercontent.com/piperun/iploggerfilter/master/filterlist")
+		l.append("https://raw.githubusercontent.com/Yhonay/antipopads/master/hosts")
+		l.append("https://raw.githubusercontent.com/quidsup/notrack/master/trackers.txt")
 	l.append("https://raw.githubusercontent.com/grufwub/DNS-Blocklist-Compiler/master/blacklist.txt")
-	l.append("https://filters.adtidy.org/extension/chromium/filters/15.txt")
 	l.append("https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts")
 	l.append("https://raw.githubusercontent.com/anarki999/Adblock-List-Archive/master/Better.fyiTrackersBlocklist.txt")
-	l.append("https://raw.githubusercontent.com/Yhonay/antipopads/master/hosts")
-	l.append("https://raw.githubusercontent.com/quidsup/notrack/master/trackers.txt")
-	l.append("https://raw.githubusercontent.com/piperun/iploggerfilter/master/filterlist")
+
 	for url in l:
 		downloadHosts(url, d)
 
@@ -200,12 +206,11 @@ def main():
 		f.write(hosts_header)
 	count = 0
 	for key in d.keys():
-		# Only finds unique hosts if it's a blacklist for Adguard which allows use of wildcards
-		# if getHostsType() == TYPE_BLACKLIST:
-		# 	host_list = getUniqueHosts(d[key])
 		host_list = d[key]
 		host_list = list(dict.fromkeys(host_list)) # Hacky fix to remove duplicates since getUniqueHosts() method seems to introduce duplicates in some cases
 		for host in host_list:
+			if host == '' or host == '\n':
+				continue
 			if getHostsType() == TYPE_STANDARD:
 				host = '127.0.0.1 ' + host.strip()
 			else:
