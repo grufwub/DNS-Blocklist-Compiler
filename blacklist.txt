@@ -1,4 +1,5 @@
 adservice.google.co.uk
+adservice.google.com
 app-measurement.com
 collector.githubapp.com
 triptiahuja.com
@@ -8,3 +9,7 @@ syndication.twitter.com
 syndication.twimg.com
 app-analytics.snapchat.com
 sc-analytics.appspot.com
+api.mstrlytcs.com
+api.optnmstr
+future-publishing.msgfocus.com
+msgfocus.com
