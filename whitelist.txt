@@ -174,3 +174,7 @@ cdninstagram.com
 s.marketwatch.com
 widget-cdn.rpxnow.com
 imagesak.secureserver.net
+
+# Netflix
+www.netflix.com
+api-global.netflix.com
