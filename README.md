@@ -3,7 +3,7 @@ Compiles a list of DNS hostnames from multiple sources and strips unnecessary da
 
 Can either compile a complete list of hosts to a standard hosts file, or compile a list for a blacklist style DNS blocker.
 
-Please note the hosts_blacklist file is compiled from only 3 of the sources, as Adguard iOS Pro doesn't seem to work if your blacklist size is much over 40,000.
+Please note the hosts_blacklist file is compiled from only 4 of the sources, as Adguard iOS Pro doesn't seem to work if your blacklist size is much over 40,000.
 
 # Current sources:
 
