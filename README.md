@@ -11,7 +11,7 @@ Better.fyi Trackerlist: https://raw.githubusercontent.com/anarki999/Adblock-List
 
 Steven Black's Hosts: https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
 
-Adguard's Simplified Hosts: https://filters.adtidy.org/extension/chromium/filters/15.txt
+Adguard's Simplified DNS Hosts: https://filters.adtidy.org/extension/chromium/filters/15.txt
 
 Personal Hosts (to catch stragglers): https://raw.githubusercontent.com/grufwub/DNS-Blocklist-Compiler/master/blacklist.txt
 
@@ -24,3 +24,5 @@ Yhonay's Antipopads: https://raw.githubusercontent.com/Yhonay/antipopads/master/
 Piperun's IPLogger filter: https://raw.githubusercontent.com/piperun/iploggerfilter/master/filterlist
 
 Quidsup's NoTrack blocklist: https://raw.githubusercontent.com/quidsup/notrack/master/trackers.txt
+
+Adguard's Mobile Ads filter: https://filters.adtidy.org/extension/chromium/filters/11.txt
