@@ -54,7 +54,12 @@ def addToDict(d, data):
 			if lineStr.startswith('#'):
 				continue
 			else:
-				lineStr = lineStr.split('#')[0]
+				endList = lineStr.split('#')[1:]
+				end = ''.join(endList)
+				if '/' in end or '(' in end or ')' in end or '[' in end or ']' in end or '?' in end or '!' in end or '=' in end or ';' in end or '%' in end or '$' in end or '{' in end or '}' in end:
+					continue
+				else:
+					lineStr = lineStr.split('#')[0]
 		if '$' in lineStr:
 			if '^$important' in lineStr:
 				lineStr.replace('^$important', '')
@@ -70,6 +75,8 @@ def addToDict(d, data):
 		if '[' in lineStr:
 			continue
 		if ']' in lineStr:
+			continue
+		if ',' in lineStr:
 			continue
         # Strips any whitespace
 		lineStr = lineStr.strip()
@@ -189,13 +196,14 @@ def main():
 	l = list()
 	getWhitelist()
 	if getHostsType() == TYPE_STANDARD:
-		l.append("https://filters.adtidy.org/extension/chromium/filters/15.txt")
-		l.append("https://raw.githubusercontent.com/piperun/iploggerfilter/master/filterlist")
-		l.append("https://raw.githubusercontent.com/Yhonay/antipopads/master/hosts")
-		l.append("https://raw.githubusercontent.com/quidsup/notrack/master/trackers.txt")
-	l.append("https://raw.githubusercontent.com/grufwub/DNS-Blocklist-Compiler/master/blacklist.txt")
-	l.append("https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts")
-	l.append("https://raw.githubusercontent.com/anarki999/Adblock-List-Archive/master/Better.fyiTrackersBlocklist.txt")
+		l.append("https://filters.adtidy.org/extension/chromium/filters/15.txt") # Adguard simplified DNS filter
+		l.append("https://raw.githubusercontent.com/piperun/iploggerfilter/master/filterlist") # piperun's iplogger filter
+		l.append("https://raw.githubusercontent.com/Yhonay/antipopads/master/hosts") # Yhonay antipopads
+		l.append("https://raw.githubusercontent.com/quidsup/notrack/master/trackers.txt") # Quidsup tracker list
+	l.append("https://raw.githubusercontent.com/grufwub/DNS-Blocklist-Compiler/master/blacklist.txt") # Personal blacklist
+	l.append("https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts") # Steven Black's Hosts
+	l.append("https://filters.adtidy.org/extension/chromium/filters/11.txt") # Adguard mobile filters
+	l.append("https://raw.githubusercontent.com/anarki999/Adblock-List-Archive/master/Better.fyiTrackersBlocklist.txt") # Better.fyi tracker list
 
 	for url in l:
 		downloadHosts(url, d)
