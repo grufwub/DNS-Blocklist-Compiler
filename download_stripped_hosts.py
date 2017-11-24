@@ -39,32 +39,25 @@ def addToDict(d, data):
 		# Skip unusable lines
 		if not lineStr:
 			continue
-		if lineStr.startswith('127.0.0.1'):
-			continue
-		if lineStr.startswith('255.255.255.255'):
-			continue
-		if '!' in lineStr:
-			continue
-		if ':' in lineStr:
-			continue
-		if '@' in lineStr:
-			continue
 		if '#' in lineStr:
-			if lineStr.startswith('#'):
+			# Skips comment lines and lines blocking specific CSS items
+			if lineStr.startswith('#') or '##' in lineStr:
 				continue
 			else:
-				endList = lineStr.split('#')[1:]
-				end = ''.join(endList)
-				if '/' in end or '(' in end or ')' in end or '[' in end or ']' in end or '?' in end or '!' in end or '=' in end or ';' in end or '%' in end or '$' in end or '{' in end or '}' in end:
-					continue
-				else:
-					lineStr = lineStr.split('#')[0]
+				lineStr = lineStr.split('#')[0]
+
 		if '$' in lineStr:
 			if '^$important' in lineStr:
 				lineStr.replace('^$important', '')
 				lineStr.replace('$important', '')
 			else:
 				continue
+		if '!' in lineStr:
+			continue
+		if ':' in lineStr:
+			continue
+		if '@' in lineStr:
+			continue
 		if '*' in lineStr:
 			continue
 		if '?' in lineStr:
@@ -78,6 +71,18 @@ def addToDict(d, data):
 		if ',' in lineStr:
 			continue
 		if '/' in lineStr:
+			continue
+		if '(' in lineStr:
+			continue
+		if ')' in lineStr:
+			continue
+		if ';' in lineStr:
+			continue
+		if '%' in lineStr:
+			continue
+		if '{' in lineStr:
+			continue
+		if '{' in lineStr:
 			continue
         # Strips any whitespace
 		lineStr = lineStr.strip()
@@ -94,19 +99,20 @@ def addToDict(d, data):
 		lineStr = lineStr.replace('^important', '')
         # Strips extra '^'
 		lineStr = lineStr.replace('^', '')
-        # Checks values against whitelist and skips safe hosts
-		is_safe = False
-		for key in whitelist:
-			if lineStr == key:
-				is_safe = True
-		if is_safe:
-			continue
+
         # Skips final unusables
 		if lineStr.startswith('.') or lineStr.endswith('.'):
 			continue
 		# Adds the host to a dictionary which serves as the value to a parent dictionary (passed in the method argument), with the registered domain as the key
 		ext = tldextract.extract(lineStr)
 		base_domain = ext.registered_domain
+		# Checks values against whitelist and skips safe hosts
+		is_safe = False
+		for key in whitelist:
+			if base_domain == key:
+				is_safe = True
+		if is_safe:
+			continue
 		# Skips those with an invalid base-domain
 		if base_domain == '' or base_domain == '\n' or base_domain == ' ':
 			continue
@@ -202,7 +208,6 @@ def main():
 	l.append("https://raw.githubusercontent.com/grufwub/DNS-Blocklist-Compiler/master/blacklist.txt") # Personal blacklist
 	l.append("https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts") # Steven Black's Hosts
 	l.append("https://filters.adtidy.org/extension/chromium/filters/11.txt") # Adguard mobile filters
-	l.append("https://raw.githubusercontent.com/anarki999/Adblock-List-Archive/master/Better.fyiTrackersBlocklist.txt") # Better.fyi tracker list
 
 	for url in l:
 		downloadHosts(url, d)
