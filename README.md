@@ -1,4 +1,4 @@
-# DNS Blocklist Compiler
+# Mobile DNS Blocklist Compiler
 Compiles a list of DNS hostnames from multiple sources and strips unnecessary data.
 
 Can either compile a complete list of hosts to a standard hosts file, or compile a list for a blacklist style DNS blocker.
