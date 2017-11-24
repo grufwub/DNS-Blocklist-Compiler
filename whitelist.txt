@@ -25,6 +25,7 @@ githubusercontent.com
 
 # Spotify iOS
 spclient.wg.spotify.com
+spotify.com
 
 # Windows internet connectivity verifier
 www.msftncsi.com
@@ -149,6 +150,11 @@ ns2.dropbox.com
 itunes.apple.com
 appleid.apple.com
 
+# Netflix
+www.netflix.com
+api-global.netflix.com
+netflix.com
+
 # Miscellaneous
 thetvdb.com
 reddit.com
@@ -176,7 +182,4 @@ widget-cdn.rpxnow.com
 imagesak.secureserver.net
 m.gsmarena.com
 gsmarena.com
-
-# Netflix
-www.netflix.com
-api-global.netflix.com
+xnxx.com
