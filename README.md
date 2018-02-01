@@ -1,10 +1,6 @@
 # Mobile DNS Blocklist Compiler
 Compiles a list of DNS hostnames from multiple sources and strips unnecessary data.
 
-Can either compile a complete list of hosts to a standard hosts file, or compile a list for a blacklist style DNS blocker.
-
-Please note the hosts_blacklist file is compiled from only 3 of the sources, as Adguard iOS Pro doesn't seem to work if your blacklist size is much over 40,000.
-
 # Current sources:
 
 Steven Black's Hosts: https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
@@ -15,7 +11,10 @@ Personal Hosts (to catch stragglers): https://raw.githubusercontent.com/grufwub/
 
 Personal Whitelist (to prevent blocking safe domains): https://raw.githubusercontent.com/grufwub/DNS-Blocklist-Compiler/master/whitelist.txt
 
-anudeepND Whitelist (again, to prevent blocking safe domains): https://github.com/anudeepND/whitelist (https://raw.githubusercontent.com/anudeepND/whitelist/master/whitelist.txt, https://raw.githubusercontent.com/anudeepND/whitelist/master/Google_domains.txt)
+anudeepND Whitelist (again, to prevent blocking safe domains): https://github.com/anudeepND/whitelist (https://raw.githubusercontent.com/anudeepND/whitelist/master/whitelist.txt)
+
+anudeepND's Ad and Coinminer domain lists: (https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt,
+https://raw.githubusercontent.com/anudeepND/blacklist/master/CoinMiner.txt)
 
 Yhonay's Antipopads: https://raw.githubusercontent.com/Yhonay/antipopads/master/hosts
 
