@@ -109,7 +109,7 @@ def getWhitelist():
 	# Downloads from my manually compiled whitelist on Github to prevent sites from being blacklisted
 	l = list()
 	l.append("https://raw.githubusercontent.com/grufwub/DNS-Blocklist-Compiler/master/whitelist.txt")
-	l.append("https://raw.githubusercontent.com/anudeepND/whitelist/master/whitelist.txt")
+	l.append("https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt")
 	print('Downloading whitelist')
 	for url in l:
 		response = urllib.request.urlopen(url)
@@ -120,54 +120,54 @@ def getWhitelist():
 				continue
 			whitelist[line] = whitelist.get(line, 0) + 1
 
-def getOrderedKeyList(d):
-	l = list()
-	for i in range(0, 10):
-		if d.get(i):
-			l.append(i)
-	return l
+# def getOrderedKeyList(d):
+# 	l = list()
+# 	for i in range(0, 10):
+# 		if d.get(i):
+# 			l.append(i)
+# 	return l
 
-def getHostLengthDictionary(d):
-	return_dict = dict()
-	for key in d.keys():
-		s = key.split('.')
-		i = len(s)
-		return_dict.setdefault(i, list()).append(key)
-	return return_dict
+# def getHostLengthDictionary(d):
+# 	return_dict = dict()
+# 	for key in d.keys():
+# 		s = key.split('.')
+# 		i = len(s)
+# 		return_dict.setdefault(i, list()).append(key)
+# 	return return_dict
 
-def getUniqueHosts(d):
-	# Returns a list of unique hosts for each registered domain, that don't overlap subdomains (e.g. stats.facebook.com and s.stats.facebook.com), keeping only the shortest.
-	# For each registered domain, goes through the listed hosts and creates a dictionary with {"Number of domain levels" : List[domain, domain, domain]}
-	length_dict = getHostLengthDictionary(d)
-	return_list = list()
-	# Creates an ordered list of keys (which are the domain level ints).
-	key_list = getOrderedKeyList(length_dict)
-	# BUG: another hacky fix right here to account for key_list sometimes being empty
-	if len(key_list) == 0:
-		return [""]
-	min_length = min(key_list)
-	min_length_host = length_dict[min_length][0]
-	ext = tldextract.extract(min_length_host)
-	# If dictionary contains the registered domain (so all traffic should be blocked), returns only this.
-	if min_length_host == ext.registered_domain:
-		return_list.append(min_length_host)
-	else:
-		# Else goes through the dictionary and finds unique non-overlapping domains
-		previous = list()
-		# BUG: this for loop seems to create duplicates in some instances
-		for length in key_list:
-			current = length_dict[length]
-			if length == min_length:
-				previous = current
-				return_list.extend(current)
-			else:
-				add_to_return_list = list()
-				for host in return_list:
-					for entry in current:
-						if host not in entry and len(entry) > len(host):
-							add_to_return_list.append(entry)
-				return_list.extend(add_to_return_list)
-	return return_list
+# def getUniqueHosts(d):
+# 	# Returns a list of unique hosts for each registered domain, that don't overlap subdomains (e.g. stats.facebook.com and s.stats.facebook.com), keeping only the shortest.
+# 	# For each registered domain, goes through the listed hosts and creates a dictionary with {"Number of domain levels" : List[domain, domain, domain]}
+# 	length_dict = getHostLengthDictionary(d)
+# 	return_list = list()
+# 	# Creates an ordered list of keys (which are the domain level ints).
+# 	key_list = getOrderedKeyList(length_dict)
+# 	# BUG: another hacky fix right here to account for key_list sometimes being empty
+# 	if len(key_list) == 0:
+# 		return [""]
+# 	min_length = min(key_list)
+# 	min_length_host = length_dict[min_length][0]
+# 	ext = tldextract.extract(min_length_host)
+# 	# If dictionary contains the registered domain (so all traffic should be blocked), returns only this.
+# 	if min_length_host == ext.registered_domain:
+# 		return_list.append(min_length_host)
+# 	else:
+# 		# Else goes through the dictionary and finds unique non-overlapping domains
+# 		previous = list()
+# 		# BUG: this for loop seems to create duplicates in some instances
+# 		for length in key_list:
+# 			current = length_dict[length]
+# 			if length == min_length:
+# 				previous = current
+# 				return_list.extend(current)
+# 			else:
+# 				add_to_return_list = list()
+# 				for host in return_list:
+# 					for entry in current:
+# 						if host not in entry and len(entry) > len(host):
+# 							add_to_return_list.append(entry)
+# 				return_list.extend(add_to_return_list)
+# 	return return_list
 
 def main():
 	d = dict()
@@ -175,13 +175,12 @@ def main():
 	getWhitelist()
 	l.append("https://filters.adtidy.org/extension/chromium/filters/15.txt") # Adguard simplified DNS filter
 	l.append("https://raw.githubusercontent.com/piperun/iploggerfilter/master/filterlist") # piperun's iplogger filter
-	l.append("https://raw.githubusercontent.com/Yhonay/antipopads/master/hosts") # Yhonay antipopads
+	# l.append("https://raw.githubusercontent.com/Yhonay/antipopads/master/hosts") # Yhonay antipopads
 	l.append("https://raw.githubusercontent.com/quidsup/notrack/master/trackers.txt") # Quidsup tracker list
-	l.append("https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt") # anudeepND's Ad domain list
-	l.append("https://raw.githubusercontent.com/anudeepND/blacklist/master/CoinMiner.txt") # anudeepND's Coinminer domain list
+	# l.append("https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt") # anudeepND's Ad domain list
+	# l.append("https://raw.githubusercontent.com/anudeepND/blacklist/master/CoinMiner.txt") # anudeepND's Coinminer domain list
 	l.append("https://raw.githubusercontent.com/grufwub/DNS-Blocklist-Compiler/master/blacklist.txt") # Personal blacklist
 	l.append("https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts") # Steven Black's Hosts
-	l.append("https://filters.adtidy.org/extension/chromium/filters/11.txt") # Adguard mobile filters
 
 	for url in l:
 		downloadHosts(url, d)
