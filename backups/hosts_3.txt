@@ -1,0 +1,14 @@
+adservice.google.co.uk
+adservice.google.com
+app-measurement.com
+collector.githubapp.com
+triptiahuja.com
+wrightsmedia.com
+purch.com
+syndication.twitter.com
+syndication.twimg.com
+app-analytics.snapchat.com
+sc-analytics.appspot.com
+api.mstrlytcs.com
+future-publishing.msgfocus.com
+msgfocus.com
