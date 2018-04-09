@@ -35,12 +35,8 @@ cdnjs.cloudflare.com
 ec-ns.sascdn.com
 ssl.p.jwpcdn.com
 widget-cdn.rpxnow.com
-adf.ly
-bit.ly
-goo.gl
 t.co
 youtu.be
-ow.ly
 1drv.com
 c.s-microsoft.com
 i.s-microsoft.com
@@ -61,6 +57,8 @@ g.live.com
 live.com
 login.live.com
 s.gateway.messenger.live.com
+outlook.live.com
+nexusrules.officeapps.live.com
 attestation.xboxlive.com
 cert.mgt.xboxlive.com
 def-vef.xboxlive.com
@@ -135,6 +133,7 @@ appleid.apple.com
 oscp.apple.com
 wordpress.com
 wp.com
+s1.wp.com
 alluremedia.com.au
 api.ipify.org
 bing.com
@@ -170,6 +169,7 @@ s.marketwatch.com
 s.shopify.com
 v.shopify.com
 s3.amazonaws.com
+amazonaws.com
 sa.symcb.com
 secure.surveymonkey.com
 surveymonkey.com
@@ -191,3 +191,5 @@ img.vidible.tv
 videos.vidible.tv
 cdn.vidible.tv
 edge.api.brightcove.com
+tinyurl.com
+giphy.com
