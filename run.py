@@ -175,7 +175,7 @@ def processWhitelist(data):
 
 def backupToFile(data, file_name):
 	print('Backing up host list %s...\n', file_name)
-	if data.keys().length() == 0:
+	if len(data.keys()) == 0:
 		print('Dict empty. Not backing up.')
 		return
 
