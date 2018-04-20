@@ -98,7 +98,7 @@ my.plexapp.com
 nine.plugins.plexapp.com
 node.plexapp.com
 tvthemes.plexapp.com
-tvthemes.plexapp.com.cdn.cloudflare.net
+cdn.cloudflare.net
 dataplicity.com
 dynupdate.no-ip.com
 no-ip.com
@@ -194,3 +194,4 @@ edge.api.brightcove.com
 tinyurl.com
 giphy.com
 linuxtracker.org
+om.cbsi.com
