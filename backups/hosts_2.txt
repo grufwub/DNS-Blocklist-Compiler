@@ -125,6 +125,7 @@ ad-stir.com
 ad.12dt.com
 ad.groupon.co.uk
 partner-ts.groupon.co.uk
+ad.weplayer.cc
 ad4game.com
 adacado.com
 adaction.mobi
@@ -171,7 +172,6 @@ audio2.spotify.com
 crashdump.spotify.com
 heads-ec.spotify.com
 log.spotify.com
-spclient.wg.spotify.com
 sto3.spotify.com
 adexchangeprediction.com
 adexpert.cz
@@ -286,6 +286,7 @@ ads-ai.com
 ads-creativesyndicator.com
 ads-for-apps.com
 ads-verify.net
+ads.chaturbate.com
 ads.diamonds
 ads.ebay.com
 stats.ebay.com
@@ -498,6 +499,7 @@ analytics.amakings.com
 analytics.brave.com
 analytics.ccs.mcafee.com
 smetrics.mcafee.com
+analytics.cohesionapps.com
 analytics.faw.sky.com
 smetrics.sky.com
 analytics.gandi.net
@@ -730,6 +732,7 @@ brandedshortlinks.com
 brandedshorturl.com
 brandedurl.com
 brandgatekeeper.com
+bravo-dog.com
 bravocampmon.com
 bravocreatesend.com
 bravodevcampaignmonitor.com
@@ -804,6 +807,7 @@ buysellads.com
 buysellads.net
 buysub.com
 buzzybar.com
+byside.com
 bz.io
 c-ctrip.com
 c.afekv.com
@@ -929,6 +933,8 @@ clicktracks.us
 clickwindow.com
 clickwindow.net
 client-event-reporter.twitch.tv
+countess.twitch.tv
+deviceidshare.twitch.tv
 clientsend.com
 clixengine.com
 clixmetrix.com
@@ -1615,6 +1621,7 @@ fwmrm.net
 fyre.co
 gaheatmaps.com
 galacticoffers.com
+gall-tarquin.com
 gameofoffers.com
 gamned.com
 gardendiscount.com
@@ -1623,6 +1630,7 @@ gaug.es
 gbl007.com
 gblwebcen.com
 gemius.pl
+generalsearches.com
 genericlink.com
 geoadnxs.com
 geoadnxs.net
@@ -1680,6 +1688,7 @@ googletagservices.com
 gorillanation.com
 goroost.com
 gosquared.com
+gotourls.bid
 gotraffic.net
 gpwebsolutions.co.uk
 graf.ly
@@ -11110,6 +11119,7 @@ myclickmeter.com
 mycomscore.com
 mycomscore.net
 mydas.mobi
+mydatabankapp.com
 mydefense.info
 myflairware.com
 myflairware.net
@@ -11611,6 +11621,7 @@ researchresults.com
 reson8.com.au
 responsetap.com
 retailautomata.com
+retargeting.biz
 returnpath.net
 revcontent.com
 revdepo.com
@@ -11710,6 +11721,7 @@ rubiconproject.org
 runadtag.com
 rundsp.com
 runicy.com
+ruralstring.com
 rushredmsmt.com
 rutargeter.com
 rvfrm2002.com
@@ -12196,6 +12208,7 @@ track-mv-01.com
 track-mv-02.com
 track-mv.com
 track.cpa.iqoption.com
+track.flexlinkspro.com
 track.us.org
 trackad.cz
 trackalyzer.com
@@ -12247,6 +12260,8 @@ trkthatpaper.org
 trkyme.com
 trovaamici.com
 tru.am
+truehits.in.th
+truehits.net
 truste-svc.net
 truste.com
 trusted.site
