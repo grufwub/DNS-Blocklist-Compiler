@@ -284,6 +284,9 @@ adrtx.net
 adrunnr.com
 ads-ai.com
 ads-creativesyndicator.com
+ads-d.viber.com
+ads.aws.viber.com
+ads.viber.com
 ads-for-apps.com
 ads-verify.net
 ads.chaturbate.com
@@ -637,6 +640,8 @@ bae5tracker.com
 bandelcot.com
 bannerflow.com
 bannermeter.com
+barra.iol.pt
+barranew.iol.pt
 basebanner.com
 bat.bing.com
 batchgeo.com
@@ -650,6 +655,7 @@ beacon.groceries.asda.com
 omniture.groceries.asda.com
 beacon.guim.co.uk
 beanstock.com
+beemray.com
 begun.ru
 behancemanage.com
 behavior.com
@@ -1204,7 +1210,6 @@ dtt617kogtcso.cloudfront.net
 da-ads.com
 dakic-ia-300.com
 danuoyi.alicdn.com
-g.alicdn.com
 daphnecm.com
 dapxl.com
 dart.l.doubleclick.net
@@ -11384,6 +11389,7 @@ pictela.net
 piksel.com
 pimpb.us
 pinchoo.com
+ping.ublock.org
 pingdom.net
 pingme.net
 pingmemessenger.com
@@ -11984,6 +11990,7 @@ snt4.net
 snta0034.com
 socialhoney.co
 sociomantic.com
+socy.es
 softtrack08.com
 softwaredefined.guru
 softwaredefined.us
