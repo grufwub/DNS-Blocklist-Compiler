@@ -110,7 +110,7 @@ def process_hosts(data):
 			else:
 				if lineStr.endswith('^'):
 					lineStr = lineStr.replace('^', '')
-					
+
 				else:
 					continue
 
@@ -320,13 +320,26 @@ def compileAndCheck(blocklists, whitelists):
 def main():
 	print('Downloading blocklists...')
 	blocklists = list()
-	blocklists.append( download_process_hosts('https://filters.adtidy.org/extension/chromium/filters/15.txt') )
+	# blocklists.append( download_process_hosts('https://filters.adtidy.org/extension/chromium/filters/15.txt') )
 	blocklists.append( download_process_hosts('https://raw.githubusercontent.com/piperun/iploggerfilter/master/filterlist') )
 	blocklists.append( download_process_hosts('https://raw.githubusercontent.com/quidsup/notrack/master/trackers.txt') )
 	blocklists.append( download_process_hosts('https://raw.githubusercontent.com/grufwub/DNS-Blocklist-Compiler/master/blacklist.txt') )
-	blocklists.append( download_process_hosts('https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts') )
+	# blocklists.append( download_process_hosts('https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts') )
 	blocklists.append( download_process_hosts('https://filters.adtidy.org/extension/chromium/filters/11.txt') )
 	blocklists.append( download_process_hosts('https://raw.githubusercontent.com/anarki999/Adblock-List-Archive/master/Better.fyiTrackersBlocklist.txt'))
+	blocklists.append( download_process_hosts('https://raw.githubusercontent.com/FadeMind/hosts.extras/master/add.2o7Net/hosts'))
+	blocklists.append( download_process_hosts('https://raw.githubusercontent.com/AdAway/adaway.github.io/master/hosts.txt'))
+	blocklists.append( download_process_hosts('http://someonewhocares.org/hosts/zero/hosts'))
+	blocklists.append( download_process_hosts('http://winhelp2002.mvps.org/hosts.txt'))
+	blocklists.append( download_process_hosts('https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&mimetype=plaintext&useip=0.0.0.0'))
+	blocklists.append( download_process_hosts('https://raw.githubusercontent.com/lightswitch05/hosts/master/ads-and-tracking-extended.txt'))
+	blocklists.append( download_process_hosts('https://raw.githubusercontent.com/StevenBlack/hosts/master/data/StevenBlack/hosts'))
+	blocklists.append( download_process_hosts('http://www.malwaredomainlist.com/hostslist/hosts.txt'))
+	blocklists.append( download_process_hosts('https://zerodot1.gitlab.io/CoinBlockerLists/hosts_browser'))
+	blocklists.append( download_process_hosts('https://raw.githubusercontent.com/mitchellkrogza/Badd-Boyz-Hosts/master/hosts'))
+	# blocklists.append( download_process_hosts('https://raw.githubusercontent.com/cbuijs/airelle/master/ads.hosts.list'))
+	# blocklists.append( download_process_hosts('https://raw.githubusercontent.com/cbuijs/airelle/master/trackers.hosts.list'))
+	# blocklists.append( download_process_hosts('https://raw.githubusercontent.com/cbuijs/airelle/master/malware.hosts.list'))
 	# blocklists.append( download_process_hosts('https://raw.githubusercontent.com/Yhonay/antipopads/master/hosts') )
 	# blocklists.append( download_process_hosts('https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt') )
 	# blocklists.append( download_process_hosts('https://raw.githubusercontent.com/anudeepND/blacklist/master/CoinMiner.txt') )
