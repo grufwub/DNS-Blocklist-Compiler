@@ -11,7 +11,7 @@ class HostList:
 	def __init__(self, url = str()):
 		self.__NAME = self.create_name(url)
 		self.__HOSTS = dict()
-		self.__NEW_DATA = False
+		self.__NEW_DATA = False # Change name of this flag and connected functions. Gives the wrong idea of what it's actually doing
 	
 	def create_name(self, url = str()):
 		result = ''
@@ -82,25 +82,40 @@ def process_hosts(data):
 		# Skip unusable lines
 		if not lineStr:
 			continue
+
+		# Strips any whitespace
+		lineStr = lineStr.strip()
+        # Strips initial pipe symbols
+		lineStr = lineStr.replace('|', '')
+        # Strips use of 'www.'
+		lineStr = lineStr.replace('www.', '')
+        # Strips initial '0.0.0.0 ' / '127.0.0.1 ' from host files
+		lineStr = lineStr.replace('0.0.0.0 ', '')
+		lineStr = lineStr.replace('127.0.0.1 ', '')
+
 		if '#' in lineStr:
 			# Skips comment lines and lines blocking specific CSS items
 			if lineStr.startswith('#') or '##' in lineStr:
 				continue
 			else:
-				lineStr = lineStr.split('#')[0]
-		if '$' in lineStr:
-			if '$important' in lineStr:
-				lineStr.replace('$important', '')
-			else:
-				continue
+				lineStr = lineStr.split('#')[0] # Removes excess comment strings located after host
+
 		if '^' in lineStr:
 			if lineStr.endswith('^third-party'):
-				lineStr.replace('^third-party', '')
+				lineStr = lineStr.replace('^third-party', '')
+
+			elif lineStr.endswith('^$important'):
+				lineStr = lineStr.replace('^$important', '')
+
 			else:
 				if lineStr.endswith('^'):
-					lineStr.replace('^', '')
+					lineStr = lineStr.replace('^', '')
+					
 				else:
 					continue
+
+		if '$' in lineStr:
+			continue
 		if '!' in lineStr:
 			continue
 		if ':' in lineStr:
@@ -133,27 +148,22 @@ def process_hosts(data):
 			continue
 		if '{' in lineStr:
 			continue
-        # Strips any whitespace
-		lineStr = lineStr.strip()
-        # Strips initial pipe symbols
-		lineStr = lineStr.replace('|', '')
-        # Strips use of 'www.'
-		lineStr = lineStr.replace('www.', '')
-        # Strips initial '0.0.0.0 ' / '127.0.0.1 ' from host files
-		lineStr = lineStr.replace('0.0.0.0 ', '')
-		lineStr = lineStr.replace('127.0.0.1 ', '')
+
         # Skips final unusables
 		if lineStr.startswith('.') or lineStr.endswith('.'):
 			continue
+
 		# Adds the host to a dictionary which serves as the value to a parent dictionary (passed in the method argument), with the registered domain as the key
 		ext = tldextract.extract(lineStr)
 		base_domain = ext.registered_domain
 		if base_domain == '' or base_domain == '\n' or base_domain == ' ':
 			continue
+
 		# Write line to dictionary
 		td = hosts.get(base_domain, dict())
 		td[lineStr] = td.get(lineStr, 0) + 1
 		hosts[base_domain] = td
+
 	return hosts
 
 def processWhitelist(data):
@@ -224,9 +234,10 @@ def processWhitelist(data):
 	return whitelist
 
 def backupToFile(data, file_name):
-	print('Backing up host list %s...\n' % file_name)
+	print('Backing up host list %s...' % file_name)
 	if len(data.keys()) == 0:
 		print('Dict empty. Not backing up.')
+		print(data)
 		return
 
 	f = open(file_name, 'w', encoding='utf-8')
@@ -235,7 +246,6 @@ def backupToFile(data, file_name):
 		for key in hosts_dict:
 			f.write(key + '\n')
 	f.close()
-	print('Finished.')
 
 def compileAndCheck(blocklists, whitelists):
 	blocklist = list()
@@ -316,7 +326,7 @@ def main():
 	blocklists.append( download_process_hosts('https://raw.githubusercontent.com/grufwub/DNS-Blocklist-Compiler/master/blacklist.txt') )
 	blocklists.append( download_process_hosts('https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts') )
 	blocklists.append( download_process_hosts('https://filters.adtidy.org/extension/chromium/filters/11.txt') )
-	blocklists.append( download_process_hosts('https://raw.githubusercontent.com/anarki999/Adblock-List-Archive/master/Better.fyiTrackersBlocklist.txt') )
+	blocklists.append( download_process_hosts('https://raw.githubusercontent.com/anarki999/Adblock-List-Archive/master/Better.fyiTrackersBlocklist.txt'))
 	# blocklists.append( download_process_hosts('https://raw.githubusercontent.com/Yhonay/antipopads/master/hosts') )
 	# blocklists.append( download_process_hosts('https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt') )
 	# blocklists.append( download_process_hosts('https://raw.githubusercontent.com/anudeepND/blacklist/master/CoinMiner.txt') )
@@ -338,7 +348,6 @@ def main():
 			continue
 
 		file_name = __BACKUP_DIR + blocklist.get_name() + __BACKUP_EXT
-		print(file_name)
 		backupToFile(blocklist.get_hosts(), file_name)
 
 	for whitelist in whitelists:
@@ -346,7 +355,6 @@ def main():
 			continue
 
 		file_name = __BACKUP_DIR + whitelist.get_name() + __BACKUP_EXT
-		print(file_name)
 		backupToFile(whitelist.get_hosts(), file_name)
 	print('--------------------------\n')
 
