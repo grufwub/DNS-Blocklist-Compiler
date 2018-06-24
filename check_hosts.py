@@ -1,3 +1,5 @@
+# TODO: optimize this so much more... Using compile.process_hosts() isn't the most efficient way. And other parts too!
+
 import os, compile
 from urllib.request import urlopen, URLError, HTTPError
 
@@ -10,18 +12,8 @@ def extract_hosts_from_file(filename):
     raw = str()
 
     f = open(filename, 'r', encoding='utf-8')
-    looping = True
-    while (looping):
-        # Hacky workaround since it only seemed to be reading one char at a time?
-        for content in f.read():
-            if content == None:
-                looping = False
-                break
-            if content == '\n':
-                break
-            raw += content
-        raw += '\n'
-
+    for line in f.readlines():
+        raw += line + '\n'
     f.close()
 
     hosts = compile.process_hosts(raw)
@@ -30,9 +22,15 @@ def extract_hosts_from_file(filename):
 
 def ping_host(host):
     try:
-        response = urlopen(host)
-    except HTTPError or URLError:
+        url = 'http://' + host
+        response = urlopen(url)
+    except HTTPError:
         return False
+    except URLError:
+        return False
+    except Exception as e:
+        print('Exception with host %s' % host)
+        print(e)
     
     return True
 
@@ -45,25 +43,31 @@ def run():
 
     print('Extracting hosts from file...')
     hosts = extract_hosts_from_file(__HOSTS_FILE)
-    print(hosts)
-    before_count = len(hosts)
-    print('Pinging hosts...')
-    for host in hosts.keys():
-        print(host)
-        result = ping_host(host)
-        print('ping %s result = %d' % host, result)
-        if result == True:
-            hosts[host] += 1
-    
-    # print('Writing checked hosts to new file %s' % __CHECKED_HOSTS_FILE)
-    # after_count = 0
-    # f = open(__CHECKED_HOSTS_FILE, 'w', encoding='utf-8')
-    # for host in hosts.keys():
-    #     if hosts[host] > 0:
-    #         continue
-    #     f.write(host + '\n')
-    #     after_count += 1
-    # f.close()
 
-    # diff = before_count - after_count
-    # print('Finished counting %d entries and discarding %d' % after_count, diff)
+    before_count = len(hosts)
+    print('Pinging hosts... [please wait this may take a while!]')
+
+    for i in range(__NO_PING_CHECKS):
+        for host in hosts.keys():
+            host_dict = hosts[host]
+            for individual_host in host_dict:
+                result = ping_host(host)
+                if result == False:
+                    hosts[host][individual_host] += 1
+    
+    print('Writing checked hosts to new file %s' % __CHECKED_HOSTS_FILE)
+    after_count = 0
+    f = open(__CHECKED_HOSTS_FILE, 'w', encoding='utf-8')
+    for host in hosts.keys():
+        host_dict = hosts[host]
+        for individual_host in host_dict:
+            if host_dict[individual_host] == __NO_PING_CHECKS - 1:
+                continue
+            f.write('127.0.0.1 ' + individual_host + '\n')
+            after_count += 1
+    f.close()
+
+    print('Finished counting %d entries and discarding %d' % (after_count, before_count - after_count))
+
+if __name__ == '__main__':
+    run()

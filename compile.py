@@ -393,3 +393,6 @@ def run():
 	f.close()
 	print('--------------------------')
 	print('Done! Counted %d entries. (:\n' % count)
+
+if __name__ == '__main__':
+	run()
