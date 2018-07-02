@@ -455,6 +455,8 @@ api.gameanalytics.com
 api.infinario.com
 api.intentiq.com
 adserver.intentiq.com
+api.redshell.io
+redshell.io
 api.tumra.com
 apple.com-onlinesupport.host
 app.yesware.com
@@ -1392,6 +1394,8 @@ banners.looksmart.com
 beseenad.looksmart.com
 bsads.looksmart.com
 oascentral.looksmart.com
+in.treasuredata.com
+treasuredata.com
 in.webcounter.cc
 iovation.co.uk
 iplogger.org
@@ -3459,6 +3463,7 @@ taba.site
 tanger.com.br
 te81.net
 trucktirehotline.com
+upgradeexplorer.com
 upi6.pillsstore-c.com		
 via99.org
 videolove.clanteam.com
@@ -11020,7 +11025,6 @@ thirtydaychange.com
 this.content.served.by.addshuffle.com
 thoughtfully-free.com
 timelywebsitehostesses.com
-tiqcdn.com
 titan-gel-extra.com
 tlx.3lift.com
 t.mdn2015x1.com

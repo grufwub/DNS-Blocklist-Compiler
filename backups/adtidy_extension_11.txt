@@ -373,6 +373,7 @@ ads.tremorhub.com
 config.tremorhub.com
 ads.xlxtra.com
 ads.youtube.com
+m.youtube.com
 adsafeprotected.com
 adsame.com
 adscale.de

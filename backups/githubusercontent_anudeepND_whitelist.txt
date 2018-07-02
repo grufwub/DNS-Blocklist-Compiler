@@ -139,6 +139,8 @@ api.ipify.org
 bing.com
 brightcove.net
 players.brightcove.net
+secure.brightcove.com
+edge.api.brightcove.com
 bufferapp.com
 crisp.chat
 d2c8v52ll5s99u.cloudfront.net
@@ -190,7 +192,6 @@ delivery.vidible.tv
 img.vidible.tv
 videos.vidible.tv
 cdn.vidible.tv
-edge.api.brightcove.com
 tinyurl.com
 giphy.com
 linuxtracker.org
