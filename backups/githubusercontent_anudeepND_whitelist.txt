@@ -47,7 +47,6 @@ geo-prod.do.dsp.mp.microsoft.com
 microsoft.com
 support.microsoft.com
 win10.ipv6.microsoft.com
-v10.events.data.microsoft.com
 xbox.ipv6.microsoft.com
 officeclient.microsoft.com
 dns.msftncsi.com

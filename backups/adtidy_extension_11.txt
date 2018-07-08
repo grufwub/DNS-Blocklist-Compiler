@@ -66,6 +66,16 @@ i2.myapkcdn.in
 c3.myapkcdn.in
 admin.appnext.com
 mo.freeindoapp.com
+tkcatwalk.aotter.net
+tkmedia.aotter.net
+tkmedia-cache.aotter.net
+tkportal.aotter.net
+tkmftc.aotter.net
+tktracker.aotter.net
+tkrecorder.aotter.net
+client.midosoo.com
+sc.smardroid.com
+ap.smardroid.com
 pssvc.iqzone.com
 cdn-cf.postitial.com
 opt8.co
@@ -97,7 +107,6 @@ adsmogo.mobi
 adbetnet.advertserve.com
 chartboosts.com
 mobpowertech.com
-ap.smardroid.com
 api.ampiri.com
 rtb.kds.media
 splicky.com
@@ -111,9 +120,6 @@ adn.insight.ucweb.com
 uc.ucweb.com
 puds.ucweb.com
 us.3zs0.date
-tkmftc.aotter.net
-tktracker.aotter.net
-tkrecorder.aotter.net
 sumatoad.com
 upsight-api.com
 gdn.bigfishgames.com
@@ -876,7 +882,6 @@ gizmobolt.com
 blogdoiphone.com
 westseattleblog.com
 giveawayoftheday.com
-m.dizilab6.com
 pornhub.com
 m.timesofindia.com
 youjizz.com
@@ -887,6 +892,8 @@ free-sex-video.net
 xtube.com
 m.spankbang.com
 sasisa.ru
+m.dizilab6.com
+techcrunch.com
 tuttoandroid.net
 realthaisluts.com
 m.fanfox.net

@@ -504,6 +504,15 @@ abc.cosiloon.com
 abd.cosiloon.com
 app.storage.yunvm.com
 pull-3045.kxcdn.com
+a.tvpage.com
+api.tvpage.com
+mktg.tvpage.com
+sitecdn.tvpage.com
+tvpage.com
+cdnjs.tvpage.com
+stage.tvpage.com
+appcdn.tvpage.com
+videos-bleepingcomputers-com.tvpagecdn.com
 app-measurement.com
 agl.hotstar.com
 segment.hotstar.com
@@ -787,3 +796,4 @@ sex-and-flirt.com
 rtb-adsterra.flshtrk.store
 best2017games.com
 bet365.com
+api.userstyles.org
