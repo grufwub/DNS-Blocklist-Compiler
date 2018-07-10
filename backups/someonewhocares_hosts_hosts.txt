@@ -1934,6 +1934,7 @@ simpletrck.com
 sitestats.tiscali.co.uk
 sm45mailtrack.com
 smartstats.com
+smetrics.tesco.com
 softonic.com
 adserver.softonic.com
 softonic.it
@@ -2457,6 +2458,9 @@ uip.semasio.net
 ultimatecounter.com
 usa.nedstat.net
 v7.stats.load.com
+v8.analytics.pinsightmedia.com
+v8engine.pinsightmedia.com
+v8push.pinsightmedia.com
 valueclick.com
 www60.valueclick.com
 fp.valueclick.com
@@ -9436,6 +9440,7 @@ ioubes.press
 ipad2free4u.com
 i.pcp001.com
 iphone-avril.offreflash.xyz
+ipm-provider.ff.avast.com
 i.qitrck.com
 qitrck.com
 i.radzolo.com 
