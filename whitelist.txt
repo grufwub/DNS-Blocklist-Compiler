@@ -185,3 +185,5 @@ m.gsmarena.com
 gsmarena.com
 img.xnxx.com
 multi.xnxx.com
+cdn.ravenjs.com # Need to double check, might be used for some ads?
+boards.greenhouse.io
