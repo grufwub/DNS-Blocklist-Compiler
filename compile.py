@@ -48,7 +48,7 @@ def download_process_hosts(url_str):
 	try:
 		raw_text = download(url_str)
 		hostlist.set_new_data_flag()
-	except HTTPError or URLError:
+	except HTTPError | URLError:
 		print('Unable to download hosts from %s. Retrieving saved backup...' % url_str)
 		raw_text = retrieve_hosts_backup(url_str)
 
@@ -349,6 +349,7 @@ def run():
 
 	print('Downloading whitelists...')
 	whitelists = list()
+	# TODO: only read personal whitelist from file. No need to download from github??
 	whitelists.append( download_process_hosts('https://raw.githubusercontent.com/grufwub/DNS-Blocklist-Compiler/master/whitelist.txt') )
 	whitelists.append( download_process_hosts('https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt') )
 	print('--------------------------')

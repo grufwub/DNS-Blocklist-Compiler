@@ -1,5 +1,6 @@
 googleusercontent.com
 youtube.com
+m.youtube.com
 s.youtube.com
 googleapis.com
 maps.googleapis.com
