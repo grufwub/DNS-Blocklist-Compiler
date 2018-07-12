@@ -37,6 +37,7 @@ engine.adclick.lv
 show.adclick.lv
 static.adclick.lv
 adclick.lv
+adclicks.io
 servedby.adcombination.com
 adcomplete.com
 adcore.ru
@@ -185,6 +186,7 @@ gam.adnxs.com
 ib.adnxs.com
 mob.adnxs.com
 nym1.ib.adnxs.com
+nym1-ib.adnxs.com
 sin1.g.adnxs.com
 cdn.adnxs.com
 speednetwork14.adk2.co
@@ -846,6 +848,7 @@ dm.demdex.net
 twc.demdex.net
 marthastewart.demdex.net
 fedex.demdex.net
+mscom.demdex.net
 schwab.demdex.net
 adobe.demdex.net
 condenast.demdex.net
@@ -897,7 +900,6 @@ cache.directorym.com
 direct-stats.com
 glitter.services.disqus.com
 links.services.disqus.com
-realtime.services.disqus.com
 tempest.services.disqus.com
 juggler.services.disqus.com
 referrer.disqus.com
@@ -3682,7 +3684,6 @@ ads1.msads.net
 a.ads1.msads.net
 a.ads2.msads.net
 b.ads2.msads.net
-cdn.mxpnl.com
 s.ntv.io
 adcache.nymag.com
 stats.nymag.com
@@ -5362,7 +5363,6 @@ zc.zeroredirect1.com
 ze1.zeroredirect1.com
 za2.zeroredirect8.com
 t.zqtk.net
-segment-data.zqtk.net
 trk.ablogica.com
 pool.admedo.com
 apphostcapital.com 
@@ -5420,6 +5420,7 @@ cdn.opensubcontent.com
 advrts-1.revenue-tracker.com
 collector-195.tvsquared.com 
 collector-1054.tvsquared.com
+collector-2398.tvsquared.com
 collector-184.tvsquared.com 
 collector-428.tvsquared.com 
 track.absoluteclickscom.com
