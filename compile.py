@@ -88,8 +88,6 @@ def process_hosts(data):
 		lineStr = lineStr.strip()
         # Strips initial pipe symbols
 		lineStr = lineStr.replace('|', '')
-        # Strips use of 'www.'
-		lineStr = lineStr.replace('www.', '')
         # Strips initial '0.0.0.0 ' / '127.0.0.1 ' from host files
 		lineStr = lineStr.replace('0.0.0.0 ', '')
 		lineStr = lineStr.replace('127.0.0.1 ', '')

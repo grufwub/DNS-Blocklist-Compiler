@@ -141,3 +141,5 @@ m.gsmarena.com
 gsmarena.com
 img.xnxx.com
 multi.xnxx.com
+cdn.ravenjs.com 
+boards.greenhouse.io

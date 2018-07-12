@@ -1,3 +1,8 @@
+growth-pa.googleapis.com
+google-analytics.com
+usage.readdle.com
+pl-mercury.netlify.com
+events.browsiprod.com
 adservice.google.co.uk
 adservice.google.com
 www-google-analytics.l.google.com
