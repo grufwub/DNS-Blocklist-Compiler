@@ -1,6 +1,7 @@
 # Google - commonly used
 googleusercontent.com
 youtube.com
+m.youtube.com
 googleapis.com
 google.com
 mtalk.google.com
