@@ -141,7 +141,7 @@ gigya.com
 googleadservices.com
 googlesyndication.com
 imasdk.googleapis.com
-googleapis.com
+www.googleapis.com
 content.googleapis.com
 googletagmanager.com
 googletagservices.com

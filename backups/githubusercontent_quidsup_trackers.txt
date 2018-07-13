@@ -173,6 +173,7 @@ crashdump.spotify.com
 heads-ec.spotify.com 
 log.spotify.com 
 sto3.spotify.com 
+www.audio2.spotify.com 
 adexchangeprediction.com 
 adexpert.cz 
 adfast.net 

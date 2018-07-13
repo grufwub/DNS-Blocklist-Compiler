@@ -19,7 +19,7 @@ githubapp.com
 githubusercontent.com
 spclient.wg.spotify.com
 spotify.com
-msftncsi.com
+www.msftncsi.com
 g.live.com
 login.live.com
 s.gateway.messenger.live.com
@@ -47,7 +47,7 @@ notify.xboxlive.com
 help.ui.xboxlive.com
 licensing.xboxlive.com
 eds.xboxlive.com
-xboxlive.com
+www.xboxlive.com
 ctldl.windowsupdate.com
 xkms.xbolive.com
 ui.skype.com pricelist.skype.com
@@ -97,7 +97,7 @@ meta.plex.bz
 cpms35.spop10.ams.plex.bz
 tvthemes.plexapp.com.cdn.cloudflare.net
 tvthemes.plexapp.com
-plex.tv node.plexapp.com
+www.plex.tv node.plexapp.com
 nine.plugins.plexapp.com
 106c06cd218b007d-b1e8a1331f68446599e96a4b46a050f5.ams.plex.services
 services.sonarr.tv
@@ -112,8 +112,9 @@ ns1.dropbox.com
 ns2.dropbox.com
 itunes.apple.com
 appleid.apple.com
-netflix.com
+www.netflix.com
 api-global.netflix.com
+netflix.com
 thetvdb.com
 reddit.com
 walmart.com

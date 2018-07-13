@@ -102,7 +102,7 @@ ads.jianchiapp.com
 abroad-ad.kingsoft-office-service.com
 cdn.adbert.info
 agent.tamedia.com.tw
-adbert.com.tw
+www.adbert.com.tw
 tw.api.vpon.com
 sdk.adtiming.com
 adsmogo.net

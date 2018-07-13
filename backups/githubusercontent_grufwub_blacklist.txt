@@ -1,5 +1,5 @@
 growth-pa.googleapis.com
-google-analytics.com
+www.google-analytics.com
 usage.readdle.com
 pl-mercury.netlify.com
 events.browsiprod.com
@@ -18,7 +18,7 @@ sc-analytics.appspot.com
 api.mstrlytcs.com
 future-publishing.msgfocus.com
 msgfocus.com
-googleadservices.com
+www.googleadservices.com
 e.reddit.com
 settings.crashlytics.com
 reports.crashlytics.com
@@ -38,7 +38,7 @@ tracker.appodealx.com
 node214.fractionalmedia.com
 cdns3.fractionalmedia.com
 imp.control.kochava.com
-adtilt.com
+www.adtilt.com
 gate.hockeyapp.net
 reachms.bfmio.com
 hb.nexage.com

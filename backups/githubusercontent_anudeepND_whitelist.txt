@@ -11,6 +11,7 @@ video-stats.l.google.com
 2.android.pool.ntp.org
 appsbackup-pa.googleapis.com
 googleapis.com
+www.googleapis.com
 fonts.gstatic.com
 gstatic.com
 geo3.ggpht.com
@@ -51,6 +52,7 @@ xbox.ipv6.microsoft.com
 officeclient.microsoft.com
 dns.msftncsi.com
 msftncsi.com
+www.msftncsi.com
 onedrive.live.com
 g.live.com
 live.com
@@ -68,7 +70,7 @@ licensing.xboxlive.com
 notify.xboxlive.com
 title.auth.xboxlive.com
 title.mgt.xboxlive.com
-xboxlive.com
+www.xboxlive.com
 xboxexperiencesprod.experimentation.xboxlive.com
 xflight.xboxlive.com
 xsts.auth.xboxlive.com
@@ -86,6 +88,7 @@ pubsub.plex.tv
 staging.plex.tv
 status.plex.tv
 tvdb2.plex.tv
+www.plex.tv
 cpms.spop10.ams.plex.bz
 cpms35.spop10.ams.plex.bz
 meta-db-worker02.pop.ric.plex.bz
@@ -98,9 +101,11 @@ nine.plugins.plexapp.com
 node.plexapp.com
 tvthemes.plexapp.com
 cdn.cloudflare.net
+www.dataplicity.com
 dataplicity.com
 dynupdate.no-ip.com
 no-ip.com
+www.no-ip.com
 login.microsoftonline.com
 microsoftonline.com
 office.com
@@ -116,6 +121,7 @@ redirector.googlevideo.com
 s.youtube.com
 s2.youtube.com
 youtube.com
+www.youtube-nocookie.com
 youtube-nocookie.com
 apt.sonarr.tv
 download.sonarr.tv
@@ -126,6 +132,7 @@ ui.skype.com
 apps.skype.com
 pricelist.skype.com
 skype.com
+www.icloud.com
 icloud.com
 ax.phobos.apple.com.edgesuite.net
 appleid.apple.com
@@ -181,11 +188,12 @@ themoviedb.com
 thetvdb.com
 twimg.com
 twitter.com
+www.twitter.com
 unsplash.com
 vimeo.com
 wikipedia.org
 ws.audioscrobbler.com
-solaredge.com
+www.solaredge.com
 yahoo.com
 delivery.vidible.tv
 img.vidible.tv
@@ -194,6 +202,7 @@ cdn.vidible.tv
 tinyurl.com
 giphy.com
 linuxtracker.org
+www.linuxtracker.org
 om.cbsi.com
 dev.virtualearth.net
 ecn.dev.virtualearth.net

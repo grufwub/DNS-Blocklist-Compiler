@@ -1,6 +1,8 @@
 # TODO: optimize this so much more... Using compile.process_hosts() isn't the most efficient way. And other parts too!
 
 import os, compile
+from platform import system as system_name
+from subprocess import call as system_call
 from urllib.request import urlopen, URLError, HTTPError
 
 __HOSTS_FILE = 'hosts'
@@ -21,18 +23,9 @@ def extract_hosts_from_file(filename):
     return hosts
 
 def ping_host(host):
-    try:
-        url = 'http://' + host
-        response = urlopen(url)
-    except HTTPError:
-        return False
-    except URLError:
-        return False
-    except Exception as e:
-        print('Exception with host %s' % host)
-        print(e)
-    
-    return True
+    param = '-n' if system_name().lower() == 'windows' else '-c'
+    command = ['ping', param, '1', host]
+    return system_call(command) == 0
 
 def run():
     print('\n---------- Hosts Checker ---------')
@@ -46,12 +39,13 @@ def run():
 
     before_count = len(hosts)
     print('Pinging hosts... [please wait this may take a while!]')
-
+    no_pinged = 0
     for i in range(__NO_PING_CHECKS):
         for host in hosts.keys():
             host_dict = hosts[host]
             for individual_host in host_dict:
                 result = ping_host(host)
+                no_pinged += 1
                 if result == False:
                     hosts[host][individual_host] += 1
     
@@ -61,7 +55,7 @@ def run():
     for host in hosts.keys():
         host_dict = hosts[host]
         for individual_host in host_dict:
-            if host_dict[individual_host] == __NO_PING_CHECKS - 1:
+            if host_dict[individual_host] == 0:
                 continue
             f.write('127.0.0.1 ' + individual_host + '\n')
             after_count += 1

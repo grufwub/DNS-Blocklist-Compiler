@@ -8,16 +8,16 @@ ads.admoda.com
 stats.pflexads.com
 hybl9bazbc35.pflexads.com
 hhbekxxw5d9e.pflexads.com
-pflexads.com
+www.pflexads.com
 orencia.pflexads.com
 a.glcdn.co
-wadleads.com
+wwww.adleads.com
 ad.madvertise.de
 ads.mobgold.com
 android.bcfads.com
 api.analytics.omgpop.com
 r.edge.inmobicdn.net
-mmnetwork.mobi
+www.mmnetwork.mobi
 img.ads.huntmad.com
 creative1cdn.mobfox.com
 admicro2.vcmedia.vn
@@ -77,7 +77,7 @@ android-sdk31.transpera.com
 apps.mobilityware.com
 ads.mobilityware.com
 ads.admarvel.com
-eltrafiko.com
+www.eltrafiko.com
 cdn.trafficforce.com
 gts-ads.twistbox.com
 static.cdn.gtsmobi.com
@@ -344,7 +344,7 @@ ww392.smartadserver.com
 ww55.smartadserver.com
 ww57.smartadserver.com
 ww84.smartadserver.com
-smartadserver.com
+www.smartadserver.com
 www2.smartadserver.com
 www3.smartadserver.com
 www4.smartadserver.com
