@@ -1,5 +1,5 @@
 # Mobile DNS Blocklist Compiler
-Compiles a list of DNS hostnames from multiple sources and strips unnecessary data.
+Compiles a list of DNS hostnames from multiple sources and strips unnecessary data. Can also ping to check for dead hosts!
 
 # Current sources:
 
