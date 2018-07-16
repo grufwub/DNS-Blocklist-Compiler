@@ -265,6 +265,7 @@ api.pingstart.com
 track.pingstart.com
 setting.rayjump.com
 net.rayjump.com
+detect.rayjump.com
 analytics.rayjump.com
 tknet.rayjump.com
 ad.myinstashot.com
