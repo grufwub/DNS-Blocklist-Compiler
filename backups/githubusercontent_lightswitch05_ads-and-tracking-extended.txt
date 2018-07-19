@@ -131,6 +131,7 @@ cloudflare.cdneval.adnxs.com
 fastly.cdneval.adnxs.com
 highwinds.cdneval.adnxs.com
 crcdn.adnxs.com
+dcdn.adnxs.com
 ib.adnxs.com
 jp.adnxs.com
 mp.adnxs.com
@@ -341,12 +342,17 @@ secure.bannerfarm.advertising.com
 beta-lombardi.advertising.com
 clientstats.advertising.com
 cmp.advertising.com
+adservices.cmp.advertising.com
+cdn.cmp.advertising.com
 content.cmp.advertising.com
 eu.content.cmp.advertising.com
 us.content.cmp.advertising.com
+dev-adservices.cmp.advertising.com
 event.cmp.advertising.com
 eu.event.cmp.advertising.com
 us.event.cmp.advertising.com
+qa-adservices.cmp.advertising.com
+qa-cdn.cmp.advertising.com
 services.cmp.advertising.com
 cmp-dev.advertising.com
 cms.advertising.com
@@ -524,6 +530,7 @@ www.dev.adx1.com
 dialin.adx1.com
 docs.adx1.com
 www.docs.adx1.com
+down.adx1.com
 downloads.adx1.com
 www.downloads.adx1.com
 dropped.adx1.com
@@ -532,6 +539,7 @@ e.adx1.com
 eventlog.adx1.com
 www.eventlog.adx1.com
 fg-set-my-cookie.adx1.com
+fs7.adx1.com
 ftp.adx1.com
 www.ftp.adx1.com
 globalsight.adx1.com
@@ -549,6 +557,7 @@ www.imap.adx1.com
 jenkins.adx1.com
 k.adx1.com
 www.k.adx1.com
+ksias.adx1.com
 log.adx1.com
 www.log.adx1.com
 login.adx1.com
@@ -605,6 +614,7 @@ staging.adx1.com
 static.adx1.com
 store.adx1.com
 www.store.adx1.com
+u5t.adx1.com
 w.adx1.com
 webmail.adx1.com
 ww.adx1.com
@@ -740,6 +750,10 @@ aax-us-pdx.amazon-adsystem.com
 aax-us-pdx-rtb.amazon-adsystem.com
 aax-us-pdx-rtb-adx.amazon-adsystem.com
 aax-us-west.amazon-adsystem.com
+aax-vx-eu-dub.amazon-adsystem.com
+aax-vx-fe-pdx.amazon-adsystem.com
+aax-vx-us-iad.amazon-adsystem.com
+aax-vx-us-pdx.amazon-adsystem.com
 aax.amazon.amazon-adsystem.com
 assoc-msdk-cn.amazon-adsystem.com
 assoc-msdk-eu.amazon-adsystem.com
@@ -1225,9 +1239,13 @@ segments.company-target.com
 comscoreresearch.com
 apple.comscoreresearch.com
 consoliads.com
+consoliad.consoliads.com
+www.consoliad.consoliads.com
+mail.consoliads.com
 sdk.consoliads.com
 sheeda.consoliads.com
 web.consoliads.com
+www.web.consoliads.com
 www.consoliads.com
 consumedmedia.com
 assets.consumedmedia.com
@@ -1363,6 +1381,7 @@ metrics.digicert.com
 digitalremedy.com
 jira.digitalremedy.com
 jira-dev.digitalremedy.com
+knowledge.digitalremedy.com
 socialapi.digitalremedy.com
 www.digitalremedy.com
 adserver.directworksmedia.com
@@ -1524,6 +1543,8 @@ rcom-staging.dynamicyield.com
 www.rcom-staging.dynamicyield.com
 rest.dynamicyield.com
 www.rest.dynamicyield.com
+rlec-use.dynamicyield.com
+www.rlec-use.dynamicyield.com
 s1a.dynamicyield.com
 www.s1a.dynamicyield.com
 srv.dynamicyield.com
@@ -1590,6 +1611,7 @@ www.apmu-vlabs.dynatrace.com
 apmwiki.dynatrace.com
 assets.dynatrace.com
 autodiscover.dynatrace.com
+barista.dynatrace.com
 bf.dynatrace.com
 ca.dynatrace.com
 www.ca.dynatrace.com
@@ -1645,6 +1667,7 @@ www.gtg.dynatrace.com
 holox.dynatrace.com
 info.dynatrace.com
 internal.dynatrace.com
+managed.internal.dynatrace.com
 js-cdn.dynatrace.com
 www.js-cdn.dynatrace.com
 linz-vpn.dynatrace.com
@@ -1702,6 +1725,7 @@ enhancedstats.com
 enhancedtrk.com
 metric-public-service-prod.ol.epicgames.com
 eqads.com
+ads2.eqads.com
 w.ads2.eqads.com
 cdn.eqads.com
 um2.eqads.com
@@ -2139,6 +2163,10 @@ www.faces.fiksu.com
 handler.fiksu.com
 heartbeat-uploads.fiksu.com
 info.fiksu.com
+auth.k8s-prod.fiksu.com
+www.auth.k8s-prod.fiksu.com
+dex.k8s-prod.fiksu.com
+www.dex.k8s-prod.fiksu.com
 auth.k8s-test.fiksu.com
 www.auth.k8s-test.fiksu.com
 dex.k8s-test.fiksu.com
@@ -3585,6 +3613,7 @@ cert3.franklyinc.com
 www.cert3.franklyinc.com
 cm.franklyinc.com
 data.franklyinc.com
+ddev1.franklyinc.com
 developer.franklyinc.com
 dfp.franklyinc.com
 www.dfp.franklyinc.com
@@ -3608,6 +3637,7 @@ ngw-static.franklyinc.com
 req.franklyinc.com
 csp.req.franklyinc.com
 ssr.franklyinc.com
+video.franklyinc.com
 videodev.franklyinc.com
 webhooks.franklyinc.com
 webhooks2.franklyinc.com
@@ -3635,6 +3665,7 @@ acp.fyber.com
 advertiser.fyber.com
 air.fyber.com
 ams.fyber.com
+ams-aws-stg.fyber.com
 android.fyber.com
 api.fyber.com
 appengage-fyber.fyber.com
@@ -3917,6 +3948,7 @@ www.adserver.gtcmovies.com
 gumgum.com
 dev.adbuilder.gumgum.com
 blog.gumgum.com
+creative-templates-api.gumgum.com
 culturalblog.gumgum.com
 dev.dashboard.gumgum.com
 dev.demobuilder.gumgum.com
@@ -4413,6 +4445,7 @@ api.sandbox53.localytics.com
 neophyte.sandbox53.localytics.com
 spa-login-ui.sandbox53.localytics.com
 spa-orch-ui.sandbox53.localytics.com
+workflows.sandbox53.localytics.com
 sdk-assets.localytics.com
 support.localytics.com
 web.localytics.com
@@ -4494,7 +4527,11 @@ www.tkovpn.marketo.com
 webmail.marketo.com
 www.marketo.com
 marketolive.com
+infor.marketolive.com
+www.infor.marketolive.com
 insights.marketolive.com
+jp.marketolive.com
+www.jp.marketolive.com
 partners.marketolive.com
 verticals.marketolive.com
 www.marketolive.com
@@ -4654,6 +4691,7 @@ beta.mobileapptracking.com
 cdn.mobileapptracking.com
 deeplink.mobileapptracking.com
 engine.mobileapptracking.com
+13146.engine.mobileapptracking.com
 191661.engine.mobileapptracking.com
 194792.engine.mobileapptracking.com
 debug.engine.mobileapptracking.com
@@ -4831,7 +4869,10 @@ careers.outbrain.com
 www.careers.outbrain.com
 content.outbrain.com
 corp.outbrain.com
+demo.outbrain.com
+developer.outbrain.com
 discover.outbrain.com
+discovery.outbrain.com
 editorial.outbrain.com
 images.outbrain.com
 itsupport.outbrain.com
@@ -4839,6 +4880,8 @@ www.itsupport.outbrain.com
 lp.outbrain.com
 www.lp.outbrain.com
 marketing.outbrain.com
+mobile-demo.outbrain.com
+new-www.outbrain.com
 odb.outbrain.com
 outloud.outbrain.com
 paid.outbrain.com
@@ -4847,6 +4890,7 @@ revee.outbrain.com
 rundeck.outbrain.com
 sales.outbrain.com
 staffpicks.outbrain.com
+static-test.outbrain.com
 storage.outbrain.com
 styleguide.outbrain.com
 sync.outbrain.com
@@ -5427,8 +5471,12 @@ cdx.ssacdn.com
 www.cdx.ssacdn.com
 cf.ssacdn.com
 www.cf.ssacdn.com
+cncn.ssacdn.com
+www.cncn.ssacdn.com
 gcdn.ssacdn.com
 www.gcdn.ssacdn.com
+itcn.ssacdn.com
+www.itcn.ssacdn.com
 llnw.ssacdn.com
 www.llnw.ssacdn.com
 scc.ssacdn.com
@@ -5523,11 +5571,15 @@ www.il-vpn.taboola.com
 images.taboola.com
 jobs.taboola.com
 la-trc.taboola.com
+ldaps.taboola.com
+www.ldaps.taboola.com
 newsroom-help.taboola.com
 www.newsroom-help.taboola.com
 newsroomhelp.taboola.com
+pages.taboola.com
 popup.taboola.com
 www.popup.taboola.com
+pubhelp.taboola.com
 publisher.taboola.com
 signup.taboola.com
 www.signup.taboola.com
@@ -6158,6 +6210,7 @@ pubsupport.yext.com
 review.yext.com
 www.review.yext.com
 support.yext.com
+sustainability.yext.com
 techops.yext.com
 www.techops.yext.com
 sourcegraph.uc1.yext.com
@@ -6550,6 +6603,7 @@ sv.us.criteo.net
 images.sv.us.criteo.net
 static.sv.us.criteo.net
 va.us.criteo.net
+www.criteo.net
 datamark.net
 www.array.datamark.net
 autodiscover.datamark.net
@@ -6613,6 +6667,8 @@ sb.scorecardresearch.com.edgekey.net
 escapicon.net
 sp.escapicon.net
 www.sp.escapicon.net
+vd.escapicon.net
+www.vd.escapicon.net
 www.escapicon.net
 everestjs.net
 www.everestjs.net
@@ -6649,6 +6705,7 @@ s2-test.go-mpulse.net
 gscontxt.net
 aol.gscontxt.net
 vice-useast.gscontxt.net
+js.hscta.net
 imprev.net
 bit.imprev.net
 content.imprev.net
@@ -6684,6 +6741,7 @@ odc.cb.qa-dest.imprev.net
 support.cb.qa-dest.imprev.net
 client.qa-dest.imprev.net
 client-admin.qa-dest.imprev.net
+content.qa-dest.imprev.net
 db.qa-dest.imprev.net
 generator.qa-dest.imprev.net
 idx.qa-dest.imprev.net
@@ -7104,10 +7162,12 @@ tca-rtb1.rfihub.net
 txa-rtb1.rfihub.net
 vtyo-rtb1.rfihub.net
 smaato.net
+ad.smaato.net
 creatives.smaato.net
 soma.smaato.net
 www.soma.smaato.net
 soma-assets.smaato.net
+track.smaato.net
 webhooks.smaato.net
 ss-omtrdc.net
 guided.ss-omtrdc.net
@@ -7174,6 +7234,7 @@ webdisk.eazybiz.ng
 webmail.eazybiz.ng
 www.eazybiz.ng
 adsrvr.org
+docker.adsrvr.org
 pull.docker.adsrvr.org
 push.docker.adsrvr.org
 test.docker.adsrvr.org
@@ -7184,6 +7245,13 @@ thales.adsrvr.org
 post.update.adsrvr.org
 s.update.adsrvr.org
 t.update.adsrvr.org
+use.adsrvr.org
+foreman.use.adsrvr.org
+use-foreman1.use.adsrvr.org
+use-foreman2.use.adsrvr.org
+use-foreman3.use.adsrvr.org
+use-foreman4.use.adsrvr.org
+use-foremanproxy1.use.adsrvr.org
 lpweb.altervista.org
 consensu.org
 admiral.mgr.consensu.org
@@ -7216,6 +7284,7 @@ liqwid.mgr.consensu.org
 www.liqwid.mgr.consensu.org
 cmp.madvertise.mgr.consensu.org
 onetag.mgr.consensu.org
+cookies-prod.onetrust.mgr.consensu.org
 pluto.mgr.consensu.org
 staging.pluto.mgr.consensu.org
 www.pluto.mgr.consensu.org
@@ -7350,6 +7419,12 @@ zabbix.beta.aviasales.ru
 blatest1.aviasales.ru
 blatest2.aviasales.ru
 blog.aviasales.ru
+compare.aviasales.ru
+compare-images.aviasales.ru
+compare-static.aviasales.ru
+e.aviasales.ru
+multimedia.e.aviasales.ru
+www.e.aviasales.ru
 flights.aviasales.ru
 hongkong2018.aviasales.ru
 hotels.aviasales.ru
@@ -7400,6 +7475,7 @@ syncsw.pool.datamind.ru
 www.syncsw.pool.datamind.ru
 www.pool.datamind.ru
 prod-hzeu-tj-2.datamind.ru
+sandbox-hzeu-rtb-3.datamind.ru
 pixel.interactivesales.ru
 www.pixel.interactivesales.ru
 bksn.se
