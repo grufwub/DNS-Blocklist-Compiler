@@ -343,6 +343,7 @@ def run():
 	# blocklists.append( download_process_hosts('https://raw.githubusercontent.com/Yhonay/antipopads/master/hosts') )
 	# blocklists.append( download_process_hosts('https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt') )
 	# blocklists.append( download_process_hosts('https://raw.githubusercontent.com/anudeepND/blacklist/master/CoinMiner.txt') )
+	# blocklists.append( download_process_hosts('https://adzhosts.fr/hosts/adzhosts-android.txt') )
 	print('-------------------------')
 
 	print('Downloading whitelists...')
