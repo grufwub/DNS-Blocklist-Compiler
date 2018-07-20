@@ -99,7 +99,6 @@ ad.digitallook.com
 ad.doctissimo.fr
 ad.domainfactory.de
 ad.eurosport.com
-ad.f1cd.ru
 ad.flurry.com
 flurry.com
 ad.foxnetworks.com
@@ -881,7 +880,6 @@ adtology.com
 adtoma.com
 adtrace.org
 adtrade.net
-adtrading.de
 adtrak.net
 adtriplex.com
 adultadvertising.com
@@ -1391,6 +1389,7 @@ debtbusterloans.com
 decisiveducks.com
 decknetwork.net
 delightdriving.com
+deloo.de
 deloton.com
 demandbase.com
 demdex.net
