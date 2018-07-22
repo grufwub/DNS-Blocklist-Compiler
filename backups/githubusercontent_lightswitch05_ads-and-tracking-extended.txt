@@ -94,6 +94,7 @@ pixel.adcrowd.com
 www.pixel.adcrowd.com
 test2017.adcrowd.com
 www.adcrowd.com
+stats.addsearch.com
 addtoany.com
 static.addtoany.com
 www.static.addtoany.com
@@ -1073,6 +1074,7 @@ bfmio.com
 display.bfmio.com
 io-cdn.bfmio.com
 ioms.bfmio.com
+analytics-ingress-global.bitmovin.com
 bizible.com
 apps.bizible.com
 awesome.bizible.com
@@ -4140,7 +4142,6 @@ mintsurvey.api.intuit.com
 credit.finance.intuit.com
 mint.finance.intuit.com
 offcnt.intuit.com
-pf.intuit.com
 financialprovider-logos.platform.intuit.com
 trinity.platform.intuit.com
 sci.intuit.com
@@ -5960,6 +5961,8 @@ go.valassisdigital.com
 tools.valassisdigital.com
 www.tools.valassisdigital.com
 adserver.valuemd.com
+track.venatusmedia.com
+www.venatusmedia.com
 vice-web-statics-cdn.vice.com
 vicedata.com
 blog.vicedata.com
@@ -6051,8 +6054,16 @@ www.app.visualwebsiteoptimizer.com
 dev.visualwebsiteoptimizer.com
 www.dev.visualwebsiteoptimizer.com
 vmmpxl.com
+secfld.vmmpxl.com
 secimg.vmmpxl.com
 vcsa.vmware.com
+vntsm.com
+cdn1.vntsm.com
+cdn1-marketplace.vntsm.com
+cdn2-marketplace.vntsm.com
+core.vntsm.com
+hb.vntsm.com
+hb-config.vntsm.com
 adsdk.vrvm.com
 vungle.com
 api.vungle.com
