@@ -1711,6 +1711,9 @@ s2.play.tainiesonline.pw
 s3.play.tainiesonline.pw
 play.play.tainiesonline.stream
 play.tainiesonline.stream
+play.pocketgolf.host
+pocketgolf.host
+www.pocketgolf.host
 play.proxy.multikonline.ru
 play.s01.vidtod.me
 play.s02.vidtod.me
@@ -1738,7 +1741,6 @@ xmr.101010.pl
 play.xmr.e-libra.ru
 xmr.e-libra.ru
 playe.vidto.se
-player.h-cdn.com
 playerassets.info
 plexcoin.info
 podrltid.info
