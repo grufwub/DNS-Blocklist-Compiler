@@ -42736,6 +42736,8 @@
 127.0.0.1 api.brightfunnel.com
 127.0.0.1 help.brightfunnel.com
 127.0.0.1 munchkin.brightfunnel.com
+127.0.0.1 browserhawk.com
+127.0.0.1 lib.browserhawk.com
 127.0.0.1 s-eu.btstatic.com
 127.0.0.1 t.btstatic.com
 127.0.0.1 bucksense.com
@@ -45550,6 +45552,7 @@
 127.0.0.1 dev.static.h-bid.com
 127.0.0.1 metrics.hbonow.com
 127.0.0.1 smetrics.hbonow.com
+127.0.0.1 fs-client-logger.herokuapp.com
 127.0.0.1 api.wootric.com.herokudns.com
 127.0.0.1 img-cdn-1.heyzap.com
 127.0.0.1 img-cdn-2.heyzap.com
@@ -45914,6 +45917,8 @@
 127.0.0.1 optout.kochava.com
 127.0.0.1 support.kochava.com
 127.0.0.1 www.kochava.com
+127.0.0.1 sstats.kroger.com
+127.0.0.1 www.sstats.kroger.com
 127.0.0.1 static.lakana.com
 127.0.0.1 leadnationmedia.com
 127.0.0.1 pixel.leadnationmedia.com
@@ -47703,6 +47708,8 @@
 127.0.0.1 pubsupport.yext.com
 127.0.0.1 review.yext.com
 127.0.0.1 www.review.yext.com
+127.0.0.1 success.yext.com
+127.0.0.1 www.success.yext.com
 127.0.0.1 support.yext.com
 127.0.0.1 sustainability.yext.com
 127.0.0.1 techops.yext.com
@@ -48345,6 +48352,7 @@
 127.0.0.1 ad2.monetate.net
 127.0.0.1 af.monetate.net
 127.0.0.1 af2.monetate.net
+127.0.0.1 engine.monetate.net
 127.0.0.1 marketer.monetate.net
 127.0.0.1 marketer-next-release.monetate.net
 127.0.0.1 sb2.monetate.net
@@ -48656,6 +48664,7 @@
 127.0.0.1 pull.docker.adsrvr.org
 127.0.0.1 push.docker.adsrvr.org
 127.0.0.1 test.docker.adsrvr.org
+127.0.0.1 foreman.adsrvr.org
 127.0.0.1 idp.adsrvr.org
 127.0.0.1 ops-self-service.adsrvr.org
 127.0.0.1 snap.adsrvr.org
@@ -49276,6 +49285,22 @@
 127.0.0.1 perf.mmstat.com
 127.0.0.1 sg.mmstat.com
 127.0.0.1 pixel.nc0.co
+127.0.0.1 sstats.adobe.com
+127.0.0.1 analytics.archive.org
+127.0.0.1 analytics-production.hapyak.com
+127.0.0.1 analytics.247sports.com
+127.0.0.1 analytics.bitrix.info
+127.0.0.1 analytics.htmedia.in
+127.0.0.1 analytics.icons8.com
+127.0.0.1 analytics.myfinance.com
+127.0.0.1 analytics.samdd.me
+127.0.0.1 analytics.swiggy.com
+127.0.0.1 lead.soperson.com
+127.0.0.1 yun-static.soperson.com
+127.0.0.1 www.soperson.com
+127.0.0.1 soperson.com
+127.0.0.1 talk99.cn
+127.0.0.1 www.talk99.cn
 127.0.0.1 api.admob.xiaomi.com
 127.0.0.1 api.d.xiaomi.com
 127.0.0.1 a.stat.xiaomi.com
@@ -49499,6 +49524,7 @@
 127.0.0.1 stage.tvpage.com
 127.0.0.1 appcdn.tvpage.com
 127.0.0.1 videos-bleepingcomputers-com.tvpagecdn.com
+127.0.0.1 ad.wynk.in
 127.0.0.1 agl.hotstar.com
 127.0.0.1 segment.hotstar.com
 127.0.0.1 agl-intl.hotstar.com

@@ -1130,6 +1130,8 @@ brightfunnel.com
 api.brightfunnel.com
 help.brightfunnel.com
 munchkin.brightfunnel.com
+browserhawk.com
+lib.browserhawk.com
 btstatic.com
 s.btstatic.com
 s-eu.btstatic.com
@@ -1753,6 +1755,7 @@ enhancedstats.com
 enhancedtrk.com
 metric-public-service-prod.ol.epicgames.com
 eqads.com
+ads.eqads.com
 ads2.eqads.com
 w.ads2.eqads.com
 cdn.eqads.com
@@ -4013,6 +4016,7 @@ static.h-bid.com
 dev.static.h-bid.com
 metrics.hbonow.com
 smetrics.hbonow.com
+fs-client-logger.herokuapp.com
 api.wootric.com.herokudns.com
 heyzap.com
 img-cdn-1.heyzap.com
@@ -4386,6 +4390,8 @@ ops.kochava.com
 optout.kochava.com
 support.kochava.com
 www.kochava.com
+sstats.kroger.com
+www.sstats.kroger.com
 static.lakana.com
 leadnationmedia.com
 pixel.leadnationmedia.com
@@ -6315,6 +6321,8 @@ publishers.yext.com
 pubsupport.yext.com
 review.yext.com
 www.review.yext.com
+success.yext.com
+www.success.yext.com
 support.yext.com
 sustainability.yext.com
 techops.yext.com
@@ -7013,6 +7021,7 @@ ad.monetate.net
 ad2.monetate.net
 af.monetate.net
 af2.monetate.net
+engine.monetate.net
 marketer.monetate.net
 marketer-next-release.monetate.net
 sb.monetate.net
@@ -7345,6 +7354,7 @@ docker.adsrvr.org
 pull.docker.adsrvr.org
 push.docker.adsrvr.org
 test.docker.adsrvr.org
+foreman.adsrvr.org
 idp.adsrvr.org
 ops-self-service.adsrvr.org
 snap.adsrvr.org

@@ -86,9 +86,9 @@ def process_hosts(data):
 
 		# Strips any whitespace
 		lineStr = lineStr.strip()
-        # Strips initial pipe symbols
+	        # Strips initial pipe symbols
 		lineStr = lineStr.replace('|', '')
-        # Strips initial '0.0.0.0 ' / '127.0.0.1 ' from host files
+		# Strips initial '0.0.0.0 ' / '127.0.0.1 ' from host files
 		lineStr = lineStr.replace('0.0.0.0 ', '')
 		lineStr = lineStr.replace('127.0.0.1 ', '')
 
@@ -148,7 +148,7 @@ def process_hosts(data):
 		if '{' in lineStr:
 			continue
 
-        # Skips final unusables
+			# Skips final unusables
 		if lineStr.startswith('.') or lineStr.endswith('.'):
 			continue
 
@@ -212,13 +212,13 @@ def processWhitelist(data):
 			continue
 		if '{' in lineStr:
 			continue
-        # Strips any whitespace
+		# Strips any whitespace
 		lineStr = lineStr.strip()
-        # Strips initial pipe symbols
+		# Strips initial pipe symbols
 		lineStr = lineStr.replace('|', '')
-        # Strips use of 'www.'
+		# Strips use of 'www.'
 		lineStr = lineStr.replace('www.', '')
-        # Skips final unusables
+		# Skips final unusables
 		if lineStr.startswith('.') or lineStr.endswith('.'):
 			continue
 		# Adds the host to a dictionary which serves as the value to a parent dictionary (passed in the method argument), with the registered domain as the key
