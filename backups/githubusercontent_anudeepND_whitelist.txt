@@ -1,6 +1,7 @@
 0.client-channel.google.com
 android.clients.google.com
 appsbackup-pa.clients6.google.com
+clients1.google.com
 clients2.google.com
 clients3.google.com
 clients4.google.com
@@ -208,3 +209,4 @@ dev.virtualearth.net
 ecn.dev.virtualearth.net
 t0.ssl.ak.dynamic.tiles.virtualearth.net
 t0.ssl.ak.tiles.virtualearth.net
+secure.avangate.com

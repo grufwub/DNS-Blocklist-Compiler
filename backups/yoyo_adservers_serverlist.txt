@@ -704,7 +704,6 @@ ads.suomiautomaatti.com
 ads.supplyframe.com
 ads.tahono.com
 ads.techtv.com
-ads.telegraph.co.uk
 ads.themovienation.com
 ads.thestar.com
 ads.thrillsaffiliates.com
@@ -1010,6 +1009,7 @@ anm.intelli-direct.com
 annonser.dagbladet.no
 anxiousapples.com
 api.intensifier.de
+app-analytics.snapchat.com
 app.pendo.io
 appsflyer.com
 aps.hearstnp.com
@@ -1380,7 +1380,6 @@ d2cmedia.ca
 dakic-ia-300.com
 danban.com
 dapper.net
-datashreddergold.com
 dbbsrv.com
 dc-storm.com
 de17a.com
@@ -1528,7 +1527,6 @@ flowgo.com
 foo.cosmocode.de
 foresee.com
 forex-affiliate.net
-forter.com
 fpctraffic.com
 fpctraffic2.com
 fqtag.com
@@ -1722,7 +1720,6 @@ kissmetrics.com
 kliks.nl
 kniverto.com
 knorex.com
-koinser.in
 komoona.com
 kompasads.com
 kontera.com
@@ -1963,7 +1960,6 @@ openads.org
 openx.angelsgroup.org.uk
 openx.blindferret.com
 opienetwork.com
-opinionstage.com
 optimize-stats.voxmedia.com
 optimizely.com
 optimost.com
@@ -2198,6 +2194,7 @@ samsungacr.com
 samsungads.com
 saysidewalk.com
 sbx.pagesjaunes.fr
+sc-analytics.appspot.com
 scambiobanner.aruba.it
 scanscout.com
 scarcestream.com
@@ -2245,6 +2242,7 @@ simpli.fi
 simplisticnose.com
 sinoa.com
 sitedataprocessing.com
+siteimproveanalytics.com
 sitemeter.com
 sitestat.com
 sixsigmatraffic.com
@@ -2352,6 +2350,7 @@ tailsweep.se
 takru.com
 tangerinenet.biz
 tapad.com
+tapfiliate.com
 tapinfluence.com
 targad.de
 targetingnow.com
@@ -2426,6 +2425,8 @@ track.flexlinkspro.com
 track.viewdeos.com
 track1.viewdeos.com
 trackalyzer.com
+trackedlink.net
+trackedweb.net
 tracker-pm2.spilleren.com
 tracker.icerocket.com
 tracker.marinsm.com
