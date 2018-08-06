@@ -55,7 +55,7 @@ class DefaultWorkerWithFunction(DefaultWorker):
 			except IndexError:
 				break
 
-		if _DEBUTT_FLAG: print("[DEBUG] (%s) Thread worker finished!" % self.THREAD_ID)
+		if DEBUTT_FLAG: print("[DEBUG] (%s) Thread worker finished!" % self.THREAD_ID)
 		self.RUNNING = False
 		
 	def add_function(self, function):
@@ -81,14 +81,14 @@ class ChildThreadStateChecker(Thread):
 				if not child_thread.RUNNING:
 					count += 1
 				else:
-					if _DEBUTT_FLAG: print("[DEBUG] (%s) Queue count remaining = %d" % (child_thread.THREAD_ID, len(child_thread.QUEUE)))
+					if DEBUTT_FLAG: print("[DEBUG] (%s) Queue count remaining = %d" % (child_thread.THREAD_ID, len(child_thread.QUEUE)))
 			if count == len(self.__CHILD_THREADS):
 				break
 			count = 0
-			if _DEBUTT_FLAG: print("--------------------------------------")
+			if DEBUTT_FLAG: print("--------------------------------------")
 			sleep(0.1)
 		
-		if _DEBUTT_FLAG: print("[DEBUG] All child threads finished running!")
+		if DEBUTT_FLAG: print("[DEBUG] All child threads finished running!")
 		self.RUNNING = False
 	
 	def register_child(self, child_thread):
@@ -145,17 +145,17 @@ class MultiThreader:
 		
 		self.__WORKER_STATE = ChildThreadStateChecker()
 		self.__BUILD_QUEUE()
-		if _DEBUTT_FLAG: print("[DEBUG] Currently there are %d thread workers" % len(self.__THREAD_WORKERS))
+		if DEBUTT_FLAG: print("[DEBUG] Currently there are %d thread workers" % len(self.__THREAD_WORKERS))
 		self._RUNNING = True
-		if _DEBUTT_FLAG: print("[DEBUG] Running MultiThreader instance!")
+		if DEBUTT_FLAG: print("[DEBUG] Running MultiThreader instance!")
 		for thread_worker_list in self.__THREAD_WORKERS:
-			if _DEBUTT_FLAG: print("[DEBUG] Adding worker list to main pool...")
+			if DEBUTT_FLAG: print("[DEBUG] Adding worker list to main pool...")
 			for thread_worker in thread_worker_list:
-				if _DEBUTT_FLAG: print("[DEBUG] Adding worker.")
+				if DEBUTT_FLAG: print("[DEBUG] Adding worker.")
 				self.__WORKER_STATE.register_child(thread_worker)
 						
 		# If not async, blocks thread until all child threads have finished
-		if _DEBUTT_FLAG: print("[DEBUG] Blocking thread until all queues are finished / empty.\n[DEBUG] Starting thread workers...")
+		if DEBUTT_FLAG: print("[DEBUG] Blocking thread until all queues are finished / empty.\n[DEBUG] Starting thread workers...")
 		for worker_list in self.__THREAD_WORKERS:
 			for worker in worker_list: worker.start()
 		self.__WORKER_STATE.start()
@@ -163,17 +163,17 @@ class MultiThreader:
 			while (True):
 				sleep(1)
 				if not self.__WORKER_STATE.RUNNING:
-					if _DEBUTT_FLAG: print("[DEBUG] Finished! Queues empty, breaking loop.")
+					if DEBUTT_FLAG: print("[DEBUG] Finished! Queues empty, breaking loop.")
 					break
 			
 		# Collect and combine processed data
 		# TODO: figure out keeping data ordered in some way or another?
-		if _DEBUTT_FLAG: print("[DEBUG] Collected processed data from workers")
+		if DEBUTT_FLAG: print("[DEBUG] Collected processed data from workers")
 		for thread_worker_list in self.__THREAD_WORKERS:
 			for thread_worker in thread_worker_list:
 				self.__PROCESSED_DATA.extend( thread_worker.get_processed_data() )
 		
-		if _DEBUTT_FLAG: print("[DEBUG] Finished running!")
+		if DEBUTT_FLAG: print("[DEBUG] Finished running!")
 		self._RUNNING = False
 		self._HAS_RUN
 		
@@ -229,8 +229,8 @@ class MultiThreader:
 		worker_count = 1
 		queue_size = len(self.__DATA) // self._THREAD_COUNT
 		
-		if queue_size > _WORKER_PER_QUEUE_THRESHOLD:
-			worker_count = queue_size // _WORKER_PER_QUEUE_THRESHOLD
+		if queue_size > WORKER_PER_QUEUE_THRESHOLD:
+			worker_count = queue_size // WORKER_PER_QUEUE_THRESHOLD
 			
 		# check function complexity and also modify worker count from this?????????
 		
