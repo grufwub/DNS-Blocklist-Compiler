@@ -3,6 +3,8 @@ from threading import Thread
 from collections import deque
 from time import sleep
 
+from safecollections import SafeList, SafeDictionary
+
 DEBUTT_FLAG = False
 WORKER_PER_QUEUE_THRESHOLD = 250
 FUNCTION_TIME_THRESHOLD = 0
@@ -44,19 +46,17 @@ class DefaultWorkerWithFunction(DefaultWorker):
 	def run(self):
 		if not self.__FUNCTION:
 			raise ValueError("Function in DefaultWorkerWithFunction instance must be non-null.")
-			
-		self.RUNNING = True
-		next_item = None
 		
+		if DEBUTT_FLAG: print("[DEBUG] worker(%s) starting running" % self.THREAD_ID)
+		self.RUNNING = True	
 		while (True):
 			try:
-				next_item = self.QUEUE.popleft()
+				next_item = self.QUEUE.pop_start()
 				self.PROCESSED_DATA.append( self.__FUNCTION(next_item) )
 			except IndexError:
 				break
-
-		if DEBUTT_FLAG: print("[DEBUG] (%s) Thread worker finished!" % self.THREAD_ID)
 		self.RUNNING = False
+		if DEBUTT_FLAG: print("[DEBUG] (%s) Thread worker finished!" % self.THREAD_ID)
 		
 	def add_function(self, function):
 		if self.RUNNING:
@@ -77,16 +77,17 @@ class ChildThreadStateChecker(Thread):
 		
 		count = 0
 		while (True):
+			sleep(0.01)
 			for child_thread in self.__CHILD_THREADS:
 				if not child_thread.RUNNING:
+					if DEBUTT_FLAG: print("[DEBUG] child_thread not running")
 					count += 1
 				else:
-					if DEBUTT_FLAG: print("[DEBUG] (%s) Queue count remaining = %d" % (child_thread.THREAD_ID, len(child_thread.QUEUE)))
+					if DEBUTT_FLAG: print("[DEBUG] (%s) Queue count remaining = %d" % (child_thread.THREAD_ID, child_thread.QUEUE.length()))	
 			if count == len(self.__CHILD_THREADS):
 				break
 			count = 0
 			if DEBUTT_FLAG: print("--------------------------------------")
-			sleep(0.1)
 		
 		if DEBUTT_FLAG: print("[DEBUG] All child threads finished running!")
 		self.RUNNING = False
@@ -97,7 +98,7 @@ class ChildThreadStateChecker(Thread):
 # Main class to initialize, that holds options, threads, information, queues, handles separating work into threads etc
 # also... Debutt = debug. I'm just immature :p
 class MultiThreader:
-	def __init__(self, async_flag = False, thread_count = -1):
+	def __init__(self, async_flag = False, thread_count = -1, remain_ordered = False):
 		self._ASYNC_FLAG = async_flag
 		self._THREAD_COUNT = thread_count
 		self._RUNNING = False
@@ -106,6 +107,7 @@ class MultiThreader:
 		self.__THREAD_WORKERS = list() # Not just a list, but a list OF lists :P
 		self.__WORKER_STATE = None
 		self.__DATA = list()
+		self.__DATA_REMAIN_ORDERED = remain_ordered
 		self.__QUEUED_DATA_INDEX = 0 # This is assuming that DATA is all ordered and stays this way (which it SHOULD be)
 		self.__FUNCTION = None
 		self.__PROCESSED_DATA = list()
@@ -155,11 +157,13 @@ class MultiThreader:
 				self.__WORKER_STATE.register_child(thread_worker)
 						
 		# If not async, blocks thread until all child threads have finished
-		if DEBUTT_FLAG: print("[DEBUG] Blocking thread until all queues are finished / empty.\n[DEBUG] Starting thread workers...")
+		# sleep(2) # Give thread workers a chance to start
+		self.__WORKER_STATE.start()
 		for worker_list in self.__THREAD_WORKERS:
 			for worker in worker_list: worker.start()
-		self.__WORKER_STATE.start()
+
 		if not self._ASYNC_FLAG:
+			if DEBUTT_FLAG: print("[DEBUG] Blocking thread until all queues are finished / empty.")
 			while (True):
 				sleep(1)
 				if not self.__WORKER_STATE.RUNNING:
@@ -168,7 +172,7 @@ class MultiThreader:
 			
 		# Collect and combine processed data
 		# TODO: figure out keeping data ordered in some way or another?
-		if DEBUTT_FLAG: print("[DEBUG] Collected processed data from workers")
+		if DEBUTT_FLAG: print("[DEBUG] Collecting processed data from workers")
 		for thread_worker_list in self.__THREAD_WORKERS:
 			for thread_worker in thread_worker_list:
 				self.__PROCESSED_DATA.extend( thread_worker.get_processed_data() )
@@ -248,7 +252,7 @@ class MultiThreader:
 		section_count = len(self.__DATA) // self._THREAD_COUNT
 		next_index = section_count
 		for thread_worker_list in self.__THREAD_WORKERS:
-			new_queue = deque()
+			new_queue = SafeList()
 			data_section = self.__DATA[self.__QUEUED_DATA_INDEX : next_index]
 			new_queue.extend(data_section)
 			for thread_worker in thread_worker_list:
