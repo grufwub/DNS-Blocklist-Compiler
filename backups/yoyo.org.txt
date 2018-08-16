@@ -2,15 +2,15 @@
 #
 # For more information about this list, see: https://pgl.yoyo.org/adservers/
 # ----
-# last updated:   Tue, 14 Aug 2018 18:11:02 GMT
-# entries:        2622
+# last updated:   Thu, 16 Aug 2018 11:50:05 GMT
+# entries:        2629
 # format:         hosts (hosts -- in hosts file format)
 # credits:        Peter Lowe - pgl@yoyo.org - https://pgl.yoyo.org/ - https://twitter.com/pgl
 # this URL:       https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&mimetype=plaintext&useip=0.0.0.0
 # other formats:  https://pgl.yoyo.org/adservers/formats.php
 # policy:         https://pgl.yoyo.org/adservers/policy.php
 #
-# start date:    Thu, 20 Aug 1998 00:00:00
+# start date:    Fri, 21 Aug 1998 00:00:00
 0.0.0.0 101com.com
 0.0.0.0 101order.com
 0.0.0.0 123found.com
@@ -1058,6 +1058,7 @@
 0.0.0.0 beacon.gu-web.net
 0.0.0.0 beamincrease.com
 0.0.0.0 beamkite.com
+0.0.0.0 bebi.com
 0.0.0.0 begun.ru
 0.0.0.0 behavioralengine.com
 0.0.0.0 belstat.com
@@ -1530,6 +1531,7 @@
 0.0.0.0 harrenmedianetwork.com
 0.0.0.0 havamedia.net
 0.0.0.0 heap.com
+0.0.0.0 heapanalytics.com
 0.0.0.0 heias.com
 0.0.0.0 hellobar.com
 0.0.0.0 hentaicounter.com
@@ -1712,8 +1714,10 @@
 0.0.0.0 lizardslaugh.com
 0.0.0.0 loading321.com
 0.0.0.0 log.btopenworld.com
+0.0.0.0 log.logrocket.io
 0.0.0.0 logger.snackly.co
-0.0.0.0 logrocket.com
+0.0.0.0 logs.logrocket.com
+0.0.0.0 logs.roku.com
 0.0.0.0 logua.com
 0.0.0.0 lop.com
 0.0.0.0 lopsidedspoon.com
@@ -1988,6 +1992,7 @@
 0.0.0.0 picadmedia.com
 0.0.0.0 piet2eix3l.com
 0.0.0.0 pietexture.com
+0.0.0.0 piguiqproxy.com
 0.0.0.0 pillscash.com
 0.0.0.0 pimproll.com
 0.0.0.0 ping.ublock.org
@@ -2424,6 +2429,7 @@
 0.0.0.0 tracker-pm2.spilleren.com
 0.0.0.0 tracker.icerocket.com
 0.0.0.0 tracker.marinsm.com
+0.0.0.0 tracker.trackerfix.com
 0.0.0.0 tracking.crunchiemedia.com
 0.0.0.0 tracking.gajmp.com
 0.0.0.0 tracking.internetstores.de
@@ -2618,6 +2624,7 @@
 0.0.0.0 yieldmo.com
 0.0.0.0 yieldtraffic.com
 0.0.0.0 yldbt.com
+0.0.0.0 ymetrica1.com
 0.0.0.0 yoggrt.com
 0.0.0.0 z5x.net
 0.0.0.0 zangocash.com
