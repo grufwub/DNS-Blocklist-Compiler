@@ -23,6 +23,7 @@ def parse_sources_file(file_name):
 	for line in f.read().split('\n'):
 		if line.startswith('#'):
 			continue
+		# TODO: improve by this to be more accepting of issues?? --> extracting actual URL instead of just removing first 10/11 characters
 		if line.startswith('blacklist:'):
 			bl.append(line[10:])
 		if line.startswith('whitelist:'):
@@ -31,7 +32,7 @@ def parse_sources_file(file_name):
 	f.close()
 	return bl, wl
 
-# Quick funct to write backup file string and minimize code
+# Quick funct to write backup file string and minimize code with reuse
 def build_backup_file_str(url):
 	url_str = tldextract.extract(url).registered_domain
 	return __BACKUP_DIR + url_str + __BACKUP_EXT
@@ -172,6 +173,8 @@ def run():
 			__GLOBAL_WHITELIST[host] = __GLOBAL_WHITELIST.get(host, 0) + 1
 		backup_to_file( build_backup_file_str(url) , hosts)
 
+	# TODO: keep multithreading library updated, and move to using safe dictionary for data storage instead of
+	# current safe list
 	print('Multithreaded hosts processing...')
 	mt = tmd.MultiThreader()
 	mt.add_data(blacklist)
