@@ -1,8 +1,8 @@
-! Checksum: 2tbQ2gisAHjuScUz+WCqAw
+! Checksum: 5NrTWSowiRVysvIN8bpEoQ
 ! Title: AdGuard Mobile Ads filter
 ! Description: Filter for all known mobile ad networks. Useful for mobile devices.
-! Version: 2.0.2.93
-! TimeUpdated: 2018-08-16T00:03:41+00:00
+! Version: 2.0.2.97
+! TimeUpdated: 2018-08-17T15:06:44+00:00
 ! Expires: 2 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#mobile
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -1283,6 +1283,8 @@ deviantart.com#$#div[class*="dp-ad-"] {height:0px!important; width:0px!important
 !
 !#####################
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/21178
+@@||pwapi.washingtonpost.com/*&__amp_source_origin
 ! https://github.com/AdguardTeam/AdguardFilters/issues/21131
 @@||ads.rubiconproject.com/prebid^$domain=index.hr
 ! https://github.com/AdguardTeam/AdguardFilters/issues/19957 - scroll issue
@@ -2338,6 +2340,8 @@ m.news.yandex.by,m.news.yandex.com,m.news.yandex.fr,m.news.yandex.kz,m.news.yand
 ! Google ads (be careful)
 ! Blocking of Facebook ads
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/19737
+! https://github.com/AdguardTeam/AdguardFilters/issues/21152
 ! http://4pda.ru/forum/index.php?showtopic=601691&st=8140#entry57313153
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/20486
