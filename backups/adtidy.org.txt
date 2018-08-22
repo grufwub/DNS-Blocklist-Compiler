@@ -1,8 +1,8 @@
-! Checksum: YVg9Gh/87fUnQvX7UqMc1w
+! Checksum: OM+BRGOJb7V774ZcPYdagw
 ! Title: AdGuard Mobile Ads filter
 ! Description: Filter for all known mobile ad networks. Useful for mobile devices.
-! Version: 2.0.2.98
-! TimeUpdated: 2018-08-20T15:29:40+00:00
+! Version: 2.0.3.0
+! TimeUpdated: 2018-08-21T18:04:44+00:00
 ! Expires: 2 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#mobile
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -2339,6 +2339,8 @@ m.news.yandex.by,m.news.yandex.com,m.news.yandex.fr,m.news.yandex.kz,m.news.yand
 ! Google ads (be careful)
 ! Blocking of Facebook ads
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/21120
+! https://github.com/AdguardTeam/AdguardFilters/issues/18802
 ! https://github.com/AdguardTeam/AdguardFilters/issues/19737
 ! https://github.com/AdguardTeam/AdguardFilters/issues/21152
 ! http://4pda.ru/forum/index.php?showtopic=601691&st=8140#entry57313153
