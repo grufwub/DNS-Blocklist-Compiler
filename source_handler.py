@@ -2,41 +2,22 @@ SOURCE_FILE = 'sources.txt'
 _BL_PRFX = 'b_'
 _WL_PRFX = 'w_'
 _ID_SPRTR = '::'
-_BL_DICT = None
-_WL_DICT = None
+_SRC_DICT = None
 
 # Reads blacklist and whitelist entries from file and simply returns them. Nothing more
 def read_sources_file():
-        bl = dict()
-        wl = dict()
-	if len(_BL_PREFIX) != len(_WL_PREFIX):
-		# Just checking for weird edge cases
-		raise ValueError('Blacklist and whitelist prefix lengths should be equal!')
+        srcs = dict()
 
-	pre_len = len(_BL_PRFX)
         f = open(SOURCE_FILE, 'r')
         for line in f.read().split('\n'):
-                if line.startswith('#'):
-                        continue
-                # TODO: improve by this to be more accepting of issues?? --> extracting actual URL instead of just removing first 10/11 characters
-                if line.startswith(_BL_PRFX):
-			src = line[pre_len:].split(_ID_SPRTR)
-			id = src[0]
-			url = src[1]
-			bl[id] = url
-		if line.startswith(_WL_PRFX):
-			src = line[pre_len:].split(_ID_SPRTR)
-			id = src[0]
-			url = src[1]
-			wl[id] = url
+		src = line.split(_ID_SPRTR)
+		_SRC_DICT[src[0]] = src[1]
         f.close()
-        return bl, wl
+        return srcs
 
 # Opens for editing and saves blacklist/whitelist entries in local dictionaries
 def load_sources_file():
-	_BL_DICT = dict()
-	_WL_DICT = dict()
-	_BL_DICT, _WL_DICT = read_sources_file()
+	_SRC_DICT = read_sources_file()
 
 # Writes edited changes to file
 # MAKE UP TO DATE!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -57,20 +38,31 @@ def write_sources_to_file():
 	f.close()
 
 def get_blacklist():
-	if _BL_DICT == None:
+	if _SRC_DICT == None:
 		raise ValueError('Please initialize internal source lists with \'open_sources_file()\' first')
-	return _BL_DICT
+	return_dict = dict()
+	for item in _SRC_DICT.keys():
+		if item .startswith(_BL_PRFX):
+			return_dict[item] = _SRC_DICT[item]
+	return return_dict
 
 def get_whitelist():
-	if _WL_DICT == None:
+	if _SRC_DICT == None:
 		raise ValueError('Please initialize internal source lists with \'open_sources_file()\' first')
-	return _WL_DICT
+	return_dict = dict()
+	for item in _SRC_DICT.keys():
+		if item.startswith(_WL_PRFX):
+			return_dict[item] = _SRC_DICT[item]
+	return return_dict
 
 def edit_source(url_id, new_url):
-	if url_id in _BL_DICT:
-		_BL_DICT[url_id] = new_url
-		return
-	if url_id in _WL_DICT:
-		_WL_DICT[url_id] = new_url
-		return
+	if url_id in _SRC_DICT:
+		_SRC_DICT[url_id] = new_url
 	raise ValueError('Supplied url could not be found in either  blacklist or whitelist!')
+
+def add_source(id, url):
+	if id in _SRC_DICT:
+		raise ValueError('A url with id %s already exists in dictionary!' % id)
+	if not id.startswith(_BL_PRFX) or not id.startswith(_WL_PRFX):
+		raise ValueError('Url id must start with either b_ or w_ to denote blacklist/whitelist')
+	_SRC_DICT[id] = url
