@@ -8,6 +8,11 @@ _PROFILE_KEY_SOURCES = 'SOURCES'
 _LOADED_PROFILES = None
 
 # TODO: handle case of null profiles! e.g. when trying to delete one
+# TODO: optimise
+# TODO: ensure consistent use of variable names, underscores etc throughout entire project
+
+if not os.path.isdir(_PROFILE_DIR):
+	os.mkdir(_PROFILE_DIR)
 
 def get_profile_files():
 	profile_list = list()

@@ -14,12 +14,6 @@ __OUTPUT_DIR = 'compiled'
 __OUTPUT_FILE = 'hosts'
 __GLOBAL_WHITELIST = dict()
 
-class CompileProfile:
-	def __init__(self):
-		# do something here??
-	def get_source_ids(self):
-		return self.IDS
-
 # Quick funct to write backup file string and minimize code with reuse
 def build_backup_file_str(url):
 	url_str = tldextract.extract(url).registered_domain
@@ -138,8 +132,7 @@ def process_host(host):
 	
 	return host
 
-def run():
-	bl_list, wl_list = read_sources_file()
+def run(bl, wl):
 	blacklist = list()
 	
 	# Ensures required directories exist
