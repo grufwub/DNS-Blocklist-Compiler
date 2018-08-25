@@ -1,5 +1,5 @@
 import threadmedaddy as tmd
-from handle_sources import read_sources_file
+import source_handler
 import tldextract, os
 from urllib.request import urlopen, URLError, HTTPError
 
