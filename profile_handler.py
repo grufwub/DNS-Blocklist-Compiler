@@ -1,4 +1,4 @@
-import pickle, os
+import json, os
 
 _PROFILE_DIR = 'profiles/'
 _PROFILE_EXT = '.profile'
@@ -29,7 +29,9 @@ def write_profiles(loaded_profiles):
 		name = profile[_PROFILE_KEY_NAME]
 		file_path = _PROFILE_DIR + name + _PROFILE_EXT
 		f = open(file_path, 'w')
-		pickle.dump(profile, f)
+		print(file_path)
+		print(profile)
+		json.dump(profile, f)
 		f.close()
 
 def load_profiles():
@@ -39,7 +41,7 @@ def load_profiles():
 	for profile in profiles:
 		f = open(profile, 'r')
 		str = f.read()
-		raw = pickle.loads(str)
+		raw = json.loads(str)
 		name = raw[_PROFILE_KEY_NAME]
 		loaded_profiles[name] = raw
 		f.close()
