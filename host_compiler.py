@@ -1,5 +1,4 @@
 import threadmedaddy as tmd
-import source_handler
 import tldextract, os
 from urllib.request import urlopen, URLError, HTTPError
 
@@ -132,9 +131,7 @@ def process_host(host):
 	
 	return host
 
-def run(bl, wl):
-	blacklist = list()
-	
+def run(bl_list, wl_list):
 	# Ensures required directories exist
 	if not os.path.isdir(__BACKUP_DIR):
 		os.mkdir(__BACKUP_DIR)
@@ -142,13 +139,16 @@ def run(bl, wl):
 		os.mkdir(__OUTPUT_DIR)
 	
 	print('Downloading blacklists...')
+	blacklist = list()
 	for url in bl_list:
+		print('--> %s' % url)
 		hosts = download_hosts(url)
 		blacklist.extend(hosts)
 		backup_to_file( build_backup_file_str(url) , hosts)
 	
 	print('Downloading whitelists...')
 	for url in wl_list:
+		print('--> %s' % url)
 		hosts = download_hosts(url)
 		for host in hosts:
 			__GLOBAL_WHITELIST[host] = __GLOBAL_WHITELIST.get(host, 0) + 1

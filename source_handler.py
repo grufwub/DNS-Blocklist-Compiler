@@ -1,6 +1,6 @@
 SOURCE_FILE = 'sources.txt'
-_BL_PRFX = 'b_'
-_WL_PRFX = 'w_'
+BL_PRFX = 'b_'
+WL_PRFX = 'w_'
 _ID_SPRTR = '::'
 
 # TODO: use more efficient ID system. Current system is very eh...
@@ -26,24 +26,6 @@ def write_sources_to_file(src_dict):
 		entry = id + _ID_SPRTR + url
 		f.write(entry + '\n')
 	f.close()
-
-def get_blacklist(src_dict):
-	if src_dict == None:
-		raise ValueError('Please initialize internal source lists with \'read_sources_file()\' first')
-	return_dict = dict()
-	for item in src_dict.keys():
-		if item .startswith(_BL_PRFX):
-			return_dict[item] = src_dict[item]
-	return return_dict
-
-def get_whitelist(src_dict):
-	if src_dict == None:
-		raise ValueError('Please initialize internal source lists with \'read_sources_file()\' first')
-	return_dict = dict()
-	for item in src_dict.keys():
-		if item.startswith(_WL_PRFX):
-			return_dict[item] = src_dict[item]
-	return return_dict
 
 def edit_source(src_dict, url_id, new_url):
 	if url_id in src_dict:

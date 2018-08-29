@@ -2,15 +2,15 @@
 #
 # For more information about this list, see: https://pgl.yoyo.org/adservers/
 # ----
-# last updated:   Sat, 18 Aug 2018 17:27:19 GMT
-# entries:        2624
+# last updated:   Tue, 28 Aug 2018 07:12:21 GMT
+# entries:        2625
 # format:         hosts (hosts -- in hosts file format)
 # credits:        Peter Lowe - pgl@yoyo.org - https://pgl.yoyo.org/ - https://twitter.com/pgl
 # this URL:       https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&mimetype=plaintext&useip=0.0.0.0
 # other formats:  https://pgl.yoyo.org/adservers/formats.php
 # policy:         https://pgl.yoyo.org/adservers/policy.php
 #
-# start date:    Thu, 27 Aug 1998 00:00:00
+# start date:    Thu, 03 Sep 1998 00:00:00
 0.0.0.0 101com.com
 0.0.0.0 101order.com
 0.0.0.0 123found.com
@@ -1119,6 +1119,7 @@
 0.0.0.0 buzzonclick.com
 0.0.0.0 bwp.download.com
 0.0.0.0 c.bigmir.net
+0.0.0.0 c.evidon.com
 0.0.0.0 c1.nowlinux.com
 0.0.0.0 c1exchange.com
 0.0.0.0 calmfoot.com
@@ -2094,7 +2095,6 @@
 0.0.0.0 ranking-id.de
 0.0.0.0 ranking-links.de
 0.0.0.0 ranking-liste.de
-0.0.0.0 ranking-street.de
 0.0.0.0 rankingchart.de
 0.0.0.0 rankingscout.com
 0.0.0.0 rankyou.com
@@ -2132,6 +2132,7 @@
 0.0.0.0 relevanz10.de
 0.0.0.0 relmaxtop.com
 0.0.0.0 remarketingpixel.com
+0.0.0.0 remistrainew.club
 0.0.0.0 remotead.cnet.com
 0.0.0.0 remox.com
 0.0.0.0 republika.onet.pl

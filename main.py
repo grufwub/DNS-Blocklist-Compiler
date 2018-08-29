@@ -1,5 +1,7 @@
 import curses
-import hosts_compiler
+import host_compiler as hc
+import source_handler as sh
+import profile_handler as ph
 
 def draw_main_menu(scrn):
 	scrn.addstr('----------< DNS Blocklist Compiler by @grufwub >----------', curses.A_BOLD)
@@ -32,6 +34,31 @@ def main(std_scrn):
 	while True:
 		print("while true!")
 
+def get_blacklist_sources(profile):
+	all_sources = sh.read_sources_file()
+	bl = list()
+	srcs = profile[ph.PROFILE_KEY_SOURCES]
+	for src_id in srcs:
+		if src_id.startswith(sh.BL_PRFX):
+			source = all_sources[src_id]
+			bl.append(source)
+	return bl
+
+def get_whitelist_sources(profile):
+	all_sources = sh.read_sources_file()
+	wl = list()
+	srcs = profile[ph.PROFILE_KEY_SOURCES]
+	for src_id in srcs:
+		if src_id.startswith(sh.WL_PRFX):
+			source = all_sources[src_id]
+			wl.append(source)
+	return wl
+
 if __name__ == '__main__':
 	# curses.wrapper(main)
-	hosts_compiler.run()
+	all_profiles = ph.load_profiles()
+	profile = all_profiles['default-mobile']
+	bl = get_blacklist_sources(profile)
+	wl = get_whitelist_sources(profile)
+	hc.run(bl, wl)
+	print('Finished!')

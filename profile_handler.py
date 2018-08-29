@@ -2,8 +2,8 @@ import json, os
 
 _PROFILE_DIR = 'profiles/'
 _PROFILE_EXT = '.profile'
-_PROFILE_KEY_NAME = 'NAME'
-_PROFILE_KEY_SOURCES = 'SOURCES'
+PROFILE_KEY_NAME = 'NAME'
+PROFILE_KEY_SOURCES = 'SOURCES'
 
 # TODO: handle case of null profiles! e.g. when trying to delete one
 # TODO: optimise
@@ -26,11 +26,9 @@ def get_profile_files():
 def write_profiles(loaded_profiles):
 	for profile_name in loaded_profiles.keys():
 		profile = loaded_profiles[profile_name]
-		name = profile[_PROFILE_KEY_NAME]
+		name = profile[PROFILE_KEY_NAME]
 		file_path = _PROFILE_DIR + name + _PROFILE_EXT
 		f = open(file_path, 'w')
-		print(file_path)
-		print(profile)
 		json.dump(profile, f)
 		f.close()
 
@@ -42,15 +40,15 @@ def load_profiles():
 		f = open(profile, 'r')
 		str = f.read()
 		raw = json.loads(str)
-		name = raw[_PROFILE_KEY_NAME]
+		name = raw[PROFILE_KEY_NAME]
 		loaded_profiles[name] = raw
 		f.close()
 	return loaded_profiles
 
 def add_profile(loaded_profiles, name, sources_active):
 	profile_dict = dict()
-	profile_dict[_PROFILE_KEY_NAME] = name
-	profile_dict[_PROFILE_KEY_SOURCES] = sources_active
+	profile_dict[PROFILE_KEY_NAME] = name
+	profile_dict[PROFILE_KEY_SOURCES] = sources_active
 	loaded_profiles[name] = profile_dict
 
 def edit_profile(loaded_profiles, name, new_profile):
