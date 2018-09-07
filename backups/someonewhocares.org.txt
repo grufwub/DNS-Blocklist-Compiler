@@ -8,7 +8,7 @@
 # Please forward any additions, corrections or comments by email to
 # hosts@someonewhocares.org
 
-# Last updated: Wed, 29 Aug 2018 at 09:37:11 GMT
+# Last updated: Fri, 07 Sep 2018 at 08:33:19 GMT
 
 # Use this file to prevent your computer from connecting to selected
 # internet hosts. This is an easy and effective way to protect you from 
@@ -6332,6 +6332,7 @@ ff02::3		ip6-allhosts
 0.0.0.0 ads.verkata.com
 0.0.0.0 ads.vesperexchange.com
 0.0.0.0 ads.vg.basefarm.net
+0.0.0.0 ads.viber.com
 0.0.0.0 ads.viddler.com
 0.0.0.0 ads.videoadvertising.com
 0.0.0.0 adsvidsdouble.com
@@ -6696,6 +6697,7 @@ ff02::3		ip6-allhosts
 0.0.0.0 app1.letitbefaster.website
 0.0.0.0 app1.letmacworkfaster.site
 0.0.0.0 app1.letslowbefast.site
+0.0.0.0 app2.downloadmacsoft.world
 0.0.0.0 app2.letitbefaster.life
 0.0.0.0 app2.letitbefaster.website
 0.0.0.0 app2.letmacworkfaster.site
@@ -7758,6 +7760,7 @@ ff02::3		ip6-allhosts
 0.0.0.0 devlp1.linkpulse.com
 0.0.0.0 dev.sfbg.com
 0.0.0.0 dev.visualwebsiteoptimizer.com
+0.0.0.0 d.getaccss.com
 0.0.0.0 dgm2.com
 0.0.0.0 dgmaustralia.com
 0.0.0.0 dg.specificclick.net
@@ -8425,6 +8428,7 @@ ff02::3		ip6-allhosts
 0.0.0.0 ieee.adbureau.net
 0.0.0.0 if.bbanner.it
 0.0.0.0 iftarvakitleri.net
+0.0.0.0 ifwry.yeslaptop.win
 0.0.0.0 ih2.gamecopyworld.com
 0.0.0.0 ih.adscale.de
 0.0.0.0 i.hotkeys.com
@@ -8434,6 +8438,7 @@ ff02::3		ip6-allhosts
 0.0.0.0 ilinks.industrybrains.com
 0.0.0.0 ilovemobi.com
 0.0.0.0 ilumigrafias.adriancugar.com
+0.0.0.0 im.52441.com
 0.0.0.0 imads.integral-marketing.com
 0.0.0.0 im.adtech.de
 0.0.0.0 image2.pubmatic.com
@@ -8485,6 +8490,7 @@ ff02::3		ip6-allhosts
 0.0.0.0 img4.cdn.adjuggler.com
 0.0.0.0 img-a2.ak.imagevz.net
 0.0.0.0 img.alibaba.com
+0.0.0.0 img.awr.im
 0.0.0.0 img.blogads.com
 0.0.0.0 img-cdn.mediaplex.com
 0.0.0.0 img.directtrack.com
@@ -8683,6 +8689,7 @@ ff02::3		ip6-allhosts
 0.0.0.0 justdating.online
 0.0.0.0 justwebads.com
 0.0.0.0 jxliu.com
+0.0.0.0 jyknnhll.yearbrazil.com
 0.0.0.0 jzclick.soso.com
 0.0.0.0 jzigsobgsmxdmr.bid
 0.0.0.0 k5ads.osdn.com
@@ -9578,6 +9585,7 @@ ff02::3		ip6-allhosts
 0.0.0.0 play.traffpartners.com
 0.0.0.0 pl.bbelements.com
 0.0.0.0 pl.betclic.com
+0.0.0.0 pleasewait.co
 0.0.0.0 ploaz54.com
 0.0.0.0 p.l.qq.com
 0.0.0.0 pl.spanel.gem.pl
@@ -9782,6 +9790,7 @@ ff02::3		ip6-allhosts
 0.0.0.0 q.b.h.cltomedia.info
 0.0.0.0 qip.magna.ru
 0.0.0.0 qitrck.com
+0.0.0.0 qpqnbnsnosdss.com
 0.0.0.0 qqlogo.qq.com
 0.0.0.0 qring-tms.qq.com
 0.0.0.0 qss-client.qq.com
@@ -10018,6 +10027,7 @@ ff02::3		ip6-allhosts
 0.0.0.0 s5.addthis.com
 0.0.0.0 s7.addthis.com
 0.0.0.0 s7clean.com
+0.0.0.0 s9kkremkr0.com
 0.0.0.0 s.ad121m.com
 0.0.0.0 s.ad131m.com
 0.0.0.0 s.admob.com
@@ -10380,7 +10390,6 @@ ff02::3		ip6-allhosts
 0.0.0.0 static.criteo.net
 0.0.0.0 staticd.cdn.adblade.com
 0.0.0.0 static.doubleclick.net
-0.0.0.0 static-eu-cdn.eporner.com
 0.0.0.0 static.eu.criteo.net
 0.0.0.0 static.everyone.net
 0.0.0.0 static.exoclick.com
@@ -10449,6 +10458,7 @@ ff02::3		ip6-allhosts
 0.0.0.0 st.pba.xl.pt
 0.0.0.0 streamate.com
 0.0.0.0 streamate.doublepimp.com
+0.0.0.0 stream-direct.co
 0.0.0.0 st.targetix.net
 0.0.0.0 stts.rbc.ru
 0.0.0.0 st.valueclick.com
@@ -10598,6 +10608,7 @@ ff02::3		ip6-allhosts
 0.0.0.0 thruport.com
 0.0.0.0 tidebuy.com
 0.0.0.0 timelywebsitehostesses.com
+0.0.0.0 t.info.rezbine.com
 0.0.0.0 titan-gel-extra.com
 0.0.0.0 tk.baidu.com
 0.0.0.0 tkweb.baidu.com
@@ -10662,6 +10673,7 @@ ff02::3		ip6-allhosts
 0.0.0.0 track.bigbrandpromotions.com
 0.0.0.0 track.dtnlyss.com
 0.0.0.0 track.e7r.com.br
+0.0.0.0 tracker.awr.im
 0.0.0.0 tracker.baidu.com
 0.0.0.0 tracker.cdn-analytics.host
 0.0.0.0 trackers.1st-affiliation.fr
@@ -11165,10 +11177,12 @@ ff02::3		ip6-allhosts
 0.0.0.0 www2.ad.tomshardware.com
 0.0.0.0 www.2-art-coliseum.com
 0.0.0.0 www2.bannerspace.com
+0.0.0.0 www2.doslectionflash.icu
 0.0.0.0 www2.glam.com
 0.0.0.0 www2.gorillavid.in
 0.0.0.0 www2.kampanyatakip.net
 0.0.0.0 www2.pubdirecte.com
+0.0.0.0 www2.smallregularbestflash.club
 0.0.0.0 www2.zapadserver1.com
 0.0.0.0 www30a1.glam.com
 0.0.0.0 www30a1-orig.glam.com
@@ -11337,6 +11351,7 @@ ff02::3		ip6-allhosts
 0.0.0.0 www.appafile.com
 0.0.0.0 www.apparelncs.com
 0.0.0.0 www.apparel-offer.com
+0.0.0.0 www.apple.com-clean-macbook.live
 0.0.0.0 www.applelounge.com
 0.0.0.0 www.appleprotection.org
 0.0.0.0 www.applicationwiki.com
@@ -11671,6 +11686,7 @@ ff02::3		ip6-allhosts
 0.0.0.0 www.googmel.win
 0.0.0.0 www.gopopup.com
 0.0.0.0 www.grabbit-rabbit.com
+0.0.0.0 www.grabflashsign.win
 0.0.0.0 www.greasypalm.com
 0.0.0.0 www.groupm.com
 0.0.0.0 www.grz67.com
