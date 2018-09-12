@@ -1,8 +1,8 @@
-! Checksum: 4D4T3jIsBcNR7QcTdXjnsw
+! Checksum: uGhGDsMb7bTQaHlqALlqFg
 ! Title: AdGuard Mobile Ads filter
 ! Description: Filter for all known mobile ad networks. Useful for mobile devices.
-! Version: 2.0.3.27
-! TimeUpdated: 2018-09-10T18:09:10+00:00
+! Version: 2.0.3.30
+! TimeUpdated: 2018-09-11T15:05:46+00:00
 ! Expires: 2 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#mobile
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -1177,6 +1177,9 @@ sasisa.ru#%#AG_onLoad(function() { window.Umobi = function() {}; });
 !-------CSS---------
 !-------------------
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/22276
+sammobile.com#$#body > .g-29 + section.content { margin-top: 0px!important; }
+sammobile.com#$#body > #home-slider + section.content { margin-top: 0px!important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/9984
 m.dizilab6.com#$##player { display:block!important; }
 m.dizilab6.com#$#.previd-link { display:none!important; }
@@ -1565,6 +1568,7 @@ m.news.de##.unisterAdsStart
 !+ NOT_OPTIMIZED
 9to5google.com,9to5toys.com,9to5mac.com,electrek.co##.post-content > .inlinead ~ div[class*=" "]:not([id]):not([style])
 !
+appleinsider.com##.content-main > .ad
 akket-com.cdn.ampproject.org##.ad_amp
 ||firebaseio.com/promo_view.json
 spiceworks.com##.mobile-topic_card-slot
