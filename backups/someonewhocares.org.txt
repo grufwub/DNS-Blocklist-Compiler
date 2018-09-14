@@ -8,7 +8,7 @@
 # Please forward any additions, corrections or comments by email to
 # hosts@someonewhocares.org
 
-# Last updated: Tue, 11 Sep 2018 at 03:09:39 GMT
+# Last updated: Thu, 13 Sep 2018 at 05:26:23 GMT
 
 # Use this file to prevent your computer from connecting to selected
 # internet hosts. This is an easy and effective way to protect you from 
@@ -7435,6 +7435,7 @@ ff02::3		ip6-allhosts
 0.0.0.0 click.go2net.com
 0.0.0.0 click.israelinfo.ru
 0.0.0.0 clickit.go2net.com
+0.0.0.0 click.maaxmarket.com
 0.0.0.0 clickmedia.ro
 0.0.0.0 click.newviralmobistore.com
 0.0.0.0 click.pulse360.com
@@ -8877,6 +8878,7 @@ ff02::3		ip6-allhosts
 0.0.0.0 m4.afs.googleadservices.com
 0.0.0.0 m4.media-box.co
 0.0.0.0 m4ymh0220.tech
+0.0.0.0 maaxmarket.com
 0.0.0.0 ma.baidu.com
 0.0.0.0 macaddictads.snv.futurenet.com
 0.0.0.0 macads.net
@@ -11826,6 +11828,7 @@ ff02::3		ip6-allhosts
 0.0.0.0 www.lucky-day-uk.com
 0.0.0.0 www.luckyday.world
 0.0.0.0 www.m2trk.com
+0.0.0.0 www.maaxmarket.com
 0.0.0.0 www.mac.com-w.net
 0.0.0.0 www.macfillerck.com
 0.0.0.0 www.macombdisplayads.com
