@@ -67,6 +67,8 @@ class MenuInstance:
         
         if self.menu_items:
             self.previous_menu_items = self.menu_items
+            self.previous_selected = self.item_selected
+            self.item_selected = 0
         self.next_menu_items = menu_items
     
     def set_header(self, header_message = ""):
@@ -78,6 +80,15 @@ class MenuInstance:
         if self.header_message:
             self.previous_header_message = self.header_message
         self.next_header_message = header_message
+    
+    def get_and_reset_selected(self):
+        """
+        Returns + resets the selected item and caches it under previous_selected
+        """
+        
+        self.previous_selected = self.item_selected
+        self.item_selected = 0
+        return self.previous_selected
     
     def run_loop(self):
         """
@@ -147,9 +158,7 @@ class MenuInstance:
             self.next_function = self.run_loop
             return True
         elif key == "KEY_RIGHT":
-            self.previous_selected = self.item_selected
             self.next_function = self.menu_items[self.item_selected].function
-            self.item_selected = 0
             return True
         
         return False
