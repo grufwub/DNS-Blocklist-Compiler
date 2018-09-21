@@ -15,6 +15,8 @@ def gen_sources_menuitems(sources):
     pass
 
 def profile_menuitems():
+    global profiles
+    
     profiles = ph.load_profiles()
     menuitems = list()
     for name in profiles.keys():
@@ -23,9 +25,10 @@ def profile_menuitems():
     return menuitems
 
 def set_profile(instance):
-    index = instance.item_selected
-    profile_selected = profiles[index]
-    main_loop(instance)
+    global profile_selected
+    
+    profile_selected = list(profiles.keys())[instance.get_returned_index()]
+    compile_blocklist(instance) # temporary
 
 ### MenuItem functions
 def compile_blocklist(instance):
@@ -109,17 +112,17 @@ def loop_main(instance):
 
 ### Main 'run' sequence
 def run():
-	e = None
+#	e = None
 	try:
-		instance = ui.MenuInstance()
+		instance = ui.MenuInstance(debug = True)
 		instance.init()
 		loop_main(instance)
-	except Exception as exc:
-		e = exc
+#	except Exception as exc:
+#		e = exc
 	finally:
 		instance.close()
-		if e:
-			print("[!!] Closed with exception: < %s >" % e)
+#		if e:
+#			print("[!!] Closed with exception: < %s >" % e)
 
 if __name__ == "__main__":    
     run()

@@ -17,7 +17,7 @@ class MenuInstance:
     Handles running curses interface, input handling etc
     """
     
-    def __init__(self):
+    def __init__(self, debug = False):
         """
         Initialization
         """
@@ -33,8 +33,11 @@ class MenuInstance:
         
         self.item_selected = 0
         self.previous_selected = -1
+        self.return_item_index = -1
         
         self.next_function = None
+        
+        self.debug = debug
     
     def init(self):
         """
@@ -67,8 +70,6 @@ class MenuInstance:
         
         if self.menu_items:
             self.previous_menu_items = self.menu_items
-            self.previous_selected = self.item_selected
-            self.item_selected = 0
         self.next_menu_items = menu_items
     
     def set_header(self, header_message = ""):
@@ -81,24 +82,19 @@ class MenuInstance:
             self.previous_header_message = self.header_message
         self.next_header_message = header_message
     
-    def get_and_reset_selected(self):
+    def get_returned_index(self):
         """
         Returns + resets the selected item and caches it under previous_selected
         """
         
-        self.previous_selected = self.item_selected
-        self.item_selected = 0
-        return self.previous_selected
+        temp = self.return_item_index
+        self.return_item_index = -1
+        return temp
     
     def run_loop(self):
         """
         Main run loop
         """
-        
-        # Handles case where we come back to menu from another screen
-        if self.previous_selected != -1:
-            self.item_selected = self.previous_selected
-            self.previous_selected = -1 # resets
         
         # Grab next set of menu_items to use
         self.menu_items = self.next_menu_items
@@ -108,10 +104,11 @@ class MenuInstance:
         self.header_message = self.next_header_message
         self.next_header_message = None
         
-        # Initial menu draw
+        # Initial draw
         self.screen.clear()
         self._draw_header()
         self._draw_menu()
+        if self.debug: self._draw_debug()
         self.screen.refresh()
         
         # Main loop
@@ -122,6 +119,7 @@ class MenuInstance:
             self.screen.clear()
             self._draw_header()
             self._draw_menu()
+            if self.debug: self._draw_debug()
             self.screen.refresh()
             
         # Call function set by input handler
@@ -149,16 +147,32 @@ class MenuInstance:
             if self.previous_menu_items == None:
                 return False
             
+            # Sets up next menu items to use
             self.next_menu_items = self.previous_menu_items
             self.previous_menu_items = None
             
+            # Sets up next header to use
             self.next_header_message = self.previous_header_message
             self.previous_header_message = None
             
+            # Sets up previously selected item index + resets previously selected
+            self.item_selected = self.previous_selected
+            self.previous_selected = -1 
+            
+            # Sets to go back to run_loop
             self.next_function = self.run_loop
             return True
         elif key == "KEY_RIGHT":
+            # Sets up next function to call
             self.next_function = self.menu_items[self.item_selected].function
+            
+            # saves currently selected item value for return in case needed
+            self.return_item_index = self.item_selected
+            
+            # resets item selected index for next screen
+            self.previous_selected = self.item_selected
+            self.item_selected = 0
+            
             return True
         
         return False
@@ -190,5 +204,12 @@ class MenuInstance:
             else:
                 self.screen.addstr(text)
             index += 1
+    
+    def _draw_debug(self):
+        for i in range(3):
+            # Keep 3 blank lines after menu
+            self.screen.addstr("\n")
+        self.screen.addstr("----------------------------------\n")
+        self.screen.addstr("item_selected = %d\nprevious_selected = %d\nreturn_item_index = %d" % (self.item_selected, self.previous_selected, self.return_item_index))
         
             
