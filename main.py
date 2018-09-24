@@ -1,4 +1,3 @@
-import curses
 import ui
 import host_compiler as hc
 import source_handler as sh
@@ -55,7 +54,7 @@ def profile_menuitems():
     return menuitems
 
 def set_profile(instance):
-    global profile_selected
+    global profile_selected, main_header
 
     # TODO: set 'selected profile' up in header somehow (UI takes header arguments??)
     profile_selected = list(profiles.keys())[instance.get_returned_index()]
@@ -75,7 +74,7 @@ def compile_blocklist(instance):
 
 def view_profiles(instance):
     instance.set_menu_items(profile_menuitems())
-    instance.set_header("Profile selection")
+    instance.set_header(profile_header)
     instance.run_loop()
 
 def edit_profiles(instance):
@@ -140,7 +139,8 @@ def run():
         instance.init()
         loop_main(instance)
     finally:
-        instance.close()
+        if instance:
+            instance.close()
 
 if __name__ == "__main__":    
     run()
