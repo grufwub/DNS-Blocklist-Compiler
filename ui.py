@@ -1,5 +1,7 @@
 import curses
 
+# TODO: clean this code up and separate out to release as separate library / module
+
 class MenuItem:
     """
     MenuItem class
@@ -90,6 +92,29 @@ class MenuInstance:
         temp = self.return_item_index
         self.return_item_index = -1
         return temp
+
+    def goto_previous(self):
+        """
+        Set MenuInstance to go back to the previous menu screen at the end of the loop
+        """
+
+        # TODO: find more elegant way of doing this
+        # Sets up next menu items to use
+        self.next_menu_items = self.previous_menu_items
+        self.previous_menu_items = None
+
+        # Sets up next header to use
+        self.next_header_message = self.previous_header_message
+        self.previous_header_message = None
+
+        # Sets up previously selected item index + resets previously selected
+        self.item_selected = self.previous_selected
+        self.previous_selected = -1
+
+        # TODO: clear next
+        # Sets to go back to run_loop
+        self.run_loop()
+
     
     def run_loop(self):
         """
@@ -115,7 +140,7 @@ class MenuInstance:
         while True:
             result = self._handle_input()
             if result: break
-            
+
             self.screen.clear()
             self._draw_header()
             self._draw_menu()
@@ -144,21 +169,21 @@ class MenuInstance:
             # Move down the list
             self._inc_selected_item()
         elif key == "KEY_LEFT":
-            if self.previous_menu_items == None:
+            if not self.previous_menu_items:
                 return False
-            
+
             # Sets up next menu items to use
             self.next_menu_items = self.previous_menu_items
             self.previous_menu_items = None
-            
+
             # Sets up next header to use
             self.next_header_message = self.previous_header_message
             self.previous_header_message = None
-            
+
             # Sets up previously selected item index + resets previously selected
             self.item_selected = self.previous_selected
-            self.previous_selected = -1 
-            
+            self.previous_selected = -1
+
             # Sets to go back to run_loop
             self.next_function = self.run_loop
             return True
@@ -211,5 +236,3 @@ class MenuInstance:
             self.screen.addstr("\n")
         self.screen.addstr("----------------------------------\n")
         self.screen.addstr("item_selected = %d\nprevious_selected = %d\nreturn_item_index = %d" % (self.item_selected, self.previous_selected, self.return_item_index))
-        
-            

@@ -4,6 +4,12 @@ import host_compiler as hc
 import source_handler as sh
 import profile_handler as ph
 
+main_header = "DNS Blocklist Compiler\nBy @grufwub"
+profile_header = "Profile Selection"
+profile_editor_header = "Profile Editor"
+sources_header = "Sources Editor"
+
+sources = None
 profiles = None
 profile_selected = ""
 
@@ -11,8 +17,32 @@ profile_selected = ""
 # TODO: fix weird use case where compiling prints output to screen, then jumps cursor back to beginning of output on quit
 # TODO: fix inconsistent use of underscores, especially with term 'menuitems'
 
-def gen_sources_menuitems(sources):
-    pass
+### Helper functions
+def main_menuitems():
+    return [
+        ui.MenuItem(text = "Compile blocklist", function = compile_blocklist),
+        ui.MenuItem(text = "Select profile", function = view_profiles),
+        ui.MenuItem(text = "Create / edit profile(s)", function = edit_profiles),
+        ui.MenuItem(text = "View / edit sources", function = edit_sources),
+        ui.MenuItem(text = "Cleanup files", function = clean_files),
+        ui.MenuItem(text = "Help", function = help_funct),
+        ui.MenuItem(text = "Exit", function = exit),
+    ]
+
+def sources_menuitems():
+    global sources
+
+    sources = sh.read_sources_file()
+    menuitems = list()
+    for key in sources.keys():
+        url = sources[key]
+        menutext = ""
+        if key.startswith(sh.BL_PRFX):
+            menutext += "Blacklist"
+        if key.startswith(sh.WL_PRFX):
+            menutext += "Whitelist"
+        menutext += ": " + url
+    return menuitems
 
 def profile_menuitems():
     global profiles
@@ -26,9 +56,10 @@ def profile_menuitems():
 
 def set_profile(instance):
     global profile_selected
-    
+
+    # TODO: set 'selected profile' up in header somehow (UI takes header arguments??)
     profile_selected = list(profiles.keys())[instance.get_returned_index()]
-    compile_blocklist(instance) # temporary
+    instance.goto_previous()
 
 ### MenuItem functions
 def compile_blocklist(instance):
@@ -77,52 +108,39 @@ def profile_editor(scrn):
 
 ### Data Handling
 def get_blacklist_sources(profile):
-	all_sources = sh.read_sources_file()
-	bl = list()
-	srcs = profile[ph.PROFILE_KEY_SOURCES]
-	for src_id in srcs:
-		if src_id.startswith(sh.BL_PRFX):
-			source = all_sources[src_id]
-			bl.append(source)
-	return bl
+    all_sources = sh.read_sources_file()
+    bl = list()
+    srcs = profile[ph.PROFILE_KEY_SOURCES]
+    for src_id in srcs:
+        if src_id.startswith(sh.BL_PRFX):
+            source = all_sources[src_id]
+            bl.append(source)
+    return bl
 
 def get_whitelist_sources(profile):
-	all_sources = sh.read_sources_file()
-	wl = list()
-	srcs = profile[ph.PROFILE_KEY_SOURCES]
-	for src_id in srcs:
-		if src_id.startswith(sh.WL_PRFX):
-			source = all_sources[src_id]
-			wl.append(source)
-	return wl
+    all_sources = sh.read_sources_file()
+    wl = list()
+    srcs = profile[ph.PROFILE_KEY_SOURCES]
+    for src_id in srcs:
+        if src_id.startswith(sh.WL_PRFX):
+            source = all_sources[src_id]
+            wl.append(source)
+    return wl
 
 ### Menu functions
 def loop_main(instance):
-    instance.set_header("DNS Blocklist Compiler\nBy @grufwub")
-    instance.set_menu_items([
-        ui.MenuItem(text = "Compile blocklist", function = compile_blocklist),
-        ui.MenuItem(text = "Select profile", function = view_profiles),
-        ui.MenuItem(text = "Create / edit profile(s)", function = edit_profiles),
-        ui.MenuItem(text = "View / edit sources", function = edit_sources),
-        ui.MenuItem(text = "Cleanup files", function = clean_files),
-        ui.MenuItem(text = "Help", function = help_funct),
-        ui.MenuItem(text = "Exit", function = exit),
-    ])
+    instance.set_header(main_header)
+    instance.set_menu_items(main_menuitems())
     instance.run_loop()
 
 ### Main 'run' sequence
 def run():
-#	e = None
-	try:
-		instance = ui.MenuInstance(debug = True)
-		instance.init()
-		loop_main(instance)
-#	except Exception as exc:
-#		e = exc
-	finally:
-		instance.close()
-#		if e:
-#			print("[!!] Closed with exception: < %s >" % e)
+    try:
+        instance = ui.MenuInstance(debug = True)
+        instance.init()
+        loop_main(instance)
+    finally:
+        instance.close()
 
 if __name__ == "__main__":    
     run()

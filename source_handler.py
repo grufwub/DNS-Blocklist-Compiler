@@ -35,6 +35,6 @@ def edit_source(src_dict, url_id, new_url):
 def add_source(src_dict, id, url):
 	if id in src_dict:
 		raise ValueError('A url with id %s already exists in dictionary!' % id)
-	if not id.startswith(_BL_PRFX) or not id.startswith(_WL_PRFX):
+	if not id.startswith(BL_PRFX) or not id.startswith(WL_PRFX):
 		raise ValueError('Url id must start with either b_ or w_ to denote blacklist/whitelist')
 	src_dict[id] = url
