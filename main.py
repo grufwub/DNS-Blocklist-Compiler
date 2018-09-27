@@ -135,7 +135,7 @@ def loop_main(instance):
 ### Main 'run' sequence
 def run():
     try:
-        instance = ui.MenuInstance(debug = True)
+        instance = ui.MenuInstance(debug = False)
         instance.init()
         loop_main(instance)
     finally:
