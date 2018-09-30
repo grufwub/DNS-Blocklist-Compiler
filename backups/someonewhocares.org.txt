@@ -8,7 +8,7 @@
 # Please forward any additions, corrections or comments by email to
 # hosts@someonewhocares.org
 
-# Last updated: Tue, 25 Sep 2018 at 04:57:16 GMT
+# Last updated: Thu, 27 Sep 2018 at 00:35:53 GMT
 
 # Use this file to prevent your computer from connecting to selected
 # internet hosts. This is an easy and effective way to protect you from 
@@ -2161,6 +2161,8 @@ ff02::3		ip6-allhosts
 0.0.0.0 a.webwise.net
 0.0.0.0 a.webwise.org
 0.0.0.0 azvjudwr.info
+0.0.0.0 badmactogoodmac.space
+0.0.0.0 badmactogoodmac.tech
 0.0.0.0 beloysoff.ru
 0.0.0.0 bestadbid.com
 0.0.0.0 bestreview.site
