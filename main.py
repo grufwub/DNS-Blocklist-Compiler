@@ -12,6 +12,8 @@ sources_header = "Sources Editor"
 sources = None
 profiles = None
 profile_selected = ""
+reload_profiles = False
+reload_sources = False
 
 # TODO: alert box if no profile selected
 # TODO: fix weird use case where compiling prints output to screen, then jumps cursor back to beginning of output on quit
@@ -40,7 +42,6 @@ def sources_menuitems():
         menutext += ": " + url
         item = ui.MenuItem(text = menutext, function = edit_source)
         menuitems.append(item)
-
     return menuitems
 
 def profile_menuitems(func):
@@ -55,12 +56,6 @@ def set_profile(instance):
 
     # TODO: set 'selected profile' up in header somehow (UI takes header arguments??)
     profile_selected = get_profile_at(instance.get_returned_index())["NAME"]
-    instance.goto_previous()
-
-def delete_profile(instance):
-    selected_name = get_profile_at(instance.get_returned_index())["NAME"]
-    del profiles[selected_name]
-    os.remove("profiles/" + selected_name + ".profile")
     instance.goto_previous()
 
 ### MenuItem functions
@@ -97,11 +92,12 @@ def create_profile(instance):
     editor = ui.ProfileEditorInstance(curses_screen = instance.screen)
     editor.set_profile(profile)
     editor.set_sources(get_sources())
-    profile = editor.run_loop()
+    editor.run_loop()
     
-    if profile["NAME"] != "" and len(profile["SOURCES"]) > 0:
+    if profile["NAME"] != "":
         get_profiles()[profile["NAME"]] = profile
         ph.write_profiles(profiles)
+        reload_sources = True
     
     # Pass control back to MenuInstance
     instance.goto_previous()
@@ -112,11 +108,10 @@ def edit_profile(instance):
     index = instance.get_returned_index()
     editor.set_profile(get_profile_at(index))
     editor.set_sources(get_sources())
-    result = editor.run_loop()
-    
-    if result["NAME"] != "" and len(result["SOURCES"]) > 0:
-        profiles[index] = result
-        ph.write_profiles(profiles)
+    editor.run_loop()
+
+    ph.write_profiles(profiles)
+    reload_profiles = True
     
     instance.goto_previous()
 
@@ -186,15 +181,17 @@ def get_whitelist_sources(profile):
     return wl
 
 def get_sources():
-    global sources
-    if not sources:
+    global sources, reload_sources
+    if not sources or reload_sources:
         sources = sh.read_sources_file()
+        reload_sources = False
     return sources
 
 def get_profiles():
-    global profiles
-    if not profiles:
+    global profiles, reload_profiles
+    if not profiles or reload_profiles:
         profiles = ph.load_profiles()
+        reload_profiles = False
     return profiles
 
 def get_profile_at(i):
