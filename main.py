@@ -64,6 +64,7 @@ def compile_blocklist(instance):
     
     # TODO: check we won't run into an issue here where 'profiles' isn't up to date but 'profile_selected' is name of new profile
     profile = profiles[profile_selected]
+    print("Compiling for profile [%s]...\n" % profile_selected)
     bl = get_blacklist_sources(profile)
     wl = get_whitelist_sources(profile)
     hc.run(bl, wl)
