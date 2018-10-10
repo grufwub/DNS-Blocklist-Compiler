@@ -1,4 +1,4 @@
-# Mobile DNS Blocklist Compiler
+# DNS Blocklist Compiler
 Compiles a list of DNS hostnames from multiple sources and strips unnecessary data. /Will/ also be able to ping to check for dead hosts!
 
 # Current sources:
