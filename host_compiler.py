@@ -15,14 +15,24 @@ __OUTPUT_FILE = 'hosts'
 __GLOBAL_WHITELIST = dict()
 
 # Quick funct to write backup file string and minimize code with reuse
-def build_backup_file_str(url):
-	url_str = tldextract.extract(url).registered_domain
-	return __BACKUP_DIR + url_str + __BACKUP_EXT
+def build_backup_file_str(raw_url):
+	file_str = __BACKUP_DIR
+
+	url = "" + raw_url
+	if url.startswith("http://"):
+		url = url.replace("http://", "")
+	if url.startswith("https://"):
+		url = url.replace("https://", "")
+	url = url.replace("/", "_")
+	url = url.replace(".", "")
+	file_str += url
+
+	return file_str + __BACKUP_EXT
 
 # Try downloading hosts, or if failed then read from backup
 def download_hosts(source_url):
 	hl = list()
-	
+
 	try:
 		# Try downloading new data
 		response = urlopen(source_url)
@@ -32,20 +42,21 @@ def download_hosts(source_url):
 		# Downloading new data failed ):
 		print('Unable to download hosts from %s. Retrieving saved backup...' % source_url)
 		file_str = build_backup_file_str(source_url)
-		
+
 		if not os.path.exists(file_str):
 			print('There is no saved backup for %s!' % source_url)
 			return
-		
+
 		f = open(file_str, 'r')
 		text = f.read()
-	
+
 	for line in text.split('\n'):
 		hl.append(line)
-	
+
 	return hl
 
 def backup_to_file(file_str, hosts):
+	print("  [backing up %s with %i entries]" % (file_str, len(hosts)))
 	f = open(file_str, 'w')
 	for host in hosts:
 		f.write(host + '\n')
@@ -126,10 +137,10 @@ def process_host(host):
 	base_domain = ext.registered_domain
 	if base_domain == '' or base_domain == '\n' or base_domain == ' ':
 		return
-	
+
 	if host in __GLOBAL_WHITELIST:
 		return
-	
+
 	return host
 
 def run(bl_list, wl_list):
@@ -138,7 +149,7 @@ def run(bl_list, wl_list):
 		os.mkdir(__BACKUP_DIR)
 	if not os.path.isdir(__OUTPUT_DIR):
 		os.mkdir(__OUTPUT_DIR)
-	
+
 	print('Downloading blacklists...')
 	blacklist = list()
 	for url in bl_list:
@@ -146,7 +157,7 @@ def run(bl_list, wl_list):
 		hosts = download_hosts(url)
 		blacklist.extend(hosts)
 		backup_to_file( build_backup_file_str(url) , hosts)
-	
+
 	print('Downloading whitelists...')
 	for url in wl_list:
 		print('--> %s' % url)
@@ -162,14 +173,14 @@ def run(bl_list, wl_list):
 	mt.add_data(blacklist)
 	mt.set_function(process_host)
 	mt.run()
-	
+
 	print('Sorting processed data...')
 	compiled_hosts = dict()
 	for host in mt.get_processed_data():
 		if host:
 			compiled_hosts[host] = compiled_hosts.get(host, 0) + 1
 	file_str = __OUTPUT_DIR + '/' + __OUTPUT_FILE
-	
+
 	print('Writing processed data to file...')
 	count = 0
 	f = open(file_str, 'w')
