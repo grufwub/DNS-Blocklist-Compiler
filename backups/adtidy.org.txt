@@ -1,8 +1,8 @@
-! Checksum: cPxySzAaOpIVmjjwXzEtgw
+! Checksum: G1ZxGzJ5XnWUvgq2awqbtg
 ! Title: AdGuard Mobile Ads filter
 ! Description: Filter for all known mobile ad networks. Useful for mobile devices.
-! Version: 2.0.3.57
-! TimeUpdated: 2018-09-30T15:03:23+00:00
+! Version: 2.0.3.75
+! TimeUpdated: 2018-10-10T12:03:47+00:00
 ! Expires: 2 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#mobile
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -98,6 +98,11 @@
 ||plugin.mobopay.baidu.com^
 ||mo.freeindoapp.com^
 !
+||rtapi.abbi.io^
+||ade.clmbtech.com^
+||i.mxplayer.j2inter.com^
+||mxvp-ad-config-prod-1.zenmxapps.com^
+||online-prod.zenmxapps.com^
 ||look.kfiopkln.com^
 ||studcat.infra.systems^
 ||adplex.co.kr^$third-party
@@ -267,7 +272,6 @@
 ||cdns.lodeo.io^
 ||ingamesads.gameloft.com^
 ||i2ad.jp^
-||mxvp-ad-config-prod-1.zenmxapps.com^
 ||mxvp-feature-toggle-prod-1.zenmxapps.com^
 ||js4386.fujianryt.com^
 ||m.12306media.com^
@@ -1047,6 +1051,13 @@ westseattleblog.com#@#.header-ad
 !
 ! Extended CSS rules
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/23663
+!! mobile main page ad
+quora.com##.mobile_app2 .paged_list_wrapper > span[id] > .Bundle:not(.AnswerStoryBundle):has(a[href][target="_blank"][rel="noopener nofollow"]):has( > div:contains(/promoted\s*by\s*/))
+!! top ad question
+quora.com##.mobile_app2 .NewGridQuestionPage div.content_area:has(a[href][target="_blank"][rel="noopener nofollow"]):has( > div:contains(/ad\s*by\s*/))
+!! bottom ads in question
+quora.com##.mobile_app2 .paged_list_wrapper > .pagedlist_item:has(a[href][target="_blank"][rel="noopener nofollow"]):has( > div:contains(/promoted\s*by\s*/))
 ! https://github.com/AdguardTeam/AdguardFilters/issues/17538
 yahoo.com###YDC-Stream > ul.Wow\(bw\) > .js-stream-content > .controller:has(> [class*="smartphone_"] > a[href^="https://beap.gemini.yahoo.com/"][rel="noopener noreferrer"])
 ! https://github.com/AdguardTeam/AdguardFilters/issues/17034
@@ -1120,9 +1131,9 @@ m.reddit.com##article[class="Post size-compact"][-ext-has=".PostHeader__sponsore
 !
 ! Main page
 ! Context ads(must be excluded in useful ads)
-yandex.by,yandex.com,yandex.kz,yandex.ru,yandex.ua,~afisha.yandex.by,~afisha.yandex.kz,~afisha.yandex.ru,~afisha.yandex.ua,~avia.yandex.by,~avia.yandex.kz,~avia.yandex.ru,~avia.yandex.ua,~bilet.yandex.com.tr,~flights.yandex.com,~disk.yandex.by,~disk.yandex.com,~disk.yandex.com.tr,~disk.yandex.fr,~disk.yandex.kz,~disk.yandex.ru,~disk.yandex.ua,~mail.yandex.by,~mail.yandex.kz,~mail.yandex.ru,~mail.yandex.ua,~mail.yandex.com,~mail.yandex.com.tr,~money.yandex.ru,~music.yandex.ru,~music.yandex.ua,~music.yandex.by,~music.yandex.kz,~news.yandex.by,~news.yandex.com,~news.yandex.fr,~news.yandex.kz,~news.yandex.ru,~news.yandex.ua,~rabota.yandex.by,~rabota.yandex.kz,~rabota.yandex.ru,~rabota.yandex.ua,~radio.yandex.by,~radio.yandex.kz,~radio.yandex.ru,~radio.yandex.ua,~realty.yandex.by,~realty.yandex.kz,~realty.yandex.ru,~realty.yandex.ua,~tv.yandex.by,~tv.yandex.kz,~tv.yandex.ru,~tv.yandex.ua,~yadi.sk,~zen.yandex.by,~zen.yandex.com,~zen.yandex.kz,~zen.yandex.ru,~zen.yandex.ua##html > body[data-bem*="/search/"] > div.page-layout > div.page-layout__content > div.main > div.serp-list > div.serp-item:has(> div.organic > div.organic__subtitle > div.label_color_yellow)
+!yandex.by,yandex.com,yandex.kz,yandex.ru,yandex.ua,~afisha.yandex.by,~afisha.yandex.kz,~afisha.yandex.ru,~afisha.yandex.ua,~avia.yandex.by,~avia.yandex.kz,~avia.yandex.ru,~avia.yandex.ua,~bilet.yandex.com.tr,~flights.yandex.com,~disk.yandex.by,~disk.yandex.com,~disk.yandex.com.tr,~disk.yandex.fr,~disk.yandex.kz,~disk.yandex.ru,~disk.yandex.ua,~mail.yandex.by,~mail.yandex.kz,~mail.yandex.ru,~mail.yandex.ua,~mail.yandex.com,~mail.yandex.com.tr,~money.yandex.ru,~music.yandex.ru,~music.yandex.ua,~music.yandex.by,~music.yandex.kz,~news.yandex.by,~news.yandex.com,~news.yandex.fr,~news.yandex.kz,~news.yandex.ru,~news.yandex.ua,~rabota.yandex.by,~rabota.yandex.kz,~rabota.yandex.ru,~rabota.yandex.ua,~radio.yandex.by,~radio.yandex.kz,~radio.yandex.ru,~radio.yandex.ua,~realty.yandex.by,~realty.yandex.kz,~realty.yandex.ru,~realty.yandex.ua,~tv.yandex.by,~tv.yandex.kz,~tv.yandex.ru,~tv.yandex.ua,~yadi.sk,~zen.yandex.by,~zen.yandex.com,~zen.yandex.kz,~zen.yandex.ru,~zen.yandex.ua##
 ! Yandex search
-yandex.by,yandex.com,yandex.kz,yandex.ru,yandex.ua,~afisha.yandex.by,~afisha.yandex.kz,~afisha.yandex.ru,~afisha.yandex.ua,~avia.yandex.by,~avia.yandex.kz,~avia.yandex.ru,~avia.yandex.ua,~bilet.yandex.com.tr,~flights.yandex.com,~disk.yandex.by,~disk.yandex.com,~disk.yandex.com.tr,~disk.yandex.fr,~disk.yandex.kz,~disk.yandex.ru,~disk.yandex.ua,~mail.yandex.by,~mail.yandex.kz,~mail.yandex.ru,~mail.yandex.ua,~mail.yandex.com,~mail.yandex.com.tr,~money.yandex.ru,~music.yandex.ru,~music.yandex.ua,~music.yandex.by,~music.yandex.kz,~news.yandex.by,~news.yandex.com,~news.yandex.fr,~news.yandex.kz,~news.yandex.ru,~news.yandex.ua,~rabota.yandex.by,~rabota.yandex.kz,~rabota.yandex.ru,~rabota.yandex.ua,~radio.yandex.by,~radio.yandex.kz,~radio.yandex.ru,~radio.yandex.ua,~realty.yandex.by,~realty.yandex.kz,~realty.yandex.ru,~realty.yandex.ua,~tv.yandex.by,~tv.yandex.kz,~tv.yandex.ru,~tv.yandex.ua,~yadi.sk,~zen.yandex.by,~zen.yandex.com,~zen.yandex.kz,~zen.yandex.ru,~zen.yandex.ua##.content__right > div.serp-list > div.serp-item:has(div.label_color_yellow)
+!
 ! END: Yandex
 !---------------------------------------------------------------------------!
 !-------------- General element hiding rules -------------------------------!
@@ -1185,6 +1196,8 @@ sasisa.ru#%#AG_onLoad(function() { window.Umobi = function() {}; });
 !-------CSS---------
 !-------------------
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/19286
+mobiltelefon.ru#$#header { margin-top: 0!important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/23121
 9ketsuki.info#$##sougo_rss { margin-bottom:280px!important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/22276
@@ -1300,6 +1313,8 @@ deviantart.com#$#div[class*="dp-ad-"] {height:0px!important; width:0px!important
 !
 !#####################
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/18815
+@@||api.gamer.com.tw/mobile_app/anime/*/stat_ad.php
 ! https://github.com/AdguardTeam/AdguardFilters/issues/23118
 @@||ssl-stat.amebame.com/pub/ads^$domain=ameblo.jp
 ! https://github.com/AdguardTeam/AdguardFilters/issues/23151
@@ -1583,7 +1598,24 @@ m.news.de##.aside > div[style="height: 600px;"]
 m.news.de##.unisterAdsStart
 !+ NOT_OPTIMIZED
 9to5google.com,9to5toys.com,9to5mac.com,electrek.co##.post-content > .inlinead ~ div[class*=" "]:not([id]):not([style])
+!+ NOT_PLATFORM(ios, ext_android_cb)
+||mobile.donanimhaber.com/ads^
 !
+bengo4.com##div[id^="ad-slot-"]
+tvbs.com.tw##.ad_320x50_mo
+tvbs.com.tw##.advertising_lightbox
+megatube.xxx##.mobile_advertising
+||mobiltelefon.ru/photo/bg/*.jpg
+m.nhaccuatui.com##.bannerAdv
+m.doisongphapluat.com##.list_news > li div.title_news > label._mB
+m.doisongphapluat.com##.list_news > li div.title_news > a[href^="http://bit.ly/"]
+m.doisongphapluat.com##.list_news > li > div.block_image_news > .thumb > a[href^="http://bit.ly/"]
+news.mail.ru##a[class="item item_side_left entity"][rel="noopener"][href*="https://t.mail.ru/redir/"]
+eg.ru##amp-embed[type="smi2"]
+jp.ign.com##amp-embed[type="outbrain"]
+m.dcinside.com##.adv-inner
+m.dcinside.com##.adv-group
+m.dcinside.com##.adv-groupin
 ameblo.jp##a[href^="https://requ.ameba.jp"]
 ameblo.jp##._1JtRssPb
 ameblo.jp##div._29jEfwlY.skin-bd-color
@@ -1744,7 +1776,6 @@ m.delmagyar.hu###block___frappe_mobil
 m.alphaporno.com##.banner
 m.alphaporno.com###suggested
 m.pornerbros.com##.adv
-||mobile.donanimhaber.com/ads^
 mobile.donanimhaber.com###comment-container > #news-container[style*="width:"][style*="position"][style*="height:"]
 mobile.donanimhaber.com##.yazilim-sponsor
 www-inside--handy-de.cdn.ampproject.org###i-amphtml-wrapper div.content_ins
@@ -2077,7 +2108,7 @@ mobile.donanimhaber.com##div[style="margin:10px auto; text-align:center; width:3
 drive2.ru###l-content > div.l-main.js-main > div.g-column-wide > div.cpc-card
 mobile.donanimhaber.com##.reklamiatla
 chip.de##.amp-article-ad
-chip.de##.amp-outbrain
+newsweekjapan.jp,chip.de##.amp-outbrain
 trustedreviews.com##.ipc-advert
 |http$third-party,script,domain=kinotut.tv
 mobil-nwzonline-de.cdn.ampproject.org##.advert
@@ -2389,6 +2420,9 @@ pornhd.com##ul.thumbs.inside-row > li:not([data-thumbindexes])
 ||ymcdn.ymtrack6.co/ads_file/
 ||ymcdn.ymtrack6.co/offer_single_files/
 ||youtube.com/_get_ads?
+! gismeteo
+gismeteo.by,gismeteo.ru##.media_height_m
+gismeteo.by##.media_height_l
 ! For Moscow subway WiFi
 auth.wi-fi.ru##.c-branding-banner
 auth.wi-fi.ru##.c-video-banner
@@ -2438,6 +2472,7 @@ m.news.yandex.by,m.news.yandex.com,m.news.yandex.fr,m.news.yandex.kz,m.news.yand
 ! Google ads (be careful)
 ! Blocking of Facebook ads
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/18815
 ! https://github.com/AdguardTeam/AdguardFilters/issues/22839
 ! https://github.com/AdguardTeam/AdguardFilters/issues/22728
 ! Ad in Opera
@@ -2671,6 +2706,8 @@ m.news.yandex.by,m.news.yandex.com,m.news.yandex.fr,m.news.yandex.kz,m.news.yand
 !+ NOT_PLATFORM(ios, ext_safari, ext_android_cb)
 ||adj.st^
 !
+||stats.abbi.io^
+||api.goodbarber.net/statsapi/
 ||tr.snapchat.com^
 ||tracking.aatkit.com^
 ||reporting.aatkit.com^
