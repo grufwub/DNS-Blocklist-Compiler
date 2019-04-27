@@ -11,7 +11,7 @@ b_10::http://someonewhocares.org/hosts/zero/hosts
 b_11::http://winhelp2002.mvps.org/hosts.txt
 b_12::https://raw.githubusercontent.com/FadeMind/hosts.extras/master/rlwpx.free.fr.htrc/hosts
 b_13::https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&mimetype=plaintext&useip=0.0.0.0
-b_14::https://raw.githubusercontent.com/EnergizedProtection/block/master/basic/formats/hosts
+b_14::https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt
 b_15::https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Hosts/GoodbyeAds.txt
 b_16::http://www.malwaredomainlist.com/hostslist/hosts.txt
 b_17::https://zerodot1.gitlab.io/CoinBlockerLists/hosts_browser
@@ -20,5 +20,6 @@ b_19::https://raw.githubusercontent.com/cbuijs/airelle/master/ads.hosts.list
 b_20::https://raw.githubusercontent.com/cbuijs/airelle/master/trackers.hosts.list
 b_21::https://raw.githubusercontent.com/Yhonay/antipopads/master/hosts
 b_22::https://raw.githubusercontent.com/anudeepND/blacklist/master/CoinMiner.txt
+b_23::https://raw.githubusercontent.com/EnergizedProtection/block/master/bluGo/formats/hosts
 w_24::https://raw.githubusercontent.com/grufwub/DNS-Blocklist-Compiler/master/whitelist.txt
 w_25::https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt
