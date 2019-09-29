@@ -3,7 +3,7 @@
 # Description: This list disables browser based miners such as coin-hive
 # Donate: http://bit.ly/CBLDonate Every donation keeps the future development going. Thank you.
 # Homepage: https://github.com/ZeroDot1/CoinBlockerLists
-# Last modified: 2019-04-26 08:15
+# Last modified: 2019-09-10 03:34:13
 # License: https://gitlab.io/ZeroDot1/CoinBlockerLists/LICENSE
 # [CoinBlocker hosts List optional by ZeroDot1]
 0.0.0.0 000.0x1f4b0.com
@@ -44,7 +44,6 @@
 0.0.0.0 6tsbe1zs.me
 0.0.0.0 8000plus.si
 0.0.0.0 8jd2lfsq.me
-0.0.0.0 a-o.ni
 0.0.0.0 a.proxy4.nullrefexcep.com
 0.0.0.0 a.proxy5.nullrefexcep.com
 0.0.0.0 aalbbh84.info
@@ -166,7 +165,6 @@
 0.0.0.0 api.xmrpool.net
 0.0.0.0 apib.monerise.com
 0.0.0.0 apin.monerise.com
-0.0.0.0 app.pr0gramm.com
 0.0.0.0 appelamule.com
 0.0.0.0 aqqgli3vle.bid
 0.0.0.0 arizona-miner.tk
@@ -183,8 +181,6 @@
 0.0.0.0 aster18prx.nl
 0.0.0.0 asvoxod.ru
 0.0.0.0 atlanta01.monero.hashvault.pro
-0.0.0.0 audioknigi.cl
-0.0.0.0 audioknigi.club
 0.0.0.0 augvtjtnsfnxg.ru
 0.0.0.0 auiehechoulh.ru
 0.0.0.0 auroramine.com
@@ -199,6 +195,7 @@
 0.0.0.0 averoconnector.com
 0.0.0.0 avualrhg9p.bid
 0.0.0.0 avualrhg9p0.bid
+0.0.0.0 awu.01.psychomining.de
 0.0.0.0 axoncoho.tk
 0.0.0.0 aymcsx.ru
 0.0.0.0 azvjudwr.info
@@ -485,6 +482,7 @@
 0.0.0.0 directprimal.com
 0.0.0.0 djfhwosjck.bi
 0.0.0.0 djfhwosjck.bid
+0.0.0.0 dl.browsermine.com
 0.0.0.0 dle-news.pw
 0.0.0.0 dmdamedia.hu
 0.0.0.0 dmg.crypto.csgocpu.com
@@ -572,7 +570,6 @@
 0.0.0.0 files.fortrader.ru
 0.0.0.0 fili.cc
 0.0.0.0 fili.tv
-0.0.0.0 financeforum.ru
 0.0.0.0 firmware.center
 0.0.0.0 flare-analytics.com
 0.0.0.0 flashx.co
@@ -807,7 +804,6 @@
 0.0.0.0 kippbeak.cf
 0.0.0.0 kissdoujin.com
 0.0.0.0 kisshentai.net
-0.0.0.0 kiwifarms.net
 0.0.0.0 kjli.fi
 0.0.0.0 krb.devphp.org.ua
 0.0.0.0 ksimdw.ru
@@ -838,6 +834,7 @@
 0.0.0.0 lmeeulcfttqv.ru
 0.0.0.0 lmodr.biz
 0.0.0.0 load.jsecoin.com
+0.0.0.0 login.browsermine.com
 0.0.0.0 london01.monero.hashvault.pro
 0.0.0.0 lookvision.info
 0.0.0.0 losangeles01.monero.hashvault.pro
@@ -847,7 +844,6 @@
 0.0.0.0 lumanajaska.ml
 0.0.0.0 m.anyfiles.ovh
 0.0.0.0 m.miricommunity.net
-0.0.0.0 m.pr0gramm.com
 0.0.0.0 m001.monerise.com
 0.0.0.0 m1.monerise.com
 0.0.0.0 m1.stream.vidzi.tv
@@ -867,6 +863,7 @@
 0.0.0.0 main.minero.cc
 0.0.0.0 main.xmrpool.net
 0.0.0.0 malictuiar.com
+0.0.0.0 manager.browsermine.com
 0.0.0.0 manila-1.xmrpool.net
 0.0.0.0 marcycoin.org
 0.0.0.0 mariuspetrescu.gq
@@ -1030,6 +1027,7 @@
 0.0.0.0 mutuza.win
 0.0.0.0 mwnodes.viaxmr.com
 0.0.0.0 mwor.gq
+0.0.0.0 mx.browsermine.com
 0.0.0.0 mxcdn1.now.sh
 0.0.0.0 mxcdn2.now.sh
 0.0.0.0 my-retrospace.sbhmn-miner.com
@@ -1120,15 +1118,12 @@
 0.0.0.0 okeyletsgo.ml
 0.0.0.0 old.browsermine.com
 0.0.0.0 olecintri.com
-0.0.0.0 oload.st
-0.0.0.0 oload.tv
 0.0.0.0 omine.org
 0.0.0.0 on.animeteatr.ru
 0.0.0.0 onlinereserchstatistics.online
 0.0.0.0 onvid.club
 0.0.0.0 open-hive-server-1.pp.ua
 0.0.0.0 openkatalog.com
-0.0.0.0 openload.co
 0.0.0.0 oxwwoeukjispema.ru
 0.0.0.0 p.estream.to
 0.0.0.0 p.hemnes.win
@@ -1325,6 +1320,7 @@
 0.0.0.0 proxyindia.net
 0.0.0.0 proxytpb.pw
 0.0.0.0 prsrjdr.ru
+0.0.0.0 psychomining.de
 0.0.0.0 punchsub.net
 0.0.0.0 pushno.com
 0.0.0.0 px1.papoto.com
@@ -1337,7 +1333,6 @@
 0.0.0.0 r8nu86wg.me
 0.0.0.0 rack.cryptaloot.pro
 0.0.0.0 rand.com.ru
-0.0.0.0 rapidvideo.com
 0.0.0.0 ratingtoplist.com
 0.0.0.0 rbkshort.info
 0.0.0.0 rctfgrazkha.ru
@@ -1378,24 +1373,38 @@
 0.0.0.0 s002.monerise.com
 0.0.0.0 s003.monerise.com
 0.0.0.0 s003.papoto.com
+0.0.0.0 s01.hostcontent.li
 0.0.0.0 s01.hostcontent.live
 0.0.0.0 s01.vidtod.me
 0.0.0.0 s01.vidtodo.pro
+0.0.0.0 s02.hostcontent.li
 0.0.0.0 s02.hostcontent.live
 0.0.0.0 s02.vidtod.me
+0.0.0.0 s03.hostcontent.li
 0.0.0.0 s03.hostcontent.live
+0.0.0.0 s04.hostcontent.li
 0.0.0.0 s04.hostcontent.live
+0.0.0.0 s05.hostcontent.li
 0.0.0.0 s05.hostcontent.live
+0.0.0.0 s06.hostcontent.li
 0.0.0.0 s06.hostcontent.live
+0.0.0.0 s07.hostcontent.li
 0.0.0.0 s07.hostcontent.live
+0.0.0.0 s08.hostcontent.li
 0.0.0.0 s08.hostcontent.live
+0.0.0.0 s09.hostcontent.li
 0.0.0.0 s09.hostcontent.live
 0.0.0.0 s1.hqq.tv
 0.0.0.0 s1.vidtod.me
+0.0.0.0 s10.hostcontent.li
 0.0.0.0 s10.hostcontent.live
+0.0.0.0 s100.hostcontent.li
 0.0.0.0 s100.hostcontent.live
+0.0.0.0 s11.hostcontent.li
 0.0.0.0 s11.hostcontent.live
+0.0.0.0 s12.hostcontent.li
 0.0.0.0 s12.hostcontent.live
+0.0.0.0 s13.hostcontent.li
 0.0.0.0 s13.hostcontent.live
 0.0.0.0 s2.analytics.blue
 0.0.0.0 s2.appelamule.com
@@ -1631,7 +1640,6 @@
 0.0.0.0 smectapop12.pl
 0.0.0.0 smurf.crypto.csgocpu.com
 0.0.0.0 snahome.com
-0.0.0.0 socket.io
 0.0.0.0 spacepools.org
 0.0.0.0 sparechange.io
 0.0.0.0 sparnove.com
@@ -1655,6 +1663,7 @@
 0.0.0.0 static-02.flu.cc
 0.0.0.0 static-cnt.bid
 0.0.0.0 static-net.nut.cc
+0.0.0.0 static.browsermine.com
 0.0.0.0 static.freebitco.in
 0.0.0.0 static.hk.rs
 0.0.0.0 static.reasedoper.pw
@@ -1865,8 +1874,6 @@
 0.0.0.0 webassembly.st
 0.0.0.0 webassembly.stream
 0.0.0.0 webdisk.monerominer.rocks
-0.0.0.0 webmail.coinpot.co
-0.0.0.0 webmail.monerominer.rocks
 0.0.0.0 webmine.cz
 0.0.0.0 webmine.pro
 0.0.0.0 webminepool.com
@@ -1930,6 +1937,7 @@
 0.0.0.0 ws-fr-02.rocks.io
 0.0.0.0 ws-fr-03.rocks.io
 0.0.0.0 ws.bhzejltg.info
+0.0.0.0 ws.browsermine.com
 0.0.0.0 ws.freebitco.in
 0.0.0.0 ws.l33tsite.info
 0.0.0.0 ws.pzoifaum.info
@@ -2442,7 +2450,6 @@
 0.0.0.0 www.aservices.party
 0.0.0.0 www.assetscdn.stream
 0.0.0.0 www.asvoxod.ru
-0.0.0.0 www.audioknigi.club
 0.0.0.0 www.auroramine.com
 0.0.0.0 www.auth.crypto-webminer.com
 0.0.0.0 www.authcaptcha.com
@@ -2616,7 +2623,6 @@
 0.0.0.0 www.fdtpyqqsnzxvt.ru
 0.0.0.0 www.fili.cc
 0.0.0.0 www.fili.tv
-0.0.0.0 www.financeforum.ru
 0.0.0.0 www.flare-analytics.com
 0.0.0.0 www.flashx.co
 0.0.0.0 www.flnqmin.org
@@ -2683,7 +2689,9 @@
 0.0.0.0 www.hodlers.party
 0.0.0.0 www.hodling.faith
 0.0.0.0 www.horrorscopeme.ml
+0.0.0.0 www.hostcontent.li
 0.0.0.0 www.hostcontent.live
+0.0.0.0 www.hostingcloud.ac
 0.0.0.0 www.hostingcloud.accountant
 0.0.0.0 www.hostingcloud.bi
 0.0.0.0 www.hostingcloud.bid
@@ -2691,6 +2699,8 @@
 0.0.0.0 www.hostingcloud.do
 0.0.0.0 www.hostingcloud.download
 0.0.0.0 www.hostingcloud.faith
+0.0.0.0 www.hostingcloud.li
+0.0.0.0 www.hostingcloud.live
 0.0.0.0 www.hostingcloud.loan
 0.0.0.0 www.hostingcloud.pa
 0.0.0.0 www.hostingcloud.party
@@ -2779,7 +2789,6 @@
 0.0.0.0 www.kinohabr.net
 0.0.0.0 www.kippbeak.cf
 0.0.0.0 www.kisshentai.net
-0.0.0.0 www.kiwifarms.net
 0.0.0.0 www.krb.devphp.org.ua
 0.0.0.0 www.ksimdw.ru
 0.0.0.0 www.kunay.nullrefexcep.com
@@ -2926,7 +2935,6 @@
 0.0.0.0 www.qlzwfzfatjth.ru
 0.0.0.0 www.qpmsybxqvlje.ru
 0.0.0.0 www.qwertycoin.crypto-webminer.com
-0.0.0.0 www.rapidvideo.com
 0.0.0.0 www.ratingtoplist.com
 0.0.0.0 www.rbkshort.info
 0.0.0.0 www.realnetwrk.com

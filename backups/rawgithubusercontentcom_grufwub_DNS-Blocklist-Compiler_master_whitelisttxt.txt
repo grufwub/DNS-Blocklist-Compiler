@@ -189,3 +189,14 @@ cdn.ravenjs.com # Need to double check, might be used for some ads?
 boards.greenhouse.io
 winfuture.de
 
+# Keybase
+bserver-1.kbfs.keybaseapi.com
+bserver-0.kbfs.keybaseapi.com
+mdserver-0.kbfs.keybaseapi.com
+api.keybase.io
+api-0.core.keybaseapi.com
+mdserver-1.kbfs.keybaseapi.com
+
+# Reddit
+gateway.reddit.com
+
