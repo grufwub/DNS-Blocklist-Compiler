@@ -1,27 +1,10 @@
 # DNS Blocklist Compiler
-Compiles a list of DNS hostnames from multiple sources and strips unnecessary data. /Will/ also be able to ping to check for dead hosts!
+Compiles a list of DNS hostnames from multiple sources, strips unnecessary data and removes duplicates including
+subdomains sharing a similar upper level domains (e.g. sub1.domain.com and subsub2.sub1.domain.com will result in
+only sub1.domain.com). Manages to strip back all the listed sources (which often each contain close to 300k including
+many unique strings, but still likely duplicates) to well under 400k domains. This was made after searching some
+other's host files and finding many duplicate domains
 
 # Current sources:
 
-Steven Black's Hosts: https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
-
-Adguard's Simplified DNS Hosts: https://filters.adtidy.org/extension/chromium/filters/15.txt
-
-Personal Hosts (to catch stragglers): https://raw.githubusercontent.com/grufwub/DNS-Blocklist-Compiler/master/blacklist.txt
-
-Personal Whitelist (to prevent blocking safe domains): https://raw.githubusercontent.com/grufwub/DNS-Blocklist-Compiler/master/whitelist.txt
-
-anudeepND Whitelist (again, to prevent blocking safe domains): https://github.com/anudeepND/whitelist (https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt)
-
-anudeepND's Ad and Coinminer domain lists: (https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt,
-https://raw.githubusercontent.com/anudeepND/blacklist/master/CoinMiner.txt)
-
-Yhonay's Antipopads: https://raw.githubusercontent.com/Yhonay/antipopads/master/hosts
-
-Piperun's IPLogger filter: https://raw.githubusercontent.com/piperun/iploggerfilter/master/filterlist
-
-Quidsup's NoTrack blocklist: https://raw.githubusercontent.com/quidsup/notrack/master/trackers.txt
-
-Adguard's Mobile Ads filter: https://filters.adtidy.org/extension/chromium/filters/11.txt
-
-Better.FYI Trackers Blocklist: https://raw.githubusercontent.com/anarki999/Adblock-List-Archive/master/Better.fyiTrackersBlocklist.txt
+Check sources.txt
